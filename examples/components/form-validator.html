@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>表单验证 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        
+        <!-- use single css file -->
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style type="text/css">
+            #test-form{padding:15px;}
+            input[type=text], input[type=password] , select{ width: 180px;} 
+            input[type=submit]{border:1px solid #ddd;background:none;padding:6px 10px;cursor: pointer;font-size:14px;}
+        </style>
+    </head>
+    <body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4 class="pui-h4">表单验证</h4> 
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <form method="post" action="" id="test-form" class="pui-form-label-left">
+                <label>用户名：</label>
+                <input type="text" name="username" />
+                <span fv-role="username">
+                    <!--<span type="normal">* 必填项，用户名只能由6到16个大小写字母、数字、横线、下划线组成的字符。</span>
+                    <span type="success"><i class="fa fa-check-circle"></i> 正确</span>
+                    <span type="empty"><i class="fa fa-close"></i> 错误：用户名不能为空。</span>
+                    <span type="error"><i class="fa fa-close"></i> 错误：用户名只能由6到16个大小写字母、数字、横线或下划线组成的字符。</span>        -->            
+                </span>
+                <br/> 
+                <label>登陆密码：</label>
+                <input type="password" name="password" />
+                <span fv-role="password"></span>
+                <br/>
+                <label>确认密码：</label>
+                <input type="password" name="confirm_password" />
+                <span fv-role="confirm_password"></span>
+                <br/>
+                <label>邮箱：</label>
+                <input type="text" name="email" />
+                <span fv-role="email"></span>
+                <br/>
+                <label>电话号码：</label>
+                <input type="text" name="tel" />
+                <span fv-role="tel"></span>
+                <br/>
+                <label>传真号码：</label>
+                <input type="text" name="fax" />
+                <span fv-role="fax"></span>
+                <br/>
+                <label>手机号码：</label>
+                <input type="text" name="mobile" />
+                <span fv-role="mobile"></span>
+                <br/>
+                <label>联系地址：</label>
+                <input type="text" name="address" />
+                <span fv-role="address"></span>
+                <br/>
+                <label>邮政编码：</label>
+                <input type="text" name="zipcode" />
+                <span fv-role="zipcode"></span>
+                <br/>
+                <label>年龄：</label>
+                <input type="text" name="age" />
+                <span fv-role="age"></span>
+                <br/>
+                <label>数字：</label>
+                <input type="text" name="number" />
+                <span fv-role="number"></span>
+                <br/>
+                <label>所在地区：</label>
+                <div class="pui-select">
+                    <select name="province">
+                        <option value="">请选择所在省份请选择所在省份</option>
+                        <option value="浙江省">浙江省</option>
+                        <option value="福建省">福建省</option>
+                        <option value="广东省">广东省</option>
+                    </select>                    
+                </div>
+                <div class="pui-select">
+                    <select name="city">
+                        <option value="">请选择所在地市</option>
+                        <option value="浙江省">浙江省</option>
+                        <option value="福建省">福建省</option>
+                        <option value="广东省">广东省</option>
+                    </select>                 
+                </div>
+                <span fv-role="province"></span>
+                <span fv-role="city"></span>
+                <br/>
+                <label>域名：</label>
+                <input type="text" name="domain" />
+                <span fv-role="domain"></span>
+                <br/>
+                <label>网址：</label>
+                <input type="text" name="website" />
+                <span fv-role="website"></span>
+                <br/>
+                <label>网站IP：</label>
+                <input type="text" name="ip" />
+                <span fv-role="ip"></span>
+                <br/>
+                <label>性别：</label>
+                <input type="radio" name="sex" value="男" checked /> 男
+                <input type="radio" name="sex" value="女" /> 女
+                <input type="radio" name="sex" value="保密" /> 保密
+                <span fv-role="sex"></span>
+                <br/>
+                <label>兴趣爱好：</label>
+                <input type="checkbox" name="hobbies[]" value="听音乐"  checked /> 听音乐
+                <input type="checkbox" name="hobbies[]" value="看电影"  checked /> 看电影
+                <input type="checkbox" name="hobbies[]" value="旅游" /> 旅游
+                <input type="checkbox" name="hobbies[]" value="吃" /> 吃
+                <input type="checkbox" name="hobbies[]" value="购物" /> 购物
+                <input type="checkbox" name="hobbies[]" value="篮球" /> 篮球
+                <input type="checkbox" name="hobbies[]" value="足球" /> 足球
+                <input type="checkbox" name="hobbies[]" value="游戏" /> 游戏
+                <input type="checkbox" name="hobbies[]" value="游泳" /> 游泳
+                <span fv-role="hobbies[]"></span>
+                <br/>
+                <!--<label>兴趣爱好2：</label>
+                <input type="checkbox" name="hobbies" value="听音乐"  /> 听音乐
+                <input type="checkbox" name="hobbies" value="看电影" /> 看电影
+                <input type="checkbox" name="hobbies" value="旅游" /> 旅游
+                <input type="checkbox" name="hobbies" value="吃" /> 吃
+                <input type="checkbox" name="hobbies" value="购物" /> 购物
+                <input type="checkbox" name="hobbies" value="篮球" /> 篮球
+                <input type="checkbox" name="hobbies" value="足球" /> 足球
+                <input type="checkbox" name="hobbies" value="游戏" /> 游戏
+                <input type="checkbox" name="hobbies" value="游泳" /> 游泳
+                <span role="hobbies"></span>
+                <br/>-->
+                <label>身份证号码：</label>
+                <input type="text" name="idcard" />
+                <span fv-role="idcard"></span>
+                <br/>
+                <label>身份证照片：</label>
+                <input type="file" name="idcard_photo" />
+                <span fv-role="idcard_photo"></span>
+                <br/>
+                <label>个人签名：</label>
+                <textarea name="signature" style="width: 40%;height: 80px;margin-bottom:15px;"></textarea>
+                <span fv-role="signature"></span>
+                <br/>
+                <label>工作经历：</label>
+                <textarea name="works" style="width: 40%;height: 80px;margin-bottom:15px;"></textarea>
+                <span fv-role="works"></span>
+                <br/>
+                <label>工龄：</label>
+                <input type="text" name="seniority" style="width: 100px;" />
+                <span fv-role="seniority"></span>
+                <br/>
+                <label>验证码：</label>
+                <input type="text" name="vcode" style="width: 100px;" />
+                <span fv-role="vcode"></span>
+                <br/>
+                <input type="submit" name="submit" id="test-form-submit" value="提交表单" />
+            </form> 
+        </div> 
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script src="./js/form.validator.test.js"></script>
+    </body>
+</html>

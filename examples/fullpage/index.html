@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="pui-full-page-html">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>FullPage - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/plugins/fullpager/fullpager.css" />
+        <style>             
+            .pui-menu {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index:101;
+            }
+            
+            .pui-menu a {color: #fff;}
+            
+            .pui-menu > li > a:hover {
+                background: none;
+                font-weight: bold;
+            }            
+            
+            .pui-menu > li.active > a {
+                background: red;
+            }
+            
+            #test {
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 10001;
+            } 
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+        <div class="pui-layout pui-browsehappy">
+            <a href="javascript:;" class="pui-close" onclick="document.body.removeChild(this.parentNode);"></a>
+            <p>您正在使用 <strong class="pui-text-yellow pui-text-xl">过时</strong> 的非现代浏览器，<strong class="pui-text-success pui-text-xl">91.23%</strong> 的人选择 <a href="http://browsehappy.com/" target="_blank" class="pui-text-green-400 pui-text-xl"><strong>升级浏览器</strong></a>，获得了更好、更安全的浏览体验！</p>
+        </div>
+        <![endif]-->
+        <ul class="pui-menu pui-menu-inline pui-menu-simple">
+            <li class="active">
+                <a href="javascript:;">One</a>
+            </li>
+            <li>
+                <a href="javascript:;">Two</a>
+            </li>
+            <li>
+                <a href="javascript:;">Three</a>
+            </li>
+            <li>
+                <a href="javascript:;">Four</a>
+            </li>
+            <li>
+                <a href="javascript:;">Five</a>
+            </li>
+        </ul>
+        <div id="test"></div>
+        <div class="pui-full-page-group" id="demo">
+            <div class="pui-full-page-nav">
+                <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered active"></label>
+                <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+            </div>
+            <div class="pui-full-page pui-full-inline-pages"> 
+                <a href="javascript:;" class="pui-full-page-inline-prev-btn">
+                    <i class="fa fa-angle-left fa-5x"></i>
+                </a>
+                <a href="javascript:;" class="pui-full-page-inline-next-btn">
+                    <i class="fa fa-angle-right fa-5x"></i>
+                </a>
+                <div class="pui-full-page-inline-nav text-center block-all">
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered active"></label>
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                </div>
+                <div class="pui-full-page-inline-list">
+                    <div class="pui-full-page-inline" style="background:#444;">
+                        <div class="pui-full-page-inline-box">
+                            <p><img src="images/4.jpg" class="pui-img-responsive" /></p>
+                            <p>李健首张专辑《似水流年》</p>
+                            <a href="javascript:;" pui-full-page-inline-next>
+                                <i class="fa fa-angle-right fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-next>
+                                <i class="fa fa-angle-down fa-5x"></i>
+                            </a>                         
+                        </div>
+                    </div>
+                    <div class="pui-full-page-inline" style="background:#444;">
+                        <div class="pui-full-page-inline-box">
+                            <p><img src="images/2.jpg" class="pui-img-responsive" /></p>
+                            <p>韩国电影《八月照相馆》</p>
+                            <a href="javascript:;" pui-full-page-inline-prev>
+                                <i class="fa fa-angle-left fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-inline-next>
+                                <i class="fa fa-angle-right fa-5x"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                    <div class="pui-full-page-inline" style="background:#444;">
+                        <div class="pui-full-page-inline-box">
+                            <p><img src="images/1.jpg" class="pui-img-responsive" /></p>
+                            <p>《音乐傲骨》</p>
+                            <a href="javascript:;" pui-full-page-inline-prev>
+                                <i class="fa fa-angle-left fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-inline-next>
+                                <i class="fa fa-angle-right fa-5x"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                    <div class="pui-full-page-inline" style="background:#444;">
+                        <div class="pui-full-page-inline-box">
+                            <p><img src="images/3.png" class="pui-img-responsive" /></p>
+                            <p>厦门白城海滩木栈道</p>
+                            <a href="javascript:;" pui-full-page-inline-prev>
+                                <i class="fa fa-angle-left fa-5x"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-full-page" style="background:green;">
+                <div class="pui-full-page-box">
+                    <h1>B</h1>  
+                    <a href="javascript:;" pui-full-page-prev>
+                        <i class="fa fa-angle-up fa-5x"></i>
+                    </a>
+                    <a href="javascript:;" pui-full-page-next>
+                        <i class="fa fa-angle-down fa-5x"></i>
+                    </a>                          
+                </div>
+            </div> 
+            <div class="pui-full-page pui-full-inline-pages"> 
+                <a href="javascript:;" class="pui-full-page-inline-prev-btn">
+                    <i class="fa fa-angle-left fa-5x"></i>
+                </a>
+                <a href="javascript:;" class="pui-full-page-inline-next-btn">
+                    <i class="fa fa-angle-right fa-5x"></i>
+                </a>
+                <div class="pui-full-page-inline-nav text-center block-all">
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered active"></label>
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                    <label class="pui-full-page-nav-item pui-badge pui-badge-dot pui-badge-default pui-unbordered"></label>
+                </div>
+                <div class="pui-full-page-inline-list">
+                    <div class="pui-full-page-inline" style="background:#ddd;">
+                        <div class="pui-full-page-inline-box">
+                            <h1>C1</h1>
+                            <a href="javascript:;" pui-full-page-inline-next>
+                                <i class="fa fa-angle-right fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-prev>
+                                <i class="fa fa-angle-up fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-next>
+                                <i class="fa fa-angle-down fa-5x"></i>
+                            </a>   
+                        </div>
+                    </div>
+                    <div class="pui-full-page-inline" style="background:#999;">
+                        <div class="pui-full-page-inline-box">
+                            <h1>C2</h1>
+                            <a href="javascript:;" pui-full-page-inline-prev>
+                                <i class="fa fa-angle-left fa-5x"></i>
+                            </a>
+                            <a href="javascript:;" pui-full-page-inline-next>
+                                <i class="fa fa-angle-right fa-5x"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                    <div class="pui-full-page-inline" style="background:#444;">
+                        <div class="pui-full-page-inline-box">
+                            <h1>C3</h1>   
+                            <a href="javascript:;" pui-full-page-inline-prev>
+                                <i class="fa fa-angle-left fa-5x"></i>
+                            </a>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-full-page" style="background: orange;">
+                <div class="pui-full-page-box">
+                    <h1>D</h1>  
+                    <a href="javascript:;" pui-full-page-prev>
+                        <i class="fa fa-angle-up fa-5x"></i>
+                    </a>
+                    <a href="javascript:;" pui-full-page-next>
+                        <i class="fa fa-angle-down fa-5x"></i>
+                    </a>                          
+                </div>
+            </div>
+            <div class="pui-full-page" style="background: teal;">
+                <div class="pui-full-page-box">
+                    <h1>E</h1>  
+                    <a href="javascript:;" pui-full-page-prev>
+                        <i class="fa fa-angle-up fa-5x"></i>
+                    </a>                 
+                </div>
+            </div>
+        </div> 
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+		<script type="text/javascript" src="./../../dist/plugins/fullpager/fullpager.js"></script>
+        <script type="text/javascript">
+            var fullpager;
+            
+            $(function() {
+                
+                fullpager = $("#demo").fullPager({
+                    //touchable    : false,
+                    //keyboard     : false,
+                    //mouseWheel   : false,
+                    navbar : [".pui-menu > li", function(index) {
+                        console.log(this, index);
+                    }],
+                    prev : function(index) {
+                        console.log(this, index);                        
+                    },
+                    next : function(index) {
+                        console.log(this, index);                        
+                    },
+                    inlinePrev : function(index) {
+                        console.log(this, index);                        
+                    },
+                    inlineNext : function(index) {
+                        console.log(this, index);                        
+                    }
+                });
+                
+                //fullpager.prev();        // 滑动到上一页
+                //fullpager.next();        // 滑动到下一页
+                //fullpager.index();       // 获取当前序号
+                //fullpager.count();       // 获取页面总数
+                //fullpager.pages();       // 获取所有页面，返回一个 jQuery 对象集 
+                //fullpager.inlinePages(); // 获取所有横向页面，返回一个 jQuery 对象集 
+                //fullpager.settings();    // 获取所有配置项
+            });
+        </script> 
+    </body>
+    </html>

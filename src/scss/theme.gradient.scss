@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Button gradient */
+
+.pui-btn-default.pui-btn-gradient, .pui-btn-gradient .pui-btn-default { 
+    @include linear-gradient(#FFFFFF, #F6F6F6);
+
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        @include linear-gradient(#EEEEEE, #FFFFFF);
+    }
+}
+
+@each $name, $color in $ui-colors {
+    .pui-btn-#{$name}.pui-btn-gradient, .pui-btn-gradient .pui-btn-#{$name} {  
+        @include linear-gradient($color, darken($color, 10%));
+        
+        html.no-touch &:hover, &.hover, &.pui-hover {
+            @include linear-gradient(darken($color, 20%), darken($color, 10%));
+        }        
+    }
+}
+
+/* Table gradient */
+
+.pui-table.pui-table-gradient {
+    thead {
+        th {
+            @include linear-gradient(#FFFFFF, #F6F6F6);            
+        }
+    }
+}
+
+/* Badge gradient */
+
+.pui-badge-default.pui-badge-gradient {
+    @include linear-gradient(#FFFFFF, #F6F6F6);
+    
+    html.no-touch &:hover, &.hover {
+        @include linear-gradient(#f6f6f6, #ffffff);
+    }       
+}
+
+.pui-badge-grey.pui-badge-gradient {
+    @include linear-gradient(#F6F6F6, #eeeeee);  
+    
+    html.no-touch &:hover, &.hover { 
+        @include linear-gradient(#eee, #f6f6f6);
+    }  
+}
+
+@each $name, $color in $ui-colors {
+    .pui-badge-#{$name}.pui-badge-gradient {  
+        @include linear-gradient($color, darken($color, 10%));
+        
+        html.no-touch &:hover, &.hover, &.pui-hover {
+            @include linear-gradient(darken($color, 15%), darken($color, 10%));
+        }        
+    }
+}
+
+/* Panel gradient */
+
+.pui-panel-group {
+    &.pui-panel-gradient {    
+        .pui-panel-head, .pui-panel-title, .pui-panel-foot {
+            @include linear-gradient(#FFFFFF, #F6F6F6);  
+        }
+    }
+}
+
+.pui-panel-default {
+    &.pui-panel-gradient, & .pui-panel-title.pui-panel-gradient, & .pui-panel-head.pui-panel-gradient, & .pui-panel-foot.pui-panel-gradient {
+        @include linear-gradient(#FFFFFF, #F6F6F6);   
+    } 
+}
+
+$bg-color : "";
+$text-color: "";
+$border-color: "";
+
+@each $name, $color in $ui-colors {
+  
+    @if $name == error {
+        $bg-color: #FFE8E3;
+    }@else if $name == warning {
+        $bg-color: #FCF5E8;
+    } @else {
+        $bg-color: lighten($color, 38%);
+    }
+    
+    .pui-panel-#{$name} { 
+        &.pui-panel-gradient, & .pui-panel-title.pui-panel-gradient, & .pui-panel-head.pui-panel-gradient, & .pui-panel-foot.pui-panel-gradient { 
+            @include linear-gradient($bg-color, darken($bg-color, 7%));
+        }
+    }
+}
+
+/* Pagination gradient */
+
+.pui-pagination.pui-pagination-gradient {    
+    li {
+        a {                      
+            html.no-touch &:hover, &.hover {
+                @include linear-gradient(#fff, #f6f6f6);              
+            }
+        
+            &.active, &.pui-active {
+                @include linear-gradient($primary-color, darken($primary-color, 7%));
+                
+                html.no-touch &:hover, &.hover {
+                    @include linear-gradient(darken($primary-color, 7%), $primary-color);                    
+                }
+            }
+        }
+    }
+}
+
+.pui-pagination-bordered.pui-pagination-gradient {    
+    li {
+        a {
+            @include linear-gradient(#fff, #f6f6f6);  
+                        
+            html.no-touch &:hover, &.hover {
+                @include linear-gradient(#f6f6f6, #fff);              
+            }
+        }
+    }
+}
+
+/* Progress gradient */
+
+.pui-progress-default.pui-progress-gradient {
+    @include linear-gradient($primary-color, darken($primary-color, 7%));    
+}
+
+@each $name, $color in $ui-colors {
+    .pui-progress-#{$name}.pui-progress-gradient {
+         @include linear-gradient($color, darken($color, 7%));
+                
+          html.no-touch &:hover, &.hover {
+              @include linear-gradient(darken($color, 7%), darken($color, 12%));                    
+          }
+    }
+}

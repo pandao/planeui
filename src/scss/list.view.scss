@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* ListView */
+
+.pui-list-view {
+    margin: 0;
+
+    > li { 
+        width: 100%; 
+        clear: both;
+        @include user-select(none);
+        -webkit-touch-callout: none;
+        @include flexbox();
+        
+        > div {
+            @include flex(1);
+        }
+
+        > a {
+            @include flex(1);
+            @include flexbox();
+            @include flex-direction(row);
+            //@include align-content(center);
+            position: relative;
+            //display: block;
+            padding: 10px;
+            padding: 1rem;
+            color: #666;
+            @include transition(background-color 0.1s ease-in);
+            -webkit-user-select:   none;  
+            -webkit-touch-callout: none; 
+            @include clearfix();
+
+            html.no-touch &:hover, &.hover { 
+                background-color: #f6f6f6;
+            } 
+
+            > img {
+                width: 48px; 
+                height: 48px;
+                //float: left; 
+                position: relative;
+            }
+
+            & > .icon, & > .tb-icon, & > .fa {
+                font-size: 48px; 
+                float: left; 
+                position: relative;
+            }
+
+            > .pui-badge {
+                position: absolute;
+                top: 5px;
+                left: 48px;
+                padding: 2px 1px; 
+                min-width: 10px;
+                min-height: 10px;
+                line-height: 1;
+            }
+
+            > .pui-badge-dot {
+                top: 6px;
+                left: 52px;
+            }
+
+            > .pui-badge-right {
+                top: 38%;
+                left: auto;
+                right: 10px; 
+                min-width: auto;
+                min-height: auto;
+
+                &:not(.pui-circle) {
+                    padding: 3px 3px 2px;
+                }
+            }
+
+            > summary { 
+                @include flex(1);
+                height: 100%;
+                padding: 3px 50px 0 0;
+                //margin-left: 64px;
+                margin-left: 1.2rem;
+                vertical-align: middle; 
+                
+                html.no-touch & {
+                    padding-top: 0;
+                }
+
+                > h6 {
+                    margin-top: -2px;
+                    margin-bottom: 0;
+                    
+                    > small {
+                        margin-right: -50px;
+                        float: right;
+                        color: #ddd;
+                    }
+                }
+                
+                > small, > strong {
+                    display: block;
+                }
+            }
+        } 
+
+        &:not(:last-child) > a {
+            border-bottom: 1px solid #eee;
+        }
+        
+        &.pui-list-view-header {
+            color: #999;
+            font-size: 12px;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+    }
+}
+
+.pui-list-view-group {
+    > .pui-list-view:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.pui-list-view-angle-right {
+    > li {
+        > a {
+            &:after {
+                width: 0;
+                height: 40%;
+                color: #ccc;
+                line-height: 1;
+                font-size: 24px;
+                font-weight: normal;
+                font-family: "FontAwesome";
+                content: "\f105"; 
+                position: absolute;
+                top: 32%;
+                right: 20px;
+            }
+
+            &.no-angle-right:after, &.pui-no-angle-right:after { 
+                content: "";  
+            }
+        }
+    }
+}
+
+.pui-list-view-small {
+
+    > li {
+        > a {
+            padding: 5px 10px;
+            
+            > img {
+                width: 24px;
+            }
+
+            & > .icon, & > .pui-icon, & > .fa {
+                font-size: 24px; 
+            }
+
+            > .pui-badge {
+                top: 3px;
+                left: 24px; 
+            }
+
+            > .pui-badge-dot {
+                top: 3px;
+                left: 28px;
+            }
+
+            html.no-touch & > .pui-badge-right {
+                top: 8px;
+                left: auto;   
+            }
+
+            > .pui-badge-right {
+                top: 9px; 
+                left: auto;  
+            }
+
+            > summary {
+                padding-top: 0;
+                margin-left: 20px; 
+
+                > h6 {
+                    margin-top: -1px;  
+                } 
+            }
+        }
+    }
+
+    &.pui-list-view-angle-right {
+        > li {
+            > a {
+                &:after {
+                    top: 5px; 
+                }
+            }
+        }
+    }
+}
+
+.pui-list-view-round, .pui-list-view-circle {
+    > li {
+        > a {
+            > img {
+                @include border-radius(500px);
+            }
+        }
+    }
+}
+
+.pui-list-view-radius {
+    > li {
+        > a {
+            > img {
+                @include border-radius(4px);
+            }
+        }
+    }
+}
+
+.pui-list-view-square {
+    > li {
+        > a {
+            > img {
+                @include border-radius(0);
+            }
+        }
+    }
+}

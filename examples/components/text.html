@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+		<title>文本等基本元素 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.basic.css" />
+	</head>
+	<body>
+		<div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>文本、段落、代码等基本元素 Basic & Texts</h4>
+            <p><small>兼容情况： 支持 IE8及以上版本（IE 7及以下版本未测试）</small></p><br/>
+            <br/>
+			<h1 class="pui-normal">Hello World! <small>副标题文本</small></h1>
+			<h2 class="pui-normal">你好，世界！ <small>副标题文本</small></h2>
+			<h3 class="pui-normal">标题H3</h3>
+			<h4 class="pui-normal">标题H4</h4>
+			<h5 class="pui-normal">标题H5</h5>
+			<h6 class="pui-normal">标题H6</h6>
+			<small>副标题文本</small>
+			<br/>
+			<a href="javascript:;" class="pui-link pui-hover-underline">链接</a>
+			<br/>
+			<a href="javascript:;" class="pui-unlink">无效的链接</a>
+			<br/>
+			<strong>强调重要文本</strong>
+			<br/>
+			<em>斜体字</em>
+			<br/>
+			<del>删除文本</del>
+			<br/>
+			<ins>标记插入的文本字符</ins>
+			<br/>
+			<mark>
+				高亮文本中的某个字符
+			</mark>
+			<br/>
+			<code>
+				code代码行</code>
+			<br/>
+			<abbr title="帮助提示文本">帮助提示(?)</abbr>
+			<br/>
+			<dfn title="术语或专业名词">术语或专业名词dfn</dfn>
+			<br/>
+			<small>副文本或不重要的文本</small>
+			<br/>
+			<q>引用字符，例如对话</q>
+			<br/>
+			<div class="pui-center pui-text-center f24" style="background:#ddd;width:50%;">
+				居中的块
+			</div>
+			<br/>
+			<p>
+				文本段落元素被设置了等于 1/2 行高（即 10px）的底部外边距（margin）
+			</p>
+			<p>
+				文本段落元素被设置了等于 1/2 行高（即 10px）的底部外边距（margin）
+			</p>
+			<p>
+				文本段落元素被设置了等于 1/2 行高（即 10px）的底部外边距（margin）
+			</p>
+			<p>
+				文本段落元素被设置了等于 1/2 行高（即 10px）的底部外边距（margin）
+			</p>
+			<p>
+				文本段落元素被设置了等于 1/2 行高（即 10px）的底部外边距（margin）, You can use the mark tag to
+				<mark>
+					highlight
+				</mark>
+				text.
+			</p>
+			<h5>字号大小：</h5>
+			<code>.text-xs~.text-xxxl</code>
+			<div class="p10">
+			    <p class="pui-text-xxxxxl">.text-xxxxxl</p>
+			    <p class="pui-text-xxxxl">.text-xxxxl</p>
+			    <p class="pui-text-xxxl">.text-xxxl</p>
+                <p class="pui-text-xxl">.text-xxl</p>
+                <p class="pui-text-xl">.text-xxxl</p>
+                <p class="pui-text-lg">.text-lg</p>
+                <p class="pui-text-md">.text-md</p>
+                <p class="pui-text-sm">.text-sm</p>
+                <p class="pui-text-xs">.text-xs</p>
+			</div>
+			<p>
+				<del>This line of text is meant to be treated as deleted text.</del>
+				For example,
+				<code>
+					&lt;section&gt;
+				</code>
+				should be wrapped as inline.
+			</p>
+			<blockquote>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+				</p>
+				<footer>
+					Someone famous in <cite title="Source Title">Source Title</cite>
+				</footer>
+			</blockquote>
+			<hr class="pui-hr-dashed" />
+			<blockquote class="pui-blockquote-right">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+				</p>
+				<footer>
+					Someone famous in <cite title="Source Title">Source Title</cite>
+				</footer>
+			</blockquote>
+			<blockquote>
+                <p>无论走到哪里，都应该记住，过去都是假的，回忆是一条没有尽头的路，一切以往的春天都不复存在，就连那最坚韧而又狂乱的爱情归根结底也不过是一种转瞬即逝的现实。</p>
+                <small class="pui-text-right">马尔克斯 ——《百年孤独》</small>
+            </blockquote>
+            <div class="pui-grid-sm-2 pui-grid-md-2">
+                <p>text-ellipsis</p>
+                <p class="pui-text-ellipsis">无论走到哪里，都应该记住，过去都是假的，回忆是一条没有尽头的路，一切以往的春天都不复存在，就连那最坚韧而又狂乱的爱情归根结底也不过是一种转瞬即逝的现实。</p>
+            </div>
+            <div class="clear"></div>
+			<dl>
+				<dt>
+					dsfasfasdfasdf
+				</dt>
+				<dd>
+					45345345345
+				</dd>
+				<dt>
+					dsfasfasdfasdf
+				</dt>
+				<dd>
+					45345345345
+				</dd>
+			</dl>
+			<hr/>
+			<p>
+				To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+				<br>
+				To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+			</p>
+			<p>
+				标记变量：<var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+			</p>
+			<p>
+				<samp>通过fadfasdffd标签来标记程序输出的内容。</samp>
+			</p>
+			<p>
+				文字段落<code>内联显示代码 cmd /k "dir /"</code>
+				文字段落
+			</p>
+			<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+			<pre class="pui-pre-scrollable">//Javascript Code
+function test(){
+    console.log("Hello Tasty!");
+}
+
+test();  // Hello Tasty!
+
+//Javascript Code
+function test(){
+    console.log("Hello Tasty!");
+}
+
+test();  // Hello Tasty!
+
+//Javascript Code
+function test(){
+    console.log("Hello Tasty!");
+}
+
+test();  // Hello Tasty!
+            </pre>
+            <div class="pui-scrollable-vertical pui-left pui-border-transparent" style="width:400px;">
+                adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>
+                adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>adfsfsdfsadfdsf<br/>
+            </div>
+            <div class="pui-scrollable-horizontal pui-left" style="width:50%;margin-left:15px;">
+                <div class="bg-color-green text-white p10" style="width:2000px;height:240px;">
+                     adfsfsdfsadfdsf<br/>adfsfsdfsadfdsffdfasdfasdfsadfasdfasdfasdfadsfadsfdsafsadfsadfdsaffdfdafadsf4t3tret34yhnvadfv agvvzxxcavdfagfdsgvdfvdfgvfdvdfsvdfvdfvasdfs<br/>  
+                     adfsfsdfsadfdsf<br/>adfsfsdfsadfdsffdfasdfasdfsadfasdfasdfasdfadsfadsfdsafsadfsadfdsaffdfdafadsf4t3tret34yhnvadfv agvvzxxcavdfagfdsgvdfvdfgvfdvdfsvdfvdfvasdfs<br/> 
+                     adfsfsdfsadfdsf<br/>adfsfsdfsadfdsffdfasdfasdfsadfasdfasdfasdfadsfadsfdsafsadfsadfdsaffdfdafadsf4t3tret34yhnvadfv agvvzxxcavdfagfdsgvdfvdfgvfdvdfsvdfvdfvasdfs<br/>       
+                </div>
+            </div>
+            <div class="clear"></div>
+            <br/><br/>
+		</div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+	</body>
+</html>

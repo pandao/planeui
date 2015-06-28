@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Layout */
+
+.pui-layout, .pui-full-width {
+    width: 100%; 
+}
+
+.pui-grid, .pui-row, .pui-container, .pui-layout, .pui-full-width {  
+    margin: 0 auto;
+    @include clearfix();
+}
+
+.pui-container {
+    padding: 0;
+} 
+
+.pui-grid {  
+    position: relative;
+    list-style: none;
+    background: transparent;
+    
+    > * > :last-child, > .pui-row:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pui-row {
+    position: relative;
+    margin: 0 (-$grid-gap-px/2) $grid-gap-px (-$grid-gap-px/2);
+    margin: 0 (-$grid-gap/2) $grid-gap (-$grid-gap/2);
+
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+    
+    &:after {
+        clear: both;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+[class*=pui-grid-] {
+    float: left;
+    padding: 0 ($grid-gap-px / 2);
+    padding: 0 ($grid-gap / 2);
+    position: relative;
+    min-height: 1px; 
+}
+
+/* grids */ 
+
+$gridsMap : (
+    xs : 320px,
+    sm : 640px,
+    md : 768px,
+    lg : 992px,
+    xl : 1200px,
+    xxl : 1400px
+);
+
+@each $size, $min-width in $gridsMap  {
+
+    $grids : "";
+    
+    @if $size == xs {
+        @for $i from 1 to 13 {
+            $grids: $grids + ".pui-grid-#{$size}-#{$i}, ";
+            .pui-grid-#{$size}-#{$i} {
+                width: percentage( ((100/12) * $i)  / 100 ); 
+            }   
+        }
+
+        @for $i from 0 to 12 {   
+            .pui-grid-#{$size}-offset-#{$i} {
+                margin-left: percentage( ((100/12) * $i)  / 100 ); 
+            }        
+
+            .pui-grid-#{$size}-push-#{$i} {
+                left: percentage( ((100/12) * $i)  / 100 );
+                //right: auto;
+            }
+
+            .pui-grid-#{$size}-pull-#{$i} {
+                right: percentage( ((100/12) * $i)  / 100 );
+                //left: auto;
+            }
+        }
+
+        .pui-row > [class*="pui-grid-"].pui-grid-#{$size}-uncentered {
+            float: left;
+            clear: none;
+            margin: 0;
+            padding: 0 ($grid-gap / 2);
+        }
+
+        .pui-row > [class*="pui-grid-"].pui-grid-#{$size}-center {
+            padding: 0;
+            float: none;
+            clear: both;
+            //display: block; 
+            margin: 0 auto;    
+        }
+
+    } @else {
+
+        @media (min-width: #{$min-width}) {
+            @for $i from 1 to 13 {
+                $grids: $grids + ".pui-grid-#{$size}-#{$i}, ";
+                .pui-grid-#{$size}-#{$i} {
+                    width: percentage( ((100/12) * $i)  / 100 ); 
+                }   
+            }
+
+            @for $i from 0 to 12 {   
+                .pui-grid-#{$size}-offset-#{$i} {
+                    margin-left: percentage( ((100/12) * $i)  / 100 ); 
+                }        
+
+                .pui-grid-#{$size}-push-#{$i} {
+                    left: percentage( ((100/12) * $i)  / 100 );
+                    //right: auto;
+                }
+
+                .pui-grid-#{$size}-pull-#{$i} {
+                    right: percentage( ((100/12) * $i)  / 100 );
+                    //left: auto;
+                }
+            }
+
+            .pui-row > [class*="pui-grid-"].pui-grid-#{$size}-uncentered {
+                float: left;
+                clear: none;
+                margin: 0;
+                padding: 0 ($grid-gap / 2);
+            }
+
+            .pui-row > [class*="pui-grid-"].pui-grid-#{$size}-center {
+                padding: 0;
+                float: none;
+                clear: both;
+                //display: block; 
+                margin: 0 auto;    
+            }
+        }
+    }
+}    
+     
+.pui-row > [class*="pui-grid-"].pui-grid-uncentered {
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0 ($grid-gap-px / 2);
+    padding: 0 ($grid-gap / 2);
+}
+
+.pui-row > [class*="pui-grid-"].pui-grid-center {
+    padding: 0;
+    float: none;
+    clear: both;
+    //display: block; 
+    margin: 0 auto;    
+}   
+
+/* grid margin */
+
+.pui-grid.pui-grid-margin-none {
+    width: 100%;
+    padding: 0;
+    
+    .pui-row {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .pui-row > [class*=pui-grid-] {
+        padding: 0;
+    }
+}
+
+$grid-gap-lg: $grid-gap + ($grid-gap * 0.5);
+$grid-gap-lg-px: $grid-gap-px + ($grid-gap-px * 0.5);
+
+.pui-grid.pui-grid-margin-lg {  
+    width: 100%;
+    padding: 0;
+    
+    .pui-row {
+        padding: 0;
+        margin: 0 (-$grid-gap-lg-px/2) $grid-gap-lg-px (-$grid-gap-lg-px/2);
+        margin: 0 (-$grid-gap-lg/2) $grid-gap-lg (-$grid-gap-lg/2);
+    }
+    
+    .pui-row > [class*=pui-grid-] { 
+        padding: 0 ($grid-gap-lg-px / 2);
+        padding: 0 ($grid-gap-lg / 2);
+    }
+    
+    .pui-row:last-child {
+        margin-bottom: 0;
+    }
+}
+ 
+.pui-grid > .pui-row > [class*=pui-grid-] > .pui-row:last-child, .pui-grid > .pui-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Layout Responsives */
+
+@media (max-width: 240px) {
+    
+    .pui-row > [class*=pui-grid-] {
+        width: 100%;
+    }
+}
+
+/* Responsives Display */
+
+.pui-xs-show, .pui-sm-show, .pui-md-show, .pui-lg-show, .pui-xl-show, .pui-xxl-show, 
+.pui-xs-block, .pui-sm-block, .pui-md-block, .pui-lg-block, .pui-xl-block, .pui-xxl-block,
+.pui-xs-inline, .pui-sm-inline, .pui-md-inline, .pui-lg-inline, .pui-xl-inline, .pui-xxl-inline,
+.pui-xs-inline-block, .pui-sm-inline-block, .pui-md-inline-block, .pui-lg-inline-block, .pui-xl-inline-block, .pui-xxl-inline-block {
+    display: none !important;    
+}
+
+$visibles : show, hide, block, inline, inline-block;
+$sizeName : xs, sm, md, lg, xl, xxl;
+
+@media (max-width: 639px) { 
+    
+    @each $display in $visibles {
+        .pui-xs-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-xs-show {
+        display: table !important;
+    }
+    
+    tr.pui-xs-show {
+        display: table-row !important;
+    }
+    
+    th.pui-xs-show, td.pui-xs-show {
+        display: table-cell !important;
+    }
+    
+    .pui-xs-float-left {
+        float: left !important;
+    }
+    
+    .pui-xs-float-right {
+        float: right !important;
+    }
+    
+    .pui-xs-float-none {
+        float: none !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    
+    @each $display in $visibles {
+        .pui-sm-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-sm-show {
+        display: table !important;
+    }
+    
+    tr.pui-sm-show {
+        display: table-row !important;
+    }
+    
+    th.pui-sm-show, td.pui-sm-show {
+        display: table-cell !important;
+    }
+    
+    .pui-sm-float-left {
+        float: left !important;
+    }
+    
+    .pui-sm-float-right {
+        float: right !important;
+    }
+    
+    .pui-sm-float-none {
+        float: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    
+    @each $display in $visibles {
+        .pui-md-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-md-show {
+        display: table !important;
+    }
+    
+    tr.pui-md-show {
+        display: table-row !important;
+    }
+    
+    th.pui-md-show, td.pui-md-show {
+        display: table-cell !important;
+    }
+    
+    .pui-md-float-left {
+        float: left !important;
+    }
+    
+    .pui-md-float-right {
+        float: right !important;
+    }
+    
+    .pui-md-float-none {
+        float: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    
+    @each $display in $visibles {
+        .pui-lg-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-lg-show {
+        display: table !important;
+    }
+    
+    tr.pui-lg-show {
+        display: table-row !important;
+    }
+    
+    th.pui-lg-show, td.pui-lg-show {
+        display: table-cell !important;
+    }
+    
+    .pui-lg-float-left {
+        float: left !important;
+    }
+    
+    .pui-lg-float-right {
+        float: right !important;
+    }
+        
+    .pui-lg-float-none {
+        float: none !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) { 
+    
+    @each $display in $visibles {
+        .pui-xl-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-xl-show {
+        display: table !important;
+    }
+    
+    tr.pui-xl-show {
+        display: table-row !important;
+    }
+    
+    th.pui-xl-show, td.pui-xl-show {
+        display: table-cell !important;
+    }  
+    
+    .pui-xl-float-left {
+        float: left !important;
+    }
+    
+    .pui-xl-float-right {
+        float: right !important;
+    }
+    
+    .pui-xl-float-none {
+        float: none !important;
+    }
+} 
+
+@media (min-width: 1400px) { 
+    
+    @each $display in $visibles {
+        .pui-xxl-#{$display} {
+            @if $display == show {
+                display: block !important;
+            } @elseif $display == hide {
+                display: none !important;
+            } @else {
+                display: #{$display} !important;
+            }
+        }
+    }
+    
+    table.pui-xxl-show {
+        display: table !important;
+    }
+    
+    tr.pui-xxl-show {
+        display: table-row !important;
+    }
+    
+    th.pui-xxl-show, td.pui-xxl-show {
+        display: table-cell !important;
+    }  
+    
+    .pui-xxl-float-left {
+        float: left !important;
+    }
+    
+    .pui-xxl-float-right {
+        float: right !important;
+    }
+    
+    .pui-xxl-float-none {
+        float: none !important;
+    }
+} 
+
+/* Layout fixed width */
+
+@media (min-width: 992px) {
+    .pui-layout-fixed, .pui-layout-fixed-960 {
+        max-width: 960px;
+    }
+    
+    .pui-layout-fixed-980 {
+        max-width: 980px;
+    }
+}
+
+@media (min-width: 1001px) {    
+    .pui-layout-fixed {
+        max-width: 1000px;
+    } 
+}
+
+@media (min-width: 1200px) {
+    .pui-layout-fixed-1200 {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) { 
+    
+    .pui-layout-fixed-1360 {
+        max-width: 1360px;
+    }
+    
+    .pui-layout-fixed-1400 {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1600px) { 
+    
+    .pui-layout-fixed-1500 {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1900px) { 
+    
+    .pui-layout-fixed-1600 {
+        max-width: 1600px;
+    }
+    
+    .pui-layout-fixed-1700 {
+        max-width: 1700px;
+    }
+    
+    .pui-layout-fixed-1800 {
+        max-width: 1800px;
+    }
+}

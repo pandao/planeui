@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>图标与图标按钮 FontAwesome icons - PlaneUI 组件示例</title>
+
+        <link rel="fa" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>             
+            .pui-button-sheet {
+                margin: 1.5rem 0;
+            }
+            
+            .pui-button-sheet-row > a {
+                padding: 1rem;
+            }
+            
+            .pui-button-sheet-row > a > .fa {
+                margin-bottom: 1rem;
+            }
+            
+            .pui-button-sheet-row > a > span {
+                display: block;
+                padding: 0.3rem 0;
+            }
+        </style>
+	</head>
+	<body>
+        <div id="layout" style="width:96%;margin:0 auto;">
+            <br/>
+            <h4>图标与图标按钮 FontAwesome icons</h4>
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <p>
+                <i class="fa fa-camera fa-large" style="color:red;"></i> fa-camera-retro
+            </p>
+            <p>
+                <i class="fa fa-camera-retro fa-2x"></i> fa-camera-retro
+            </p>
+            <p>
+                <i class="fa fa-camera-retro fa-3x"></i> fa-camera-retro
+            </p>
+            <p>
+                <i class="fa fa-camera-retro fa-4x"></i> fa-camera-retro
+            </p>
+            <p>
+                <a href="javascript:;" class="pui-btn pui-btn-success pui-btn-large pui-text-shadow"><i class="fa fa-flag fa-large"></i> 图标按钮Button</a>
+            </p>
+            <p>
+                <a href="javascript:;" class="pui-btn pui-btn-success pui-text-shadow"><i class="fa fa-flag fa-large"></i> 图标按钮Button</a>
+            </p>
+            <p>
+                <a href="javascript:;" class="pui-btn pui-btn-success pui-btn-small pui-text-shadow"><i class="fa fa-flag fa-large"></i> 图标按钮Button</a>
+            </p>
+            <p>
+                <a href="javascript:;" class="pui-btn pui-btn-success pui-btn-xsmall pui-text-shadow"><i class="fa fa-flag fa-large"></i> 图标按钮Button</a>
+            </p>
+            <div class="pui-button-sheet pui-button-sheet-table pui-button-sheet-bordered" id="icon-sheet"></div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>
+            $(function() {
+                $.getJSON("./../../dist/data/icon.fontawesome.json", function(json) {
+                    var iconSheet = $("#icon-sheet");
+                    var lineNum = 10;
+                    var sheet = "";
+                    var array = [];
+                    
+                    for (var i in json) {
+                        array.push([i, json[i]]);
+                    }
+                    
+                    var total = array.length;
+                    
+                    var lineCount = Math.ceil(total / lineNum);
+                    var lines = [];
+                    
+                    for (var i = 0; i < lineCount; i++) { 
+                        var arr = [];
+                        sheet += "<div class=\"pui-button-sheet-row\">";
+                        
+                        for (var x = 0; x < lineNum; x++) {
+                            //console.log(i, x, icon);
+                            var icon = array[(i * lineNum) + x];
+                            if (icon) {
+                                arr.push(icon); 
+                                sheet += '<a href="javascript:;"><i class="fa fa-'+icon[0]+' fa-2x"></i><span>fa-'+icon[0]+'</span><span>'+icon[1]+'</span></a>';
+                            } else {
+                                sheet += '<a href="javascript:;"></a>';
+                            }
+                        }
+                        
+                        lines.push(arr);
+
+                        sheet += "</div>";
+                    }
+                    
+                    iconSheet.append(sheet);
+                    console.log(total, lineCount, json, array, lines);
+                });
+            });
+        </script>
+    </body>
+</html>

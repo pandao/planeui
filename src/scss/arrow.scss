@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* arrow */
+
+$arrow-width: 4px; 
+            
+.pui-arrow-up, .pui-arrow-down, .pui-arrow-left, .pui-arrow-right {
+    margin-top: -1px;
+    margin-left: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0; 
+    font-size: 0;
+    line-height: 0;
+}
+
+.pui-arrow-up, .pui-arrow-down {
+    border-left: $arrow-width solid transparent;
+    border-right: $arrow-width solid transparent;
+}
+
+.pui-arrow-up {
+    // 不设边框颜色可以继承父对象的颜色
+    border-bottom: $arrow-width solid;
+}
+
+.pui-arrow-down {
+    border-top: $arrow-width solid;
+}
+
+.pui-arrow-left, .pui-arrow-right {
+    border-top: $arrow-width solid transparent; 
+    border-bottom: $arrow-width solid transparent;
+}
+
+.pui-arrow-left {
+    border-right: $arrow-width solid;
+}
+
+.pui-arrow-right { 
+    border-left: $arrow-width solid;
+}
+
+.pui-arrow-small {
+    border-width: $arrow-width;
+}
+
+.pui-arrow-medium {
+    border-width: $arrow-width + 1;
+}
+
+.pui-arrow-large {
+    border-width: $arrow-width + 2;
+}
+
+.pui-arrow-xlarge {
+    border-width: $arrow-width + 3;
+}
+
+.pui-arrow-xxlarge {
+    border-width: $arrow-width + 4;
+}
+
+.pui-symbol-gt:after, .pui-symbol-lt:after, .pui-symbol-gt-up:after, .pui-symbol-gt-down:after {  
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+.pui-symbol-gt:after {
+    content: "\f105";
+}
+
+.pui-symbol-gt-up:after {
+    content: "\f106";
+}
+
+.pui-symbol-gt-down:after {
+    content: "\f107";
+}
+
+.pui-symbol-lt:after {
+    content: "\f104";
+}

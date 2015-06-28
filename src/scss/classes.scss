@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* basic & classes */
+
+.clearfix {
+    @include clearfix();
+}
+
+.clear, .pui-clear {
+    *zoom: 1;               /* for IE 6/7 */
+    &:before, &:after {
+        height: 0;
+        font-size: 0;
+        visibility: hidden;  
+        display: table;
+        content: " ";
+        line-height: 0;     /* for Opera */
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+@each $type in $cursor-types {
+    .pui-cursor-#{$type} {
+        @if $type == undrop {
+            cursor: no-drop !important;
+        } @else if $type == disabled {
+            cursor: not-allowed !important;
+        } @else {
+            cursor: $type !important;
+        }
+    }
+}
+
+.pui-link {
+    color: $link-color !important;
+}
+
+.pui-underline, 
+html.no-touch .pui-hover-underline:hover, 
+.pui-hover-underline.hover {
+    text-decoration: underline !important;
+}
+
+.pui-unlink {
+    color: #444 !important;
+    html.no-touch &:hover, &.hover {
+        color: red !important;
+        cursor: not-allowed !important;
+        text-decoration: line-through !important;
+    }
+}
+
+$resize-type: none, both, x, y;
+
+@each $type in $resize-type {
+    .pui-resize-#{$type} {
+        @if $type == x {
+            resize: horizontal !important;
+        } @else if $type == y {
+            resize: vertical !important;
+        } @else {
+            resize: $type !important;
+        }
+    }
+}
+
+.pui-hr-dashed {
+    border-bottom: 1px dashed #ddd !important;
+}
+
+.pui-margin-none {
+    margin: 0 !important;
+}
+
+@each $pos in $positions {
+    .pui-margin-#{$pos}-none {
+        margin-#{$pos}: 0 !important;
+    }
+}
+
+.pui-padding-none {
+    padding: 0 !important;
+}
+
+@each $pos in $positions {
+    .pui-padding-#{$pos}-none {
+        padding-#{$pos}: 0 !important;
+    }
+}
+
+/* Positions */
+
+$position-type: relative, absolute, fixed, static;
+
+@each $type in $position-type {
+    .pui-pos-#{$type}, .pui-position-#{$type} {
+        position: $type !important;
+    }
+} 
+
+.pui-pos-tl, 
+.pui-position-tl {
+    top: 0 !important;
+    left: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+}
+
+.pui-pos-tr, 
+.pui-position-tr {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
+}
+
+.pui-pos-bl, 
+.pui-position-bl {
+    bottom: 0 !important;
+    left: 0 !important;
+    top: auto !important;
+    right: auto !important;
+}
+
+.pui-pos-br,
+.pui-position-br {
+    bottom: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+/* code pre */
+
+code, .pui-code, .pui-command, .pui-command-line {
+    color: #fff;
+    padding: 2px 4px;
+    padding: 0.2rem 0.4rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    @include border-radius(4px);
+    background-color: #7CD179;
+}
+
+.pui-pre-scrollable {
+    height: 240px;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pui-scrollable-vertical {
+    height: 240px;
+    overflow: auto;
+    overflow-y: scroll;
+    resize: vertical;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pui-scrollable-horizontal {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* float & align */
+
+.pui-left {
+    float: left !important;
+}
+
+.pui-right {
+    float: right !important;
+}
+
+.pui-float-none {
+    float: none !important;
+}
+
+.pui-center, .pui-block-center, .pui-center-all > *, .pui-block-center-all > * {
+    clear: both !important;
+    display: inherit !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.pui-block-center, .pui-block-center-all > * {
+    display: block !important;
+}
+
+/* display */
+
+.pui-show, .pui-show-all > * {
+    display: block !important;
+}
+
+.pui-hide, .pui-hide-all > * {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.pui-visible, .pui-visible-all > * {
+    visibility: visible !important;
+}
+
+.pui-invisible {
+    visibility: hidden !important;
+}
+
+.pui-block, .pui-block-all > * {
+    display: block !important;
+}
+
+.pui-inline, .pui-inline-all > * {
+    display: inline !important;
+}
+
+.pui-inline-block, .pui-inline-block-all > * {
+    display: inline-block !important;
+}
+
+.pui-hover-display:hover {
+    display: block !important;
+}
+
+.pui-hover-display-inline:hover {
+    display: inline-block !important;
+}
+
+.pui-hover-display-none:hover {
+    display: none !important;
+}
+
+/* opacity */
+
+.pui-transparent {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+}
+
+/* overflow */
+
+$overflow-types: auto, inherit, hidden, scroll, visible;
+
+@each $type in $overflow-types {
+    .pui-overflow-#{$type} {
+        overflow: $type !important;
+    }
+}
+
+@each $type in $overflow-types {
+    .pui-overflow-x-#{$type} {
+        overflow-x: $type !important;
+    }
+}
+
+@each $type in $overflow-types {
+    .pui-overflow-y-#{$type} {
+        overflow-y: $type !important;
+    }
+}
+
+/* box-shadow */
+
+.pui-box-shadow {
+    @include box-shadow(0 0 2px rgba(0, 0, 0, 0.18) !important);
+}
+
+.pui-box-shadow-plus {
+    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.18) !important);
+}
+
+.pui-box-shadow-large {
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.18) !important);
+}
+
+.pui-box-shadow-none {
+    @include box-shadow(none !important);
+}
+
+.pui-box-shadow-top {
+    @include box-shadow(0 -1px 2px rgba(0, 0, 0, 0.18) !important); 
+}
+
+.pui-box-shadow-bottom {
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.18) !important);  
+}
+
+/* box shadow colors */
+
+@each $name, $color in $ui-colors {
+    $color-inset: darken($color, 20%);
+    
+    .pui-box-shadow-#{$name} {
+        @include box-shadow(1px 1px 1px rgba(red($color), green($color), blue($color), 0.5) !important);
+    }
+    
+    .pui-box-shadow-#{$name}-inset {
+        @include box-shadow(inset 1px 1px 3px rgba(red($color-inset), green($color-inset), blue($color-inset), 0.8) !important);
+    }
+}
+
+/* blockquote */
+
+.pui-blockquote-right {
+    padding-right: 15px;
+    padding-right: 1.5rem;
+    padding-left: 0;
+    text-align: right;
+    border-right: 5px solid #eee;
+    border-left: 0;
+}
+
+/* status */
+
+@each $name, $color in $ui-colors {
+    .pui-#{$name} {
+        background-color : $color !important;
+    }
+}
+
+/* background */
+
+@each $color in $colors {
+    .pui-bg-color-#{""+$color}, *.pui-bg-color-#{""+$color} {
+        //@if $color != none || $color != white || $color != gray || $color != beige || $color != silver {
+            //color: #fff;
+        //}
+
+        background-color: $color !important;
+    }
+}
+
+.pui-bg-none {
+    background: none !important;
+}
+
+.pui-bg-transparent {
+    background: transparent !important;
+}
+
+.pui-bg-scroll {
+    background-attachment: scroll !important;
+}
+
+.pui-bg-fixed {
+    background-attachment: fixed !important;
+}
+
+.pui-bg-pos-center {
+    background-position: center center !important;
+}
+
+.pui-bg-pos-cl {
+    background-position: center left !important;
+}
+
+.pui-bg-pos-cr {
+    background-position: center right !important;
+}
+
+.pui-bg-pos-tl {
+    background-position: top left !important;    
+}
+
+.pui-bg-pos-tr {
+    background-position: top right !important;    
+}
+
+.pui-bg-pos-tc {
+    background-position: top center !important; 
+}
+
+.pui-bg-pos-bl {
+    background-position: bottom left !important;   
+}
+
+.pui-bg-pos-br {
+    background-position: bottom right !important;    
+}
+
+.pui-bg-pos-bc {
+    background-position: bottom center !important;   
+}
+
+$repeat-types: repeat, repeat-x, repeat-y, no-repeat;
+
+@each $type in $repeat-types {
+    .pui-bg-#{$type} {
+        background-repeat: $type !important;
+    }
+}
+
+.pui-bg-cover {
+    background-size: cover !important;
+}
+        
+.pui-blur, .pui-bg-blur, .pui-blur-all > * {
+    @include filter-blur(12px, 12);
+} 
+
+/* REM width */
+
+@for $i from 1 to 65 {
+    .pui-width-#{$i}rem {
+        width: #{$i}rem;
+    }
+}
+
+/* REM height */
+
+@for $i from 1 to 65 {
+    .pui-height-#{$i}rem {
+        height: #{$i}rem;
+    }
+}
+
+/* Material Design Z-Depth */
+
+@for $i from 1 to 7 {
+    .pui-z-depth-#{$i} {
+        @include zDepth($i);
+    }
+}
+
+/* Material Design colors */
+
+@each $color, $list in $md-colors {
+    @each $color-number, $color-value in $list {
+        @if $color-number == 500 {
+            .pui-bg-#{""+$color}, .pui-bg-#{""+$color}-#{$color-number} {
+                @if $color-number gte 500 {
+                    color: #fff !important;
+                }
+                
+                border-color: $color-value !important;
+                background-color: $color-value !important;
+            }
+        
+            .pui-text-#{""+$color}, .pui-text-#{""+$color}-#{$color-number} {
+                color: $color-value !important;
+            }
+        
+            .pui-border-#{""+$color}, .pui-border-#{""+$color}-#{$color-number} {
+                border-color: $color-value !important;
+            }
+        } @else {
+            .pui-bg-#{""+$color}-#{$color-number} {
+                @if $color-number gte 500 {
+                    color: #fff !important;
+                }
+            
+                border-color: $color-value !important;
+                background-color: $color-value !important;
+            }
+        
+            .pui-text-#{""+$color}-#{$color-number} {
+                color: $color-value !important;
+            }
+        
+            .pui-border-#{""+$color}-#{$color-number} {
+                border-color: $color-value !important;
+            }
+        }
+    }
+} 
+
+.pui-white, .pui-white-500 {
+    color: $default-text-color !important; 
+}
+            
+.pui-user-unselect {
+    @include user-select(none); 
+}

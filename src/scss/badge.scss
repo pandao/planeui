@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* badge */
+
+.pui-badge {
+    cursor: pointer;
+    min-width: 24px;
+    padding: 0 2px 1px;
+    padding: 0 0.2rem 1px;
+    font-size: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid transparent; 
+    white-space: nowrap;
+    @include border-radius(3px);
+    @include user-select(none);
+    -webkit-touch-callout: none;
+    @include transition(color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out);
+
+    &.pui-badge-default {
+        color: #ccc;
+        background: #fff;
+        border: 1px solid $default-border-color;   
+            
+        a {
+            color: #999;
+        } 
+        
+        html.no-touch &:hover, &.hover {
+            color: #999;
+            background-color: #f6f6f6;
+        }
+    }
+    
+    &.pui-badge-grey {
+        color: #ccc;
+        background: #f6f6f6;
+        border: 1px solid $default-border-color;
+            
+        a {
+            color: #ccc;
+        }  
+        
+        html.no-touch &:hover, &.hover {
+            color: #ccc;
+            background-color: #eee;
+        }
+    }
+    
+    @each $name, $color in $ui-colors {    
+        &.pui-badge-#{$name} {
+            color: #fff;
+            border-color: $color;
+            background-color: $color;
+            
+            a {
+                color: #fff;
+            }
+        
+            html.no-touch &:hover, &.hover {
+                color: #fff;
+                background-color: darken($color, 10%);
+            }
+        }
+        
+        &.pui-badge-border-#{$name} {
+            color: $color;  
+            border-color: $color; 
+        
+            html.no-touch &:hover, &.hover {
+                color: #fff; 
+                background-color: darken($color, 10%);
+            }         
+        }
+    }
+    
+    &.pui-badge-unbordered {
+        border: none;
+    }
+    
+    &.pui-badge-circle {
+        @include border-radius(400px);      
+    }
+    
+    &.pui-badge-square {
+        @include border-radius(0);        
+    }
+    
+    &.pui-badge-dot {
+        display: inline-block;
+        width: 10px;
+        min-width: 10px;
+        height: 10px;
+        padding: 0;
+        line-height: 14px;
+        text-indent: -9999em;
+        border-radius: 5px;
+    }
+}

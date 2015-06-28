@@ -1,0 +1,543 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* forms */
+
+.pui-form {
+    padding: 15px; 
+    padding: 1.5rem; 
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.pui-form, .pui-form-group {  
+    @include clearfix();
+}
+
+.pui-form-group {
+    position: relative;
+    padding-top: 12px;
+    padding-top: 1.2rem;
+
+    &.pui-form-group-underline, &.pui-form-group-underline-dashed {
+        padding: 12px 0;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid #eee;
+        
+        &:last-child {
+            border: none;
+        }
+    }
+    
+    &.pui-form-group-underline-dashed {
+        border-bottom-style: dashed;
+    }
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], input[type="search"],
+input[type="date"], input[type="datetime"], input[type="time"] {  
+    width: 99.9%; 
+    //padding: 8px 10px;
+    padding:  10px;
+    //padding: 0.6rem;
+    height: 36px;
+    margin: 0 10px 7px 0;
+    //margin: 0 1rem 0.7rem 0;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    
+    &.pui-input-underline {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding-left: 0;
+    }
+    
+    &.pui-input-underline-dashed {
+        border: none;
+        border-bottom: 1px dashed #ddd;
+        padding-left: 0;
+    }
+    
+    .pui-form-group > &:last-child, fieldset > &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+input[type="serach"] { 
+    //width: auto;  
+}
+
+input[type="range"] { 
+    width: 100%;
+    width: 99.7%\9;  
+    margin: 0 10px 10px 0;
+    margin: 0 1rem 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
+    
+    .pui-form-group > &:last-child, fieldset > &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+    text-align: center;  
+}
+
+$input-widths : (
+    xs : 5rem 50px,
+    sm : 10rem 100px,
+    md : 20rem 200px,
+    lg : 30rem 300px,
+    xl : 40rem 400px,
+    xxl : 50rem 500px,
+    xxxl : 60rem 600px
+);
+
+@each $size, $width in $input-widths {
+    .pui-input-#{$size} {
+        width : nth($width, 2);
+        width : nth($width, 1);
+    }
+}
+
+.pui-form label { 
+    cursor: pointer;  
+    padding-right: 8px;
+}
+
+.pui-form-title { 
+    padding-bottom: 10px;
+    padding-bottom: 1rem;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    
+    h1 {
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+}
+
+textarea, .pui-form textarea {
+    width: 99.9%;
+    height: 240px; 
+    padding: 6px;
+    padding: 0.6rem;
+    border: 1px solid #ddd;    
+}
+
+fieldset {
+
+    &.pui-fieldset-border-top, &.pui-fieldset-border-top-dashed {
+        padding-top: 10px;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        padding-bottom: 0;
+        border: none;
+        border-top: 1px solid #eee;
+    }
+    
+    &.pui-fieldset-border-top-dashed {
+        border-top: 1px dashed #eee;
+    }
+    
+    &.pui-fieldset-border-dashed {
+        border: 1px dashed #eee; 
+    }
+    
+    &.pui-fieldset-unbordered {
+        border: none;
+    }
+    
+    &.pui-fieldset-unbordered legend {
+        padding: 0;
+    }
+}
+
+select {
+    font-size: 14px;
+    padding: 4px 6px;
+    width: 99.9%;
+    height: 35px;
+    height: 34px\0;
+    background: none;
+    border: 1px solid #ddd;  
+    outline: none;
+    position: relative;
+    @include border-radius(4px);
+    background: #fff url(../images/select.png) no-repeat right center; 
+    
+    &[multiple] {
+        background: none;
+        min-height: 100px;
+    }
+            
+    &::-ms-expand {
+        display: none;
+    }
+}
+            
+html.touch select {
+    height: 33px;
+    line-height: 31px;
+    padding: 0 6px;
+}
+            
+.pui-select { 
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+
+    &:after {     
+        color: #999;
+        position: absolute;
+        top : 0.2rem;
+        right : 1.5rem;
+        font-family: "FontAwesome";
+        font-weight: normal;
+        font-style: normal; 
+        font-size: 1.6rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+        content : "\f107";
+    }
+
+    html.no-touch &:hover:after, &.hover:after {
+        color: #666;
+    }
+
+    select {
+        background: none;
+        padding-right: 2rem;
+    }
+}
+
+input[type="file"] {
+    padding: 4px;
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    background: none;  
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: -2px;
+    margin-top: -0.2rem;
+}
+
+.pui-form .pui-input-tips-text {
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+input[type="text"], input[type="password"], input[type="file"], textarea, .pui-form textarea, 
+input[type="email"], input[type="url"], input[type="number"], input[type="search"], 
+input[type="date"], input[type="datetime"], input[type="time"] {
+    @include border-radius(4px);    
+}
+
+input[type="text"], input[type="password"], input[type="file"], select, input[type="email"], 
+input[type="url"], input[type="number"], input[type="range"], input[type="search"],
+input[type="date"], input[type="datetime"], input[type="time"] {
+    margin-right: 5px;
+    margin-right: 0.5rem;    
+}
+
+form.pui-form-label-left {
+    label {
+        float: left;
+        width: 100px;
+        display: block;
+        padding: 5px 10px 15px;
+        padding: 0.5rem 1rem 1.5rem;
+    }
+
+    br {clear: both;}
+}
+
+// for Form validator
+
+[fv-role] {
+
+    > [type=normal], > [type=success], > [type=error], > [type=empty] {
+        font-size: 12px;
+        vertical-align: middle; 
+    }
+
+    > [type=normal] {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    > [type=success], > [type=error], > [type=empty] {
+        display: none;
+    }  
+
+    > [type=success] {
+        color: #15B952;
+    }  
+
+    > [type=empty], > [type=error] {
+        color: red;
+    }
+
+    > [type=normal], > [type=success], > [type=empty], > [type=error] {
+        > .fa {
+            font-size: 16px;
+        }
+    }
+}
+
+input, select, textarea {
+    &.fv-error {
+        color: red;
+        border-color: red;
+    }
+
+    &.fv-success {
+        color: #15B952;
+        border-color: #15B952;
+    }
+}
+
+.pui-input-group {
+    height: 36px;
+    @include clearfix();
+    
+    .pui-input-group-addon { 
+        float: left; 
+        font-size: 14px;
+        line-height: 34px;
+        padding: 0 8px;
+        margin: 0;
+        border: 1px solid #ddd;
+        background: #f6f6f6;
+        
+        label {
+            margin-bottom: 0;
+        }
+    }
+    
+    .pui-input-group-text-input {
+        float: left;
+        margin: 0;
+        height: 100%;
+        height: 36px;
+        margin-left: -1px;
+        @include border-radius(0);
+    }
+    
+    .pui-input-group-text-input + .pui-input-group-text-input {
+        @include border-top-right-radius(4px);
+        @include border-bottom-right-radius(4px);        
+    }
+    
+    select {
+        margin: 0;
+        float: left; 
+    }
+    
+    .pui-input-group-addon:not(:first-child) {
+        margin-left: -1px;
+    } 
+    
+    select + select {
+        margin-left: -2px;
+        @include border-radius(0);
+    }
+    
+    .pui-input-group-addon:first-child, .pui-input-group-text-input:first-child {
+        @include border-top-left-radius(4px);
+        @include border-bottom-left-radius(4px);
+    }
+    
+    .pui-input-group-addon:last-child {
+        @include border-top-right-radius(4px);
+        @include border-bottom-right-radius(4px);
+    }
+    
+    .pui-input-group-btn {
+        .pui-btn { 
+            font-size: 14px;
+        }
+    }
+    
+    .pui-input-group-text-input + .pui-input-group-btn > .pui-btn {
+        margin-left: -1px;
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);        
+    }
+    
+    select + .pui-input-group-btn > .pui-btn {        
+        margin-left: -2px;
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);      
+    }
+    
+    > select:first-child {      
+        @include border-top-right-radius(0);
+        @include border-bottom-right-radius(0);      
+    }
+    
+    .pui-input-group-addon + select {   
+        margin-left: -1px;   
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);         
+    }
+}
+
+.pui-input-list {
+    margin-bottom: 15px; 
+    
+    input {
+        margin-bottom: 0;    
+  
+        &:not(first-child) {
+            margin-top: -1px;
+        }
+      
+        &:not(:first-child), &:not(:last-child) {
+            @include border-radius(0);
+        }
+      
+        &:first-child {
+            @include border-top-left-radius(4px);
+            @include border-top-right-radius(4px);
+        }
+        
+        &:last-child {
+            @include border-bottom-left-radius(4px);
+            @include border-bottom-right-radius(4px);
+        }
+    }
+    
+    .pui-btn {
+        width: 99.9%;
+        height: 36px;
+    }
+}
+
+input, textarea, select {
+    
+    &.pui-input-round { 
+        @include border-radius(4px);
+    }
+    
+    &.pui-input-square {
+        border-radius: 0;
+    }
+    
+    &.pui-input-unbordered {
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+    } 
+    
+    &.pui-box-shadow {        
+        @include box-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+    }
+    
+    &.pui-box-shadow-inset {        
+        @include box-shadow(inset 1px 1px 3px rgba(0, 0, 0, 0.15));
+    }
+
+    @each $name, $color in $ui-colors { 
+        &.pui-input-#{$name} {
+            color: #fff;
+            border-color: $color;
+            background-color: $color;
+        }
+        
+        &.pui-input-border-#{$name} {
+            color: $color;
+            border-color: $color;
+        }
+    }
+}
+
+.pui-form {
+    .pui-row {   
+        margin: 0; 
+        
+        &.pui-form-group {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 8px;
+            padding-bottom: 0.8rem;
+        
+            &:last-child {
+                margin-bottom: $grid-gap;
+            }
+        }
+        
+        [class*="pui-grid-"] {
+            padding: 0;
+        }
+    }
+} 
+
+//@media only screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    //.pui-input-group {}
+//}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    select {
+        background-image: url(../images/select@2x.png); 
+        background-size: 10%; 
+    }
+    select[disabled] {
+        background-image: none;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    select {
+        background-image: url(../images/select@3x.png); 
+        background-size: 10%; 
+    }
+    select[disabled] {
+        background-image: none;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], input[type="search"] {  
+        font-size: 12px;
+    }
+    
+    .pui-input-list {
+        input {
+            font-size: 12px;
+        }
+    }
+    
+    select, .pui-form label {
+        font-size: 12px;
+    }
+    
+    //.pui-input-group {
+
+        //.pui-input-group-addon { 
+            //float: left; 
+            //font-size: 12px;
+            //padding: 4px 8px;
+        //}
+        
+        //.pui-input-group-btn {
+            //.pui-btn { 
+                //font-size: 12px;
+                //padding: 3px 12px;  
+            //}
+        //}
+    
+        //select + .pui-input-group-btn > .pui-btn {     
+            //padding: 8px 12px 7px;      
+        //}
+    //}
+}
+
+@import "form.file.input";

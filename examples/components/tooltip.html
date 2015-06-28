@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>Tooltip - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <style>
+            pre {background:none;border:none;color: inherit;}
+        </style>
+	</head>
+    <body style="overflow: auto;">
+        <div class="pui-layout" style="width:96%;overflow: auto;">
+            <br/>
+            <h4 class="h4">提示 Tooltip</h4> 
+            <p><small>兼容情况： 支持 IE9+（基本兼容 IE8）</small></p><br/>
+            <h5>图文排版</h5>
+            <div class="pui-tooltip pui-tooltip-viewer pui-tooltip-arrow-bc">
+                <div class="pui-tooltip-context">
+                    <div class="pui-text-center" style="width:101%;margin-top:-1px;margin-left:-2px;">
+                        <p><img src="images/19.jpg" height="240" style="border-top-left-radius: 5px;border-top-right-radius: 5px;" /></p>
+                        <strong class="pui-h4">歌手李健</strong>
+                    </div>
+                    <ul class="pui-menu pui-menu-simple pui-menu-inline pui-menu-justify" style="margin:-5px 0 0;padding:10px 0 15px;">
+                        <li><a href="#">微博主页</a></li>
+                        <li class="pui-menu-divider">|</li>
+                        <li><a href="#">作品专辑</a></li>
+                        <li class="pui-menu-divider">|</li>
+                        <li><a href="#">粉丝(56.7万)</a></li>
+                        <li class="pui-menu-divider">|</li>
+                        <li><a href="#">关注(353)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/><br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-lt pui-square pui-shadow" style="margin-left:15px;">
+                <div class="pui-tooltip-context">
+                    <p><img src="images/2.jpg" /></p>
+                    <p>《青春再见》 </p>
+                </div>
+            </div>
+            <br/><br/>
+            <h5>普通文本(可含图片)</h5>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-rc pui-tooltip-error" style="margin-right:15px;">
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-rc" style="margin-right:15px;">
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+                pui-tooltip-arrow-rc<br/> 
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-rc" style="margin-right:15px;">
+                pui-tooltip-arrow-rc
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-rc pui-tooltip-error">
+                pui-tooltip-arrow-rc
+            </div>
+            <br/>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-rt pui-tooltip-info" style="margin-right:15px;">
+                pui-tooltip-arrow-rt<br/>
+                pui-tooltip-arrow-rt<br/>
+                pui-tooltip-arrow-rt<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-rt pui-tooltip-info-light">
+                <p>《青春再见》</p>
+                <p><img src="images/2.jpg" /></p>
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-rb pui-tooltip-success" style="margin-right:15px;">
+                pui-tooltip-arrow-rb<br/>
+                pui-tooltip-arrow-rb<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-rb pui-tooltip-error-light">
+                pui-tooltip-arrow-rb
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-lc pui-tooltip-success-light pui-text-green" style="margin:15px;">
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+                pui-tooltip-arrow-lc<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-lc pui-tooltip-warning-light pui-text-orange">
+                pui-tooltip-arrow-lc
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-lt" style="margin:15px;">
+                pui-tooltip-arrow-lt<br/>
+                pui-tooltip-arrow-lt<br/>
+                pui-tooltip-arrow-lt<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-lt pui-tooltip-secondary-light">
+                pui-tooltip-arrow-lt
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-lb pui-tooltip-gary-light" style="margin:15px;">
+                pui-tooltip-arrow-lb<br/>
+                pui-tooltip-arrow-lb<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-lb pui-tooltip-primary-light">
+                pui-tooltip-arrow-lb
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-tc" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-tc">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-tr" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-tr">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-tl" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-tl">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-bl" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-bl">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-br" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-br">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-opacity pui-tooltip-arrow-bc" style="margin:15px;">
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+                adfadfsafsadfadsfdsafdddfdf234323<br/>
+            </div>
+            <div class="pui-tooltip pui-tooltip-bordered pui-tooltip-arrow-bc">
+                adfadfsafsadfadsfdsaf
+            </div>
+            <br/>
+            <div id="test-div" style="width:100px;height:100px;margin:50px;padding:5px 10px;background:red;border:10px solid orange;" pui-tooltip="{position:['bottom','center']}">无指定目标对象，默认无缓存，无指定的内容</div>
+            <br/><br/><br/><br/>
+            
+            <button class="pui-btn pui-btn-default" pui-tooltip="{position:['top','center']}">无指定目标对象，默认无缓存，无指定的内容</button>
+            <br/><br/><br/><br/>
+            
+            <button class="pui-btn pui-btn-default" pui-tooltip="{position:['bottom','center'], content:'插入的', showMode : 'fade'}">无指定目标对象，有缓存，有指定的内容</button>
+            <br/><br/><br/><br/>
+            
+            <button class="pui-btn pui-btn-default pui-center" pui-tooltip="{position:['left','center'], content:'插入的内容XXXXX<br/>设置为无缓存', cached : false}">无指定目标对象，设置为无缓存，但有指定的内容</button>
+            <br/><br/><br/><br/>
+            
+            <button class="pui-btn pui-btn-success pui-center" pui-tooltip="{target:'', position:['right','center'], content:'插入的内容XXXXX', cached: true}" style="">指定目标为空，有缓存，有指定的内容</button>
+            <br/><br/><br/><br/>
+            
+            <button class="pui-btn pui-btn-info" pui-tooltip="{target:'#test', cached : false, position:['bottom','center']}">有指定的目标对象并显示其内容</button>
+            <div class="pui-tooltip pui-tooltip-bordered pui-hide" id="test">
+                adfadfsafsadfadsfdsaf
+            </div> 
+            <br/><br/><br/><br/>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                
+                var loading = '<div class="pui-inline-block pui-animation-rotate pui-animation-repeat pui-animation-reverse pui-text-white"><span class="fa fa-spinner fa-2x"></span></div> 正在加载内容，请稍后...';
+                
+                var ajaxURL = "http://192.168.1.2/planeui/examples/components/php/ajax.php";
+                
+                $("#test-div").tooltip({
+                    position : ["bottom", "center"],
+                    auto : true,
+                    cached : true,
+                    content : function(self, tooltip, resetStyle) { 
+                        
+                        tooltip.html(loading);
+                        resetStyle(tooltip);
+                        
+                        $.get(ajaxURL, function(result){
+                            
+                            tooltip.html(result);
+                            resetStyle(tooltip);
+                        }); 
+                    },
+                    callback : function(self, tooltip) {
+                        console.log("隐藏Tooltip后，执行的回调函数。");
+                    }
+                });
+                
+                $(".pui-btn").tooltip({
+                    position : ["bottom", "center"],
+                    auto : true,
+                    cached : true,
+                    content : function(self, tooltip, resetStyle) { 
+                        
+                        tooltip.html(loading);
+                        resetStyle(tooltip);
+                        
+                        $.get(ajaxURL, function(result){
+                            
+                            tooltip.html(result);
+                            resetStyle(tooltip);
+                        }); 
+                    },
+                    callback : function(self, tooltip) {
+                        console.log("隐藏Tooltip后，执行的回调函数。");
+                    }
+                });
+            });
+        </script> 
+    </body>
+    </html>

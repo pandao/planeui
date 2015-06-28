@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>自定义上传控件 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>
+        </style>
+	</head>
+	<body>
+        <div class="pui-layout">
+            <form class="pui-form pui-input-sm-large pui-input-md-large pui-grid">                
+                <h4 class="pui-h4">自定义上传控件</h4>
+                <p><small>兼容情况： 支持 IE8+</small></p><br/>
+                <div class="pui-row pui-form-group">
+                    <label>示例一：</label>
+                    <div class="pui-file-input">
+                        <input type="file" />
+                        <a href="javascript:;" class="pui-btn pui-btn-success pui-file-input-btn">上传图片</a>
+                    </div>
+                </div>
+                <div class="pui-row pui-form-group">
+                    <label>示例二：</label>
+                    <div class="pui-file-input">
+                        <input type="file" />
+                        <a href="javascript:;" class="pui-btn pui-btn-info pui-file-input-btn">上传图片</a>
+                    </div>
+                </div>
+                <div class="pui-row pui-form-group">
+                    <label>示例三：</label>
+                    <div class="pui-file-input">
+                        <input type="file" />
+                        <a href="javascript:;" class="pui-btn pui-btn-warning pui-file-input-btn">上传图片到服务器</a>
+                    </div>
+                </div>
+                <div class="pui-row pui-form-group">
+                    <label>示例四：</label>
+                    <div class="pui-file-input">
+                        <input type="file" />
+                        <a href="javascript:;" class="pui-btn pui-btn-primary pui-file-input-btn"><i class="fa fa-upload"></i> 上传图片到服务器</a>
+                    </div>
+                </div>
+                <div class="pui-row pui-form-group">
+                    <label>示例五：</label>
+                    <div class="pui-file-input">
+                        <input type="file" />
+                        <a href="javascript:;" class="pui-btn pui-btn-secondary pui-file-input-btn"><i class="fa fa-upload fa-2x"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>            
+            $(function() {
+                $(".pui-file-input").fileInput(function() {
+                    console.log(this, $(this).val());
+                    alert($(this).val());
+                });
+            });
+        </script>
+    </body>
+</html>

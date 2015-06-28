@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+		<title>过渡与动画 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" href="./../../dist/css/planeui.css" />
+        <style> 
+            .box {
+                width: 200px;
+                height: 200px; 
+                padding: 90px 0;
+                background: orange;
+                color: #fff;
+                text-align: center; 
+                margin-right: 10px;
+                position: absolute;
+                top: 150px;
+                left: 150px;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4 class="h4">过渡与动画 Animations</h4> 
+            <p>说明：不支持 IE9及以下版本</p>
+            <div class="box" id="test"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div id="pui-animation-radios"></div>
+            <label>
+                <input type="checkbox" id="enable-reverse" value="pui-animation-reverse" /> 反向运动
+            </label>
+            <label style="margin: 0 15px;">
+                <input type="checkbox" id="enable-repeat" value="pui-animation-repeat" /> 重复运动
+            </label><br/>
+            <input type="button" class="pui-btn pui-btn-default btn-info" id="paused-btn" value="暂停" />
+            <br/>
+        </div><br/>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">
+            $(function() {  
+                var animations = [
+                    "fade-in", "fade-out", 
+                    "scale-x", "scale-y", 
+                    "zoom-in", "zoom-out", 
+                    "slide-up", "slide-down", "slide-left", "slide-right", 
+                    "shaking-x", "shaking-y", 
+                    "rotate", "rotate-x", "rotate-y", 
+                    "stretch-left", "stretch-right", "stretch-up", "stretch-down",
+                    "tossing", "floating", "pulse", "pulse-plus", "bounce", "expand-in", "expand-out"
+                ];
+                
+                var radios = $("#pui-animation-radios");
+                
+                for (var i = 0, len = animations.length; i < len; i++) {
+                    var checked = (i == 0) ? ' checked="checked"' : '';
+                    radios.append('<label style="display:block;width:360px;"><input type="radio" name="animation" value="'+animations[i]+'" /> '+animations[i]+' </label>');
+                }                
+                     
+                radios.find('input[type=radio]').bind('click', function(){
+                    var value = "pui-animation-" + $(this).val();
+                    
+                    $("#test").html($(this).val()).removeClass().addClass("box "+value+"");
+                    
+                    if($("#enable-reverse").is(":checked")) {
+                        $("#test").addClass("pui-animation-reverse");
+                    }
+                    
+                    if($("#enable-repeat").is(":checked")) {
+                        $("#test").addClass("pui-animation-repeat");
+                    }
+                });  
+                
+                $("#paused-btn").bind('click', function() {
+                    $("#test").addClass("pui-animation-paused");                    
+                });
+            }); 
+        </script> 
+	</body>
+</html>

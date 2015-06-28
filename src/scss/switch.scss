@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Custom Switch Button */
+            
+pui-switch {  
+    cursor: pointer; 
+    font-size: 12px;
+    font-size: 1.2rem;
+    overflow: hidden; 
+    @include user-select(none);
+    -webkit-touch-callout: none;
+
+    & + & {
+        margin-left: 10px;
+        margin-left: 1rem;
+    }
+    
+    > switches {
+        > span { 
+            min-width: 36px;
+            min-width: 3.6rem;
+            padding: 2px 6px;
+            padding: 0.2rem 0.6rem;
+            text-align: center;
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #ddd; 
+            @include transition(all 100ms ease-in);
+
+            html.no-touch &:hover, &.hover {
+                background: #f6f6f6;
+            }
+
+            &:first-child {      
+                @include border-top-left-radius(5px); 
+                @include border-bottom-left-radius(5px);
+            }
+
+            &:last-child {      
+                @include border-top-right-radius(5px); 
+                @include border-bottom-right-radius(5px);
+            }
+        }
+
+        > span + span {
+            margin-left: -1px; 
+        }
+
+        & > .switched, & > .pui-switched {
+            color: #fff;
+            background: #2191F6;
+            border-color: #2191F6;
+
+            html.no-touch &:hover, &.hover { 
+                background: #1279D8;
+                border-color: #1279D8;
+            }
+
+            & + span {
+                border-left-color: #2191F6;
+            }
+        }
+        
+    }
+
+    &[disabled] > switches > .pui-switched {
+        color: #777;
+        background: #ddd;
+        border-color: #ddd;
+
+        & + span {
+            border-left-color: #ddd;
+        }
+    }
+
+
+    > input[type="hidden"] { 
+        width: 0;
+        height: 0; 
+    } 
+
+    > small {
+        margin-left: 15px;
+        margin-left: 1.5rem;
+    } 
+
+    &.pui-switch-sm > switches > span { 
+        min-width: 16px; 
+        min-width: 1.6rem; 
+        min-height: 16px;
+        min-height: 1.6rem;
+        padding: 0 3px;
+        padding: 0 0.3rem;
+    }
+
+    &.pui-switch-lg > switches > span { 
+        padding: 2px 10px;
+        padding: 0.2rem 1rem;
+    }
+
+    &.square > switches > span,
+    &.pui-square > switches > span {  
+        @include border-radius(0);
+    }
+
+    &.round > switches > span,
+    &.pui-round > switches > span {
+        &:first-child {  
+            @include border-top-left-radius(500px);
+            @include border-bottom-left-radius(500px);
+        }
+
+        &:last-child {  
+            @include border-top-right-radius(500px);
+            @include border-bottom-right-radius(500px);
+        }
+    }
+}  

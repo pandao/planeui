@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* WebComponents : Custom Checkbox & Radio */
+  
+pui-checkbox, pui-radio { 
+    font-size: 14px;
+    cursor: pointer;
+    @include user-select(none); // 设置为无法选择文本
+    -webkit-touch-callout: none; // 长按时不触发系统的菜单
+    
+    &:before { 
+        font-family: "FontAwesome"; 
+        font-weight: normal;
+        font-style: normal; 
+        font-size: 18px;
+        font-size: 1.8rem;
+        padding-right: 5px;
+        padding-right: 0.5rem;
+        line-height: 1;  
+        vertical-align: middle;
+        text-rendering: auto;  
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+        color: #ddd;  
+        content: "\F096";
+    }
+    
+    > input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    } 
+
+    & + & {
+        margin-left: 10px;
+        margin-left: 1rem;
+    } 
+}    
+
+pui-checkbox.checked:before { 
+    color: #71B472;  
+    content: "\F046";
+}
+
+pui-radio:before { 
+    content: "\F10C";
+}
+
+pui-radio.checked:before { 
+    color: #71B472;   
+    content: "\f192";
+}

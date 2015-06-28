@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>屏幕尺寸监测 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>
+        </style>
+	</head>
+	<body>
+        <div class="pui-layout">
+            <form class="pui-form pui-input-sm-large pui-input-md-large pui-grid">                
+                <h4 class="pui-h4">屏幕尺寸监测</h4>
+                <p><small>兼容情况： 支持 IE8+（IE7及以下版本未测试）</small></p><br/>
+                <div id="test"></div>
+            </form>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>     
+            function screenObserve() {
+                var test = $("#test");
+                var width = $(window).width();
+                
+                if ($.responsive.xs()) {
+                    test.html(width + "px => xs => 小于 640px");
+                }
+                else if ($.responsive.sm()) {
+                    test.html(width + "px => sm => 大于或等于 640px，小于 768px");
+                }
+                else if ($.responsive.md()) {
+                    test.html(width + "px => md => 大于或等于 768px，小于 992px");
+                }
+                else if ($.responsive.lg()) {
+                    test.html(width + "px => lg => 大于或等于 992px，小于 1200px");
+                }
+                else if ($.responsive.xl()) {
+                    test.html(width + "px => xl => 大于或等于 1200px，小于 1400px");
+                }
+                else if ($.responsive.xxl()) {
+                    test.html(width + "px => xxl => 大于或等于 1400px");
+                }
+            }
+            
+            $(function() {
+                screenObserve();
+                $(window).resize(screenObserve);
+            });
+        </script>
+    </body>
+</html>

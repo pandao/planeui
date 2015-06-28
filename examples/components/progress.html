@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>进度条 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>进度条 Progress</h4>
+            <p><small>兼容情况： 支持 IE8+</small></p>
+            <div class="pui-container">
+                <div class="pui-progress pui-progress-unshadow">
+                    <div class="pui-progress-bar pui-progress-default pui-progress-mini pui-progress-mini-text" style="width:36%;">
+                        <span>36%</span>                        
+                    </div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-default pui-progress-small pui-progress-small-text text-right" style="width:36%;">
+                        <span>36%</span>
+                    </div>
+                </div>
+                <div class="pui-progress pui-progress-striped">
+                    <div class="pui-progress-bar pui-progress-default" style="width:36%;">36%</div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-primary pui-progress-gradient" style="width:36%;" id="test">36%</div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-secondary pui-progress-gradient" style="width:48%;">48%</div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-info pui-progress-gradient" style="width:54%;">54%</div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-success pui-progress-gradient" style="width:64%;">64%</div>
+                </div>
+                <div class="pui-progress">
+                    <div class="pui-progress-bar pui-progress-warning pui-progress-gradient" style="width:72%;">72%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-error" style="width:80%;">80%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-primary" style="width:36%;">36%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped-reverse pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-secondary" style="width:48%;">48%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped-reverse pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-info" style="width:54%;">54%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped-reverse pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-success" style="width:64%;">64%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped-reverse pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-warning" style="width:72%;">72%</div>
+                </div>
+                <div class="pui-progress pui-progress-striped-reverse pui-progress-active">
+                    <div class="pui-progress-bar pui-progress-error pui-progress-gradient" style="width:80%;">80%</div>
+                </div>
+                <div class="pui-progress pui-progress-group">
+                    <div class="pui-progress-bar pui-progress-primary" style="width:32%;">32%</div>
+                    <div class="pui-progress-bar pui-progress-secondary" style="width:24%;">24%</div>
+                    <div class="pui-progress-bar pui-progress-info" style="width:16%;">16%</div>
+                    <div class="pui-progress-bar pui-progress-success" style="width:10%;">10%</div>
+                    <div class="pui-progress-bar pui-progress-warning" style="width:8%;">8%</div>
+                    <div class="pui-progress-bar pui-progress-error" style="width:6%;">6%</div>
+                </div>
+                <div class="pui-progress pui-progress-group pui-progress-mini-group clear">
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-primary" style="width:32%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-secondary" style="width:24%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-info" style="width:16%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-success" style="width:10%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-warning" style="width:8%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-error" style="width:6%;"></div>
+                    <!-- 在Android 4.2下不需要 .pui-progress-group-end -->
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-group-end" style="width:4%;"></div>
+                    <div class="pui-progress-text-group">
+                        <span style="width:32%">32%</span>
+                        <span style="width:24%">24%</span>
+                        <span style="width:16%">16%</span>
+                        <span style="width:10%">10%</span>
+                        <span style="width:8%">8%</span>
+                        <span style="width:6%">6%</span>
+                    </div>
+                </div>
+                <div class="pui-progress pui-progress-group pui-progress-small-group clear">
+                    <div class="pui-progress-bar pui-progress-small pui-progress-primary" style="width:32%;"></div>
+                    <div class="pui-progress-bar pui-progress-small pui-progress-secondary" style="width:24%;"></div>
+                    <div class="pui-progress-bar pui-progress-small pui-progress-info" style="width:16%;"></div>
+                    <div class="pui-progress-bar pui-progress-small pui-progress-success" style="width:10%;"></div>
+                    <div class="pui-progress-bar pui-progress-small pui-progress-warning" style="width:8%;"></div>
+                    <div class="pui-progress-bar pui-progress-small pui-progress-error" style="width:6%;"></div>
+                    <!--  pui-progress-group-end-unshadow -->
+                    <div class="pui-progress-bar pui-progress-small pui-progress-group-end" style="width:4%;"></div>
+                    <div class="pui-progress-text-group">
+                        <span style="width:32%">32%</span>
+                        <span style="width:24%">24%</span>
+                        <span style="width:16%">16%</span>
+                        <span style="width:10%">10%</span>
+                        <span style="width:8%">8%</span>
+                        <span style="width:6%">6%</span>
+                    </div>
+                </div>
+                <div class="pui-progress pui-progress-group pui-progress-mini-group clear" style="margin-top:48px;"> 
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-info" style="width:33.33%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-warning" style="width:33.33%;"></div>
+                    <div class="pui-progress-bar pui-progress-mini pui-progress-success" style="width:33.33%;"></div>
+                    <div class="pui-progress-text-group" style="top: -40px;">
+                        <span style="width:33.33%" class="h3">第一步：填写邮箱</span>
+                        <span style="width:33.33%" class="h5">第二步：填写资料</span>
+                        <span style="width:33.33%" class="h5">第三步：注册完成</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("#test").width(0).animate({width: $("#test").text()}, {
+                    duration : 5000,
+                    step : function(now, fx){
+                        this.innerHTML = Math.floor(now) + "%";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

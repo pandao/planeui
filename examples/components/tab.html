@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>选项卡 Tab - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <style>
+            #test > .pui-tab-head > li.active, 
+            #test2 > .pui-tab-head > li.active {
+                background: none;
+                color: #666;
+                padding-bottom: 4px;
+                border-color: #ddd;
+                border-bottom: 4px solid #008EE5;
+            }
+            
+            #test > .pui-tab-head > li.active + li,
+            #test2 > .pui-tab-head > li.active + li {
+                border-color: #ddd;
+            }
+            
+            #test3 > .pui-tab-scroll-x, #test3 .pui-tab-box { 
+                width: 769px;
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>选项卡 Tab</h4>
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <div class="pui-tab pui-tab-bordered pui-tab-group-style" id="test3">
+                <ul class="pui-tab-head clear">
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=1">pui-tab-box-1</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=2" tab-onready-ajax="false" class="active">pui-tab-box-2</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=3">pui-tab-box-3</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=4">pui-tab-box-4</li>
+                </ul> 
+                <div class="pui-tab-scroll-x">
+                    <div class="pui-tab-container" style="margin-left:-769px;">
+                        <div class="pui-tab-box" style="background:green;">pui-tab-box-1</div>
+                        <div class="pui-tab-box show" style="background:red;">pui-tab-box-2</div>
+                        <div class="pui-tab-box" style="background:orange;">pui-tab-box-3</div>
+                        <div class="pui-tab-box" style="background: blue;">pui-tab-box-4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-group-style" id="test2">
+                <ul class="pui-tab-head clear">
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=1">pui-tab-box-1</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=2" tab-onready-ajax="false" class="active">pui-tab-box-2</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=3">pui-tab-box-3</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=4">pui-tab-box-4</li>
+                </ul> 
+                <div class="pui-tab-scroll-y">
+                    <div class="pui-tab-container" style="margin-top:-100px;">
+                        <div class="pui-tab-box" style="background:green;">pui-tab-box-1</div>
+                        <div class="pui-tab-box show" style="background:red;">pui-tab-box-2</div>
+                        <div class="pui-tab-box" style="background:orange;">pui-tab-box-3</div>
+                        <div class="pui-tab-box" style="background: blue;">pui-tab-box-4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-group-style" id="test">
+                <ul class="pui-tab-head clear">
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=1">pui-tab-box-1</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=2" tab-onready-ajax="false" class="active">pui-tab-box-2</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=3">pui-tab-box-3</li>
+                    <li tab-ajax-url="http://192.168.1.2/planeui/tests/php/ajax.php?cid=4" class="disabled">pui-tab-box-4</li>
+                </ul> 
+                <div class="pui-tab-scroll-container">
+                    <div class="pui-tab-container">
+                        <div class="pui-tab-box" style="background:green;">pui-tab-box-1</div>
+                        <div class="pui-tab-box show">pui-tab-box-2</div>
+                        <div class="pui-tab-box" style="background:orange;">pui-tab-box-3</div>
+                        <div class="pui-tab-box" style="background: blue;">pui-tab-box-4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-group-style">
+                <ul class="pui-tab-head clear">
+                    <li>pui-tab-box-1</li>
+                    <li class="active">pui-tab-box-2</li>
+                    <li>pui-tab-box-3</li>
+                    <li class="disabled">pui-tab-box-4</li> 
+                </ul> 
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box">pui-tab-box-1</div>
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                    <div class="pui-tab-box">pui-tab-box-4</div>
+                </div>
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-bottom">
+                <div class="pui-tab-container pui-tab-box-bordered pui-tab-box-radius"><!--  pui-tab-box-bordered pui-tab-box-radius -->
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div>
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul> 
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-right">
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">
+                        <p>pui-tab-box-1</p>
+                        <p>开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0开启Ajax时，Ajax请求成功后的回调0</p>
+                    </div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-left">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-underline pui-tab-bottom pui-tab-justify">
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+            </div>
+            <div class="pui-tab pui-tab-underline pui-tab-right">
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+            </div>
+            <div class="pui-tab pui-tab-underline pui-tab-left">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-bottom">
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+            </div>
+            <div class="pui-tab pui-tab-right">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-left">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-bordered pui-tab-justify">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li>pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container pui-tab-box-bordered pui-tab-box-radius">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-bordered">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container pui-tab-box-bordered pui-tab-box-radius">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-bordered">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container pui-tab-box-bordered">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div>
+                <footer class="pui-tab-foot pui-tab-foot-bordered">pui-tab-foot</footer>
+            </div>
+            <div class="pui-tab pui-tab-justify">
+                <ul class="pui-tab-head pui-tab-square">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-justify">
+                <ul class="pui-tab-head pui-tab-ellipse">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-underline pui-tab-justify">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab pui-tab-underline">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div> 
+            </div>
+            <div class="pui-tab">
+                <ul class="pui-tab-head pui-tab-square pui-tab-ellipse">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div>
+                <footer class="pui-tab-foot">pui-tab-foot</footer>
+            </div>
+            <div class="pui-tab">
+                <ul class="pui-tab-head pui-tab-square">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div>
+                <footer class="pui-tab-foot">pui-tab-foot</footer>
+            </div>
+            <div class="pui-tab">
+                <ul class="pui-tab-head">
+                    <li class="active">pui-tab-box-1</li>
+                    <li>pui-tab-box-2</li>
+                    <li class="disabled">pui-tab-box-3</li>
+                </ul>
+                <div class="pui-tab-container">
+                    <div class="pui-tab-box" style="display: block;">pui-tab-box-1</div>
+                    <div class="pui-tab-box">pui-tab-box-2</div>
+                    <div class="pui-tab-box">pui-tab-box-3</div>
+                </div>
+                <footer class="pui-tab-foot">pui-tab-foot</footer>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">  
+            $(function() {
+
+                PUI(".pui-tab:not(#test3):not(#test2)").tab({
+                    speed : "slow",
+                    showMode : "slide", 
+                    //cached : true,
+                    //ajax : true,
+                    //ajaxLoading : '<div class="pui-loading-spinner pui-animation-rotate pui-animation-repeat pui-animation-reverse pui-text-center"><span class="fa fa-spinner fa-2x"></span></div> 正在加载内容，请稍后...',
+                    callback : function(tab, tabHead, tabBox, index, settings) {
+                        tabBox.eq(index).append("开启Ajax时，Ajax请求成功后的回调" + index);
+                    }
+                    /*callback : function(tab, tabHead, tabBox, index, settings) {
+                        console.log("没有开启Ajax时，切换后的回调", tab, tabHead, tabBox, index);
+                        
+                        if(settings.cached) return ;
+                        
+                        tabBox.eq(index).html('<div class="pui-loading-spinner pui-animation-rotate pui-animation-repeat pui-animation-reverse pui-text-center"><span class="fa fa-spinner fa-2x"></span></div> 正在加载内容，请稍后...');
+                        var ajaxURL = tabHead.eq(index).attr("pui-tab-ajax-url");
+                        
+                        $.post(ajaxURL, {}, function(data) {
+                            tabBox.eq(index).html(data);
+                        });
+                    }*/
+                });
+
+                $("#test3").tab({
+                    speed : "slow",
+                    showMode : "scroll-x"
+                });
+
+                $("#test2").tab({
+                    speed : "slow",
+                    showMode : "scroll-y"
+                });
+
+            });
+        </script>
+    </body>
+    </html>

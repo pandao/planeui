@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Article */
+
+.pui-article {
+    
+}
+
+.pui-article > header, .pui-article-head {
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.pui-article-title {
+    font-size: 16px; 
+    font-size: 1.6rem; 
+    margin-bottom: 8px;
+    margin-bottom: 0.8rem; 
+}
+
+.pui-article-subtitle {  
+    font-size: 12px; 
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.pui-article-content { 
+    padding: 1.5rem 0;
+}
+
+.pui-article > section {
+    margin: 15px 0;
+    margin: 1.5rem 0; 
+} 
+
+.pui-article footer, .pui-article-foot {
+    margin-top: 15px;
+    margin-top: 1.5rem;      
+}
+
+.pui-article, .pui-article-content, .pui-article-head, .pui-article-foot {    
+    @include clearfix();
+}

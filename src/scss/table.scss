@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Tables */
+
+.pui-table {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    margin: 2rem auto;
+    background: #fff;
+    table-layout: fixed;
+    position: relative;
+    
+    th, td {
+        padding: 6px;
+        padding: 0.6rem;
+        vertical-align: top;
+        border-bottom: 1px solid #ddd;
+    }
+
+    @each $name, $color in $ui-colors {       
+        tr.#{$name} > td, tr.#{$name} > th, th.#{$name}, td.#{$name} {
+            color: #fff;
+            background-color: $color;
+            border-color: $color;
+        }
+    }
+    
+    &.pui-table-body-scroll > tbody {
+        height: 100px;
+        overflow: auto;
+    }
+    
+    &.margin-none, &.pui-margin-none {
+        margin: 0 auto;
+    }
+}
+
+.pui-table-bordered, .pui-table-bordered td, .pui-table-bordered th {
+    border: 1px solid #ddd;
+}
+
+.pui-table-unbordered, .pui-table-unbordered td, .pui-table-unbordered th {
+    border: none;
+}
+
+.pui-table {
+    &.pui-table-border-vertical {
+        border: none;
+        border-left: 1px solid #ddd;
+        
+        td, th {
+            border: none;
+            border-right: 1px solid #ddd;        
+        }
+    }
+
+    &.pui-table-text-center {
+        td, th {
+            text-align: center;
+        }
+    }
+
+    &.pui-table-text-left {
+        td, th {
+            text-align: left;
+        }
+    }
+    
+    &.pui-table-text-right {
+        td, th {
+            text-align: right;
+        }
+    }
+
+    &.pui-table-thead-bg thead {
+        background: #f6f6f6;
+    }
+
+    &.pui-table-interlaced-color {
+        tr:nth-child(even) {
+            background: #fafafa;        
+        }
+        
+        html.no-touch tr:hover, tr.hover {
+            background: #ffffcc;        
+        }
+
+		html.no-touch thead tr:hover, thead tr.hover {
+			background: #f6f6f6;
+		}
+    }
+
+    &.pui-table-uninterlaced-color {
+        tr {
+            background: #fff; 
+            
+            &:nth-child(even), &:nth-child(odd), &:hover {
+                background: #fff; 
+            }       
+        }
+    } 
+    
+    &.pui-table-compact {
+        td, th {
+            padding: 3px;
+            padding: 0.3rem;            
+        }
+    }
+}

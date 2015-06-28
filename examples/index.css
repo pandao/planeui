@@ -1,0 +1,279 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.main {
+    padding: 0;
+}
+
+.page-header {
+    color: #fff;
+    /*height: 48px;*/
+    background: #1D88E6;
+    /*border-bottom: 1px solid #1783DB !important;*/
+}
+
+.main-color {
+    background-color: #1D88E6 !important; 
+}
+
+.page-header .pui-menubar {
+    margin: 0;
+}
+
+.page-header .fa {
+    color: #fff;
+    padding: 0;
+    -webkit-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+}
+
+.page-header .fa.hover,
+html.no-touch .page-header .fa:hover {
+    color: rgba(0, 0, 0, .3);
+}
+
+.page-header .fa-list {
+    padding-top: 12px;
+}
+
+.page-header .pui-menu-simple {
+    padding-top: 6px;
+}
+
+.page-header .pui-menu-simple.open {
+    width: 100%;
+    background: #1D88E6;
+    top: 4.7rem;
+    right: 0;
+    display: block;
+    float: none !important;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.page-header .pui-menu-simple.open > li {
+    display: inline-block;
+}
+
+.page-header .pui-menu-simple.pui-menu-inline > li > a {
+    color: #fff;
+    padding: 1px 10px;
+}
+
+.page-header .pui-menu-simple.pui-menu-inline > li > a.hover,
+html.no-touch .page-header .pui-menu-simple.pui-menu-inline > li > a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 500px;
+}
+
+[class*=pui-grid-] {
+    margin-bottom: 25px;
+}
+
+.pui-row {
+    padding-bottom: 3rem;
+}
+
+.banner {
+    display: table;
+    margin-bottom: 50px;
+    background: #1D88E6 url(./login/images/bg.jpg) no-repeat bottom center;
+    background-size: contain;
+}
+
+.banner-con {
+    color: #fff;
+    display: table-cell;
+    padding: 210px 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.banner-con > h1.pui-text-xxxxxl {
+    line-height: 1.2;
+}
+
+.pui-row {
+    margin-bottom: 0;
+}
+
+.page-title > .fa {
+    margin-top: -5px;
+}
+
+#mobile-first {
+    margin-top: 0.6rem;
+}
+
+.features p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+footer {
+    margin-bottom: 3rem;
+}
+
+#go-to-top {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 999;
+    display: none;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+#go-to-top.hover,
+html.no-touch #go-to-top:hover {
+    color: #2989D6 !important;
+}
+
+@media (max-width: 320px) {
+    
+    .features h1 {
+        zoom: 1;
+    }
+    
+    .pui-grid-xs-6 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .banner-con {
+    }
+
+    .fa.fa-3x {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {   
+    .banner-con {
+        padding: 120px 0;
+    }
+    
+    .features p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .features h1, .examples h1 {
+        zoom: 0.7;
+    }
+    
+    .features h5, .examples h5 {
+        font-size: 1.6rem;
+    }
+    
+    #mobile-first {
+        margin: 0 0 12px !important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .banner-con {
+        padding: 120px 0;
+    }
+
+    .banner-con > h1 {
+        line-height: 1.2;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 2.4rem !important;
+    }
+
+    .banner-con > h1.pui-text-xxxxxl {
+        font-size: 4rem  !important;
+        margin-bottom: 1.2rem  !important;
+    }
+
+    .banner-con > .pui-text-lg {
+        line-height: 1.2;
+        font-size: 1.2rem  !important;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+
+    .page-header .pui-menu-simple {
+        display: none;
+    }
+    .pui-menubar {
+        padding-top:15px;
+    }
+    
+    #go-to-top {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 481px) and (max-width:768px), (min-width:769px) and (max-width: 870px)  {
+    #mobile-first {
+        /*zoom: 0.8 !important;*/
+        margin: 15px 0 24px !important;
+        display: block !important;
+    }
+    
+    #mobile-first a {
+        font-size: 99% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*.page-title {
+        padding: 0 15px;
+    }*/
+    .pui-menubar {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    footer {
+        padding: 25px 30px;
+
+    }
+    
+    .main-con {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .main {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .banner {
+        background-image: url(./login/images/bg@2x.jpg);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .banner {
+        background-image: url(./login/images/bg@2x.jpg);
+    }
+}
+
+.fa-paper-plane {
+
+}
+
+.pui-row > h2 {
+    margin-bottom: 3rem;
+}
+
+.pui-hr-dashed {
+    margin-bottom: 5rem;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 2rem;
+}

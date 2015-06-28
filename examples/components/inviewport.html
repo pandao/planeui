@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>视图位置监测 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>
+            html, body, .pui-layout {width:100%;height:100%;overflow: hidden;}
+            
+            .pui-layout {
+                padding: 3rem;
+            }
+            
+            #box {
+                position: absolute;
+                top: 30%;
+                left : 30%;
+                width: 40%;
+                height: 40%;   
+                display: table;
+            }
+            
+            .box-con {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            #output{margin: 15px 0;}
+        </style>
+	</head>
+	<body>
+       <!--  angle-down
+ angle-left
+ angle-right
+ angle-up-->
+        <div class="pui-layout">              
+            <div>
+                <h4 class="pui-h4">视图位置监测</h4>
+                <p><small>兼容情况： 支持 IE8+</small></p><br/>
+                <div>
+                    <button class="pui-btn pui-btn-success">移到视图内</button>
+                    <button class="pui-btn pui-btn-success">移到视图上方</button>
+                    <button class="pui-btn pui-btn-success">移到视图下方</button>
+                    <button class="pui-btn pui-btn-success">移到视图左侧</button>
+                    <button class="pui-btn pui-btn-success">移到视图右侧</button>
+                    <button class="pui-btn pui-btn-success">获取位置</button>
+                </div>
+                <div id="output"></div>
+            </div>
+            <div id="box" class="pui-bg-green">
+                <div class="box-con">BOX</div>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>            
+            $(function() {
+                var btns = $(".pui-btn");
+                var box  = $("#box");
+                
+                btns.eq(0).bind($.clickOrTouch(), function() {
+                    box.animate({
+                        top : "30%",
+                        left : "30%"
+                    }, 600, getPosition);
+                });
+                
+                btns.eq(1).bind($.clickOrTouch(), function() {
+                    box.animate({
+                        top : "30%",
+                        left : "30%"
+                    }).animate({
+                        top : "-100%"
+                    }, 600, getPosition);
+                });
+                
+                btns.eq(2).bind($.clickOrTouch(), function() {
+                    box.animate({
+                        top : "30%",
+                        left : "30%"
+                    }).animate({
+                        top : "200%"
+                    }, 600, getPosition);
+                });
+                
+                btns.eq(3).bind($.clickOrTouch(), function() {
+                    box.animate({
+                        top : "30%",
+                        left : "30%"
+                    }).animate({
+                        left : "-200%"
+                    }, 600, getPosition);
+                });
+                
+                btns.eq(4).bind($.clickOrTouch(), function() {
+                    box.animate({
+                        top : "30%",
+                        left : "30%"
+                    }).animate({
+                        left : "200%"
+                    }, 600, getPosition);
+                });
+                
+                function getPosition() {
+                    var pos = [
+                        "在视图内：in-viewport " + box.is(":in-viewport"),
+                        "屏幕上方：in-screen-above " + box.is(":in-screen-above"),
+                        "屏幕下方：in-screen-below " + box.is(":in-screen-below"),
+                        "屏幕左侧：in-screen-left " + box.is(":in-screen-left"),
+                        "屏幕右侧：in-screen-right " + box.is(":in-screen-right")
+                    ].join("<br/>");
+                    
+                    $("#output").html(pos);
+                }
+                
+                getPosition();
+                
+                btns.eq(5).bind($.clickOrTouch(), getPosition);
+            });
+        </script>
+    </body>
+</html>

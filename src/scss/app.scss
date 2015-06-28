@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+html {
+    &.pui-app {
+        -ms-touch-action: none;
+
+        &, & > body {  
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}
+

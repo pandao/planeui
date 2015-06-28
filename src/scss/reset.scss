@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* viewport settings */
+
+@-webkit-viewport {
+    @include viewport-device-width();
+}
+
+@-moz-viewport {
+    @include viewport-device-width();
+}
+
+@media (max-width: 1024px) { 
+    @-ms-viewport {
+        @include viewport-device-width();
+    }
+}
+
+@-o-viewport { 
+    @include viewport-device-width();
+}
+
+@viewport {
+    @include viewport-device-width();
+}
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}
+
+::selection {
+    background: #39f;
+    color: #fff;
+    text-shadow: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+//article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    //display: block;
+//}
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+html {
+    font-size: 62.5%; //=10px 10/16px  
+    @include text-size-adjust(100%);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    //min-height: 100%;
+    //overflow-x: hidden;
+}
+
+body {
+    color: #444;
+    font-size: 12px;   //IE6~8
+    font-size: 1.2rem; /* 1.2rem=12px, 1rem=10px */  
+    line-height: 1.9;
+    text-align: center;
+    position: relative;
+    background: #ffffff;
+} 
+
+div {
+    text-align: left;
+}
+
+//body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, strong, p, span, small 
+body, button, input, select, textarea, strong, p, span, small {
+    font-family: "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", STXihei, "华文细黑", STHeiti, "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Tahoma, "Droid Sans", "wenquanyi micro hei", FreeSans, Arimo, Arial, SimSun, "宋体", Heiti, "黑体", sans-serif; 
+}
+
+input, button, select, textarea { 
+    margin: 0;
+    vertical-align: middle;  
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
+input[type="url"], input[type="search"], select, textarea {  
+    @include appearance(none);
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], select {
+    cursor: pointer;
+}
+
+button, input {
+    line-height: normal;
+}
+
+input, textarea, button {
+    outline: none;
+    
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+input, textarea {
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="range"] {
+    background: #ddd;
+    height: 3px;
+}
+
+a, a:link, a:visited {
+    color: #555;
+    text-decoration: none;
+}
+
+html.no-touch a:hover, a.hover {
+    color: #1C71FE;
+    text-decoration: none;
+}
+
+img {
+    border: none; 
+    vertical-align: middle;
+    
+    &::selection {
+        background: transparent;
+    }
+    
+    &::-moz-selection {
+        background: transparent;
+    }
+}
+
+ul, ol {
+    margin-top: 0;
+    padding-left: 18px;
+    padding-left: 1.8rem;
+}
+
+ul > li > ul, ol > li > ol {
+    margin-bottom: 0;
+}
+
+ul, ol, dl {
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+
+ol {    
+    *margin-left: 5px; /* 解决IE7下数字序号被盖住的问题 */
+}
+
+dt {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 0.6rem;
+}
+
+kbd {
+    padding: 1px 3px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    @include border-radius(3px);
+}
+
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Microsoft YaHei", "Hiragino Sans GB", "Courier New", monospace;
+}
+
+pre {
+    color: #444;
+    line-height: 1.5;
+    display: block;
+    padding: 6px;
+    padding: 0.6rem;
+    margin: 15px auto;
+    margin: 1.5rem auto;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+    background-color: #f6f6f6;
+}
+
+p code {
+    margin: 0 5px;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+abbr[title], dfn[title] {
+    color: #3BA03B;
+    cursor: help;
+    border-bottom: 1px dotted #777;
+}
+
+address {
+    line-height: 1.5;
+    font-style: normal;
+}
+
+small, .small {
+    font-size: 12px;
+    font-size: 1rem;
+    font-size: 1.2rem\9;
+    color: #999;
+    font-weight: normal;
+}
+
+h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
+    font-size: 70%;
+    margin-left: 10ox;
+    margin-left: 1rem;
+}
+
+mark, .mark, .highlight {
+    padding: 2px 3px;
+    background: #ffffcc;
+    @include border-radius(4px);
+}
+
+p {
+    mark, .mark {
+        margin: 0 5px;
+        margin: 0 0.5rem;
+    }
+}
+
+q, blockquote {
+    font-style: italic;
+}
+
+blockquote {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 10px 12px;
+    padding: 1rem 1.2rem;
+    margin: 15px 0;
+    margin: 1.5rem 0;
+    border-left: 5px solid #eee;
+    
+    p:last-child, ul:last-child, ol:last-child {
+        margin-bottom: 0;
+    }
+
+    footer, small, .small {
+        color: #999;
+        display: block;
+        font-size: 80%;
+        line-height: 1.5;
+    }
+}
+
+table {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption {
+
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+}
+
+tfoot {
+    vertical-align: middle;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+tr {
+    display: table-row;
+}
+
+td, th {
+    text-align: left;
+    display: table-cell;
+}
+
+th {
+    font-weight: bold;
+}
+
+hr {
+    height: 0px;
+    margin: 15px auto;
+    margin: 1.5rem auto;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    _display: block;
+    _overflow: hidden;
+}
+
+iframe {
+    border: none;
+}
+
+form {
+    margin: 15px 0;
+    margin: 1.5rem 0;
+}
+
+fieldset {
+    margin: 15px auto;
+    margin: 1.5rem auto;
+    padding: 6px 10px 10px;
+    padding: 0.6rem 1rem 1rem;
+    border: 1px solid #eee;
+}
+
+legend {
+    border: 0;
+    font-size: 15px;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+

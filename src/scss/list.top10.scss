@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* TOP 10 List */
+
+.pui-top10-list {
+
+    > li > a {
+        display: block; 
+        padding: 3px; 
+
+        &:before {  
+            text-align: center; 
+            margin-right: 8px;
+            padding: 0 5px;
+            line-height: 1;
+            @include border-radius(3px);
+            color: #999;
+            background: #eee; 
+        } 
+
+        &.pui-top-1:before {
+            color: #fff;
+            background: red;
+            content : "1";
+        }     
+
+        &.pui-top-2:before {
+            color: #fff;
+            background: #ff6600;
+            content : "2";
+        }     
+
+        &.pui-top-3:before {
+            color: #fff;
+            background: orange;
+            content : "3";
+        }     
+
+        &.pui-top-4:before {
+            content : "4";
+        }    
+
+        &.pui-top-5:before {
+            content : "5";
+        }    
+
+        &.pui-top-6:before {
+            content : "6";
+        }    
+
+        &.pui-top-7:before {
+            content : "7";
+        }    
+
+        &.pui-top-8:before {
+            content : "8";
+        }    
+
+        &.pui-top-9:before {
+            content : "9";
+        }    
+
+        &.pui-top-10:before {
+            padding: 0 2px;
+            content : "10";
+        }  
+
+        > .pui-top-count {
+            color: #ccc;
+            float: right;
+        }    
+    }   
+}
+
+.pui-top10-list-box {
+    margin-left: 32px; 
+    margin-bottom: 5px;
+
+    > small {
+        display: block;
+        padding: 5px 10px;
+        @include border-radius(3px);
+        border: 1px solid #f6f6f6;
+        background: #fafafa;
+    }
+}
+
+.pui-top10-list-square > li > a:before {
+    @include border-radius(0);
+} 
+
+.pui-top10-list-circle > li > a:before { 
+    padding: 1px 6px;
+    @include border-radius(500px);
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Rating */
+           
+.pui-rating { 
+    @include user-select(none);
+    -webkit-touch-callout: none;
+
+    > span { 
+        display: inline-block;
+        padding: 0 1px; 
+        cursor: pointer;
+
+        &:before { 
+            display: inline-block;
+            font-family: "FontAwesome";
+            font-weight: normal;
+            font-style: normal; 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; 
+            color: #ddd;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 21px;
+            font-size: 2.1rem;
+            content : "\F006"; 
+        }
+
+        &.half:before {
+            color: #ff9900;
+            content : "\F123";
+        }
+
+        &.full:before {
+            color: #ff9900;
+            content : "\F005";
+        }
+    }
+
+    > small {
+        vertical-align: middle;
+        margin-left: 7px;
+        margin-left: 0.7rem;
+    }
+}    
+
+.pui-rating-xsmall > span:before {
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.pui-rating-small > span:before {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.pui-rating-large > span:before {
+    font-size: 25px;
+    font-size: 2.5rem;
+}
+
+.pui-rating-xlarge > span:before {
+    font-size: 30px;
+    font-size: 3rem;
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Breadcrumb */
+
+.pui-breadcrumb {
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    list-style: none;
+    font-size: 12px;
+    font-size: 1.2rem; 
+    background: transparent;
+    @include border-radius(2px);
+}
+
+.pui-breadcrumb li {
+    display: inline-block;
+}
+
+.pui-breadcrumb li + li:before {
+    color: #ddd;
+    content: "/\00a0";
+    padding: 0 6px;
+    padding: 0 0.6rem;
+} 
+
+.pui-breadcrumb li a {    
+    color: $link-color;
+    
+    html.no-touch &:hover, &.hover {
+        text-decoration: underline;
+    }
+}
+
+.pui-breadcrumb-right {
+    .pui-breadcrumb {
+        float: right;
+    }
+    
+    @include clearfix();
+}
+
+.pui-breadcrumb-arrow li + li:before { 
+    font-family: "FontAwesome";  
+    font-size: 16px;
+    padding: 0 8px 0 7px;
+    content : "\F105";
+} 

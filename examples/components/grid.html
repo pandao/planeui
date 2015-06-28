@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>响应式网格布局 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>
+            .pui-card {margin-bottom: 0;}
+            h5 {margin: 15px 0;}
+            
+            .pui-grid + .pui-grid {margin-top: 2rem;}
+        </style>
+	</head>
+    <body style="padding:10px;">
+        <div class="pui-layout pui-layout-fixed pui-layout-fixed-1200 pui-layout-fixed-1400 pui-layout-fixed-1500 pui-layout-fixed-1800">
+            <br/>
+            <h4>响应式网格布局 Grid layout</h4>
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <div class="pui-grid" id="test"></div>
+            <h5>Pull & Push</h5>
+            <div class="pui-grid" id="test2"></div>
+            <h5>Offsets</h5>
+            <div class="pui-grid" id="test3"></div>
+            <h5>混合</h5>
+            <div class="pui-grid">
+                <div class="pui-row">
+                    <div class="pui-grid-xs-6 pui-grid-sm-4 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3">  
+                        <div class="pui-card pui-card-default pui-card-box">
+                            <p class="pui-xs-show">pui-grid-xs-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-4</p>
+                            <p class="pui-md-show">pui-grid-md-3</p>
+                            <p class="pui-lg-show">pui-grid-lg-3</p>
+                            <p class="pui-xl-show">pui-grid-xl-3</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-3</p>
+                        </div>
+                    </div>
+                    <div class="pui-grid-xs-6 pui-grid-sm-8 pui-grid-md-9 pui-grid-lg-9 pui-grid-xl-9 pui-grid-xxl-9">
+                        <div class="pui-card pui-card-default pui-card-box">
+                            <p class="pui-xs-show">pui-grid-xs-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-8</p>
+                            <p class="pui-md-show">pui-grid-md-9</p>
+                            <p class="pui-lg-show">pui-grid-lg-9</p>
+                            <p class="pui-xl-show">pui-grid-xl-9</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pui-row">
+                    <div class="pui-grid-xs-6 pui-grid-sm-4 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3"> 
+                        <div class="pui-grid">
+                            <div class="pui-row" style="margin-bottom:0;">
+                                <div class="pui-grid-xs-12 pui-grid-sm-6 pui-grid-md-6 pui-grid-lg-6 pui-grid-xl-6 pui-grid-xxl-6">
+                                    <div class="pui-card pui-card-default pui-card-box">
+                                        <p class="pui-xs-show">pui-grid-xs-12</p>
+                                        <p class="pui-sm-show">pui-grid-sm-6</p>
+                                        <p class="pui-md-show">pui-grid-md-6</p>
+                                        <p class="pui-lg-show">pui-grid-lg-6</p>
+                                        <p class="pui-xl-show">pui-grid-xl-6</p>
+                                        <p class="pui-xxl-show">pui-grid-xxl-6</p>
+                                    </div>
+                                </div>
+                                <div class="pui-grid-xs-12 pui-grid-sm-6 pui-grid-md-6 pui-grid-lg-6 pui-grid-xl-6 pui-grid-xxl-6">
+                                    <div class="pui-card pui-card-default pui-card-box">
+                                        <p class="pui-xs-show">pui-grid-xs-12</p>
+                                        <p class="pui-sm-show">pui-grid-sm-6</p>
+                                        <p class="pui-md-show">pui-grid-md-6</p>
+                                        <p class="pui-lg-show">pui-grid-lg-6</p>
+                                        <p class="pui-xl-show">pui-grid-xl-6</p>
+                                        <p class="pui-xxl-show">pui-grid-xxl-6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pui-grid-xs-6 pui-grid-sm-8 pui-grid-md-9 pui-grid-lg-9 pui-grid-xl-9 pui-grid-xxl-9">
+                        <div class="pui-card pui-card-default pui-card-box">
+                            <p class="pui-xs-show">pui-grid-xs-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-8</p>
+                            <p class="pui-md-show">pui-grid-md-9</p>
+                            <p class="pui-lg-show">pui-grid-lg-9</p>
+                            <p class="pui-xl-show">pui-grid-xl-9</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pui-row">
+                    <div class="pui-grid-xs-6 pui-grid-xs-push-6 pui-grid-sm-7 pui-grid-sm-push-5 pui-grid-md-9 pui-grid-md-push-3 pui-grid-lg-9 pui-grid-lg-push-3 pui-grid-xl-3 pui-grid-xl-push-9 pui-grid-xxl-push-9">
+                        <div class="pui-card pui-card-default pui-card-box">                 
+                            <p class="pui-xs-show">pui-grid-xs-6 pui-grid-xs-push-6</p>                   
+                            <p class="pui-sm-show">pui-grid-sm-7 pui-grid-sm-push-5</p>
+                            <p class="pui-md-show">pui-grid-md-3 pui-grid-md-push-3</p>
+                            <p class="pui-lg-show">pui-grid-lg-3 pui-grid-lg-push-3</p>
+                            <p class="pui-xl-show">pui-grid-xl-3 pui-grid-xl-push-9</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-3 pui-grid-xxl-push-9</p>
+                        </div>
+                    </div>
+                    <div class="pui-grid-xs-6 pui-grid-xs-pull-6 pui-grid-sm-5 pui-grid-sm-pull-7 pui-grid-md-3 pui-grid-md-pull-9 pui-grid-lg-3 pui-grid-lg-pull-9 pui-grid-xl-9 pui-grid-xl-pull-3 pui-grid-xxl-9 pui-grid-xxl-pull-3">
+                        <div class="pui-card pui-card-default pui-card-box">   
+                            <p class="pui-xs-show">pui-grid-xs-6 pui-grid-xs-pull-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-5 pui-grid-sm-pull-7</p>
+                            <p class="pui-md-show">pui-grid-md-3 pui-grid-md-pull-9</p>
+                            <p class="pui-lg-show">pui-grid-lg-3 pui-grid-lg-pull-9</p>
+                            <p class="pui-xl-show">pui-grid-xl-9 pui-grid-xl-pull-3</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-9 pui-grid-xxl-pull-3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pui-row">
+                    <div class="pui-grid-xs-6 pui-grid-xs-offset-6 pui-grid-sm-5 pui-grid-sm-offset-7 pui-grid-md-4 pui-grid-md-offset-8 pui-grid-lg-3 pui-grid-lg-offset-9 pui-grid-xl-3 pui-grid-xl-offset-9 pui-grid-xxl-3 pui-grid-xxl-offset-9">
+                        <div class="pui-card pui-card-default pui-card-box">
+                            <p class="pui-xs-show">pui-grid-xs-6 pui-grid-xs-offset-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-5 pui-grid-sm-offset-7</p>
+                            <p class="pui-md-show">pui-grid-md-4 pui-grid-md-offset-8</p>
+                            <p class="pui-lg-show">pui-grid-lg-3 pui-grid-lg-offset-9</p>
+                            <p class="pui-xl-show">pui-grid-xl-3 pui-grid-xl-offset-9</p>
+                            <p class="pui-xxl-show">pui-grid-xl-3 pui-grid-xxl-offset-9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pui-row">
+                    <div class="pui-grid-xs-6 pui-grid-sm-4 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-grid-center">
+                        <div class="pui-card pui-card-default pui-card-box">
+                            <p class="pui-xs-show">pui-grid-xs-6</p>
+                            <p class="pui-sm-show">pui-grid-sm-4</p>
+                            <p class="pui-md-show">pui-grid-md-3</p>
+                            <p class="pui-lg-show">pui-grid-lg-3</p>
+                            <p class="pui-xl-show">pui-grid-xl-3</p>
+                            <p class="pui-xxl-show">pui-grid-xxl-3</p>
+                            <p>pui-grid-center 一直居中</p>
+                            <button class="pui-sm-hide pui-xs-hide">sm-hide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>
+            $(function() {
+                var sizes = ["xs", "sm", "md", "lg", "xl", "xxl"];
+                var grid = "";
+                
+                for (var i = 1; i < 13; i ++) {
+                    grid += '<div class="pui-row"><div class="pui-grid-xs-'+i+' pui-grid-sm-'+i+' pui-grid-md-'+i+' pui-grid-lg-'+i+' pui-grid-xl-'+i+' pui-grid-xxl-'+i+'">';
+                    grid += '<div class="pui-card pui-card-default pui-card-box">';
+                    for (var s in sizes) {
+                        grid += '<p class="pui-'+sizes[s]+'-show">'+sizes[s]+'-'+i+'</p>';
+                    }
+                    grid += '</div></div></div>';
+                }
+                
+                $("#test").append(grid);
+                
+                var grid2 = "";
+                
+                for (var i = 1; i < 13; i ++) {
+                    var classes = '', classes2 = '', showText = '', showText2 = '';
+
+                    for (var s in sizes) {
+                        classes += 'pui-grid-'+sizes[s]+'-'+i+' pui-grid-'+sizes[s]+'-push-'+(13-i-1)+' ';
+                        classes2 += 'pui-grid-'+sizes[s]+'-'+(13-i-1)+' pui-grid-'+sizes[s]+'-pull-'+i+' ';
+                        showText += '<p class="pui-'+sizes[s]+'-show">'+sizes[s]+'-push-'+i+'</p>';
+                        showText2 += '<p class="pui-'+sizes[s]+'-show">'+sizes[s]+'-pull-'+i+'</p>';
+                    }
+                    
+                    if (i === 12) {
+                        grid2 += '<div class="pui-row"><div class="pui-grid-xs-12 pui-grid-sm-12 pui-grid-md-12 pui-grid-lg-12 pui-grid-xl-12 pui-grid-xxl-12 pui-grid-xs-push-12 pui-grid-sm-push-12 pui-grid-md-push-12 pui-grid-lg-push-12 pui-grid-xl-push-12 pui-grid-xxl-push-12"><div class="pui-card pui-card-default pui-card-box">xs-'+i+', xs-push-'+(13-i-1)+', xs-pull-'+(13-i-1)+'</div></div></div>';
+                    } else {
+                        
+                        grid2 += '<div class="pui-row">';
+                        grid2 += '<div class="'+classes+'"><div class="pui-card pui-card-default pui-card-box">'+showText+'</div></div>';
+                        grid2 += '<div class="'+classes2+'"><div class="pui-card pui-card-default pui-card-box">'+showText2+'</div></div>';
+                        grid2 += '</div>';
+                    }
+                }
+                
+                $("#test2").append(grid2);
+                
+                var grid3 = "";
+                
+                for (var i = 1; i < 13; i ++) {
+                    var classes = '', showText = '';
+                    for (var s in sizes) {
+                        classes += 'pui-grid-'+sizes[s]+'-'+i+' pui-grid-'+sizes[s]+'-offset-'+(13-i-1)+' ';
+                        showText += '<p class="pui-'+sizes[s]+'-show">'+sizes[s]+'-offset-'+i+'</p>';
+                    }
+                    
+                    grid3 += '<div class="pui-row"><div class="'+classes+'">';
+                    grid3 += '<div class="pui-card pui-card-default pui-card-box">';
+                    grid3 += showText;
+                    grid3 += '</div></div></div>';
+                }
+                
+                $("#test3").append(grid3);
+            });
+        </script>
+    </body>
+</html>

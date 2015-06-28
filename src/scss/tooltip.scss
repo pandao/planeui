@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Tooltips */
+
+.pui-tooltip {
+    position: relative; 
+    display: inline-block;
+    @include user-select(none);
+    -webkit-touch-callout: none;
+
+    &.square, &.pui-square {
+        @include border-radius(0);
+    }
+
+    &.shadow, &.pui-shadow {
+        @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+    }
+}
+
+.pui-tooltip-bordered {
+    padding: 8px 12px;
+    padding: 0.8rem 1.2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    @include border-radius(5px); 
+}
+
+.pui-tooltip-opacity {
+    color: #fff;
+    background: #000;
+    border-color: #000;
+    @include opacity(0.7);
+} 
+
+.pui-tooltip-opacity-1 { 
+    @include opacity(1);
+} 
+
+.pui-tooltip-viewer {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ddd;
+    @include border-radius(5px); 
+}
+
+.pui-tooltip-context {
+    position: relative;
+    
+    > img + p {
+        margin-top: 5px;
+    }
+
+    > p:last-child {
+        margin-bottom:  0;
+    }
+}
+
+[class*=pui-tooltip-arrow-] {
+    &:before, &:after {
+        width: 0;
+        height: 0;
+        display: block;
+        content: "";
+        border: 7px solid transparent; 
+        pointer-events: pointer-events;
+        position: absolute;
+    } 
+}
+
+/* Top */
+
+[class*=pui-tooltip-arrow-t] {
+    &:before, &:after {
+        border-bottom-color: #ccc; 
+        top: -14px;
+    }
+    
+    &:after {
+        border-bottom-color: #fff;  
+        top: -13px; 
+    }
+}
+
+.pui-tooltip-arrow-tl {
+    &:before, &:after {
+        left: 8%; 
+    } 
+}
+
+.pui-tooltip-arrow-tc {
+    &:before, &:after {  
+        left: 49%;
+    } 
+}
+
+.pui-tooltip-arrow-tr {
+    &:before, &:after { 
+        right: 8%; 
+    }   
+}
+
+/* Bottom */ 
+
+[class*=pui-tooltip-arrow-b] {
+    &:before, &:after {
+        border-top-color: #ccc; 
+        bottom: -14px;
+    }
+
+    &:after {
+        border-top-color: #fff; 
+        bottom: -13px;
+    }
+}
+
+.pui-tooltip-arrow-bl {
+    &:before, &:after { 
+        left: 8%;
+    }  
+}
+
+.pui-tooltip-arrow-bc {
+    &:before, &:after { 
+        left: 49%;
+    }  
+}
+
+.pui-tooltip-arrow-br {
+    &:before, &:after { 
+        right: 8%;
+    }  
+}
+
+/* left */
+
+[class*=pui-tooltip-arrow-l] {
+    &:before, &:after {
+        border-right-color: #ccc; 
+        left: -14px;
+    }
+
+    &:after {
+        border-right-color: #fff; 
+        left: -13px;
+    }
+}
+
+.pui-tooltip-arrow-lt {
+    &:before, &:after { 
+        top: 12px;
+    }  
+}
+
+.pui-tooltip-arrow-lc {
+    &:before, &:after { 
+        top: 46%;
+    }  
+}
+
+.pui-tooltip-arrow-lb {
+    &:before, &:after { 
+        bottom: 12px;
+    }  
+}
+
+/* right */ 
+
+[class*=pui-tooltip-arrow-r] {
+    &:before, &:after {
+        border-left-color: #ccc; 
+        right: -14px;
+    }
+
+    &:after {
+        border-left-color: #fff; 
+        right: -13px;
+    }
+}
+
+.pui-tooltip-arrow-rt {
+    &:before, &:after { 
+        top: 12px;
+    }  
+}
+
+.pui-tooltip-arrow-rc {
+    &:before, &:after { 
+        top: 46%;
+    }  
+}
+
+.pui-tooltip-arrow-rb {
+    &:before, &:after { 
+        bottom: 12px;
+    }  
+}
+
+/* tooltip colors */
+
+@each $name, $color in $ui-colors {
+    .pui-tooltip-#{$name}, .pui-tooltip-#{$name}-light {
+        background: $color;
+        border-color: $color; 
+
+        &[class*=pui-tooltip-arrow-t] {
+            &:before, &:after { 
+                border-bottom-color: inherit;    
+            }
+        }
+
+        &[class*=pui-tooltip-arrow-b] {
+            &:before, &:after { 
+                border-top-color: inherit;    
+            }
+        }
+
+        &[class*=pui-tooltip-arrow-l] {
+            &:before, &:after { 
+                border-right-color: inherit;    
+            }
+        }
+
+        &[class*=pui-tooltip-arrow-r] {
+            &:before, &:after { 
+                border-left-color: inherit;    
+            }
+        }
+    }
+    
+    .pui-tooltip-#{$name}-light { 
+        @if $name == error {
+            color: $color;
+            background: lighten($color, 20%);
+            border-color: lighten($color, 20%);
+        } @elseif $name == warning {
+            color: $color;
+            background: lighten($color, 20%);
+            border-color: lighten($color, 20%);
+        } @elseif $name == gary {
+            color: #666;
+            background: lighten($color, 5%);
+            border-color: lighten($color, 5%);
+        } @else {
+            color: $color;
+            background: lighten($color, 30%);
+            border-color: lighten($color, 30%);
+        }
+    }
+}
+
+/* tooltip opacity */
+
+.pui-tooltip-opacity {
+    &[class*=pui-tooltip-arrow-t] {
+        &:before, &:after {
+            border-bottom-color: inherit;
+        }          
+    }
+
+    &[class*=pui-tooltip-arrow-b] {
+        &:before, &:after {
+            border-top-color:  inherit;
+        }          
+    }
+
+    &[class*=pui-tooltip-arrow-l] {
+        &:before, &:after {
+            border-right-color:  inherit;
+        }
+    }
+
+    &[class*=pui-tooltip-arrow-r] {
+        &:before, &:after {
+            border-left-color:  inherit;
+        }
+    }
+}

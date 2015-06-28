@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'planeui-logo';
+  src: url("../fonts/planeui-logo.eot?-rfliw7");
+  src: url("../fonts/planeui-logo.eot?#iefix-rfliw7") format("embedded-opentype"), url("../fonts/planeui-logo.ttf?-rfliw7") format("truetype"), url("../fonts/planeui-logo.woff?-rfliw7") format("woff"), url("../fonts/planeui-logo.svg?-rfliw7#planeui-logo") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*=pui-logo], [class*=planeui-logo] {
+  font-family: 'planeui-logo';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: inherit;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pui-logo:before,
+.pui-logo-1x:before,
+.pui-logo-2x:before,
+.pui-logo-3x:before,
+.pui-logo-4x:before,
+.pui-logo-5x:before,
+.pui-logo-6x:before,
+.pui-logo-7x:before,
+.pui-logo-8x:before,
+.planeui-logo:before,
+.planeui-logo-1x:before,
+.planeui-logo-2x:before,
+.planeui-logo-3x:before,
+.planeui-logo-4x:before,
+.planeui-logo-5x:before,
+.planeui-logo-6x:before,
+.planeui-logo-7x:before,
+.planeui-logo-8x:before {
+  content: "\e600";
+}
+
+.pui-logo-lg, .planeui-logo-lg {
+  font-size: 1.4em;
+}
+
+.pui-logo-lg:before, .planeui-logo-lg:before {
+  content: "\e600";
+}
+
+.pui-logo-1x, .planeui-logo-1x {
+  font-size: 1em;
+}
+
+.pui-logo-2x, .planeui-logo-2x {
+  font-size: 2em;
+}
+
+.pui-logo-3x, .planeui-logo-3x {
+  font-size: 3em;
+}
+
+.pui-logo-4x, .planeui-logo-4x {
+  font-size: 4em;
+}
+
+.pui-logo-5x, .planeui-logo-5x {
+  font-size: 5em;
+}
+
+.pui-logo-6x, .planeui-logo-6x {
+  font-size: 6em;
+}
+
+.pui-logo-7x, .planeui-logo-7x {
+  font-size: 7em;
+}
+
+.pui-logo-8x, .planeui-logo-8x {
+  font-size: 8em;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>搜索框 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;padding-bottom: 300px;">
+            <br/>
+            <h4>搜索框 Search</h4>  
+            <p><small>兼容情况： 支持 IE8+</small></p>
+            <div class="pui-bg-green-300" style="padding:5px;">
+                <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-search-simple pui-search-white" style="width:30%;margin:0;">
+                    <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                    <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+                </form> 
+            </div>
+            <br/>
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-search-simple" style="width:30%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            <div class="pui-bg-green-300 pui-clear" style="padding:5px;">
+                <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-round pui-search-large pui-search-unbordered pui-right" style="width: 40%;margin:0;">
+                    <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                    <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+                    <ul class="pui-list pui-search-auto-complete pui-shadow">
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">jQuery插件</a></li>
+                        <li><a href="#">jQuery UI</a></li>
+                        <li><a href="#">jQuery Mobile</a></li>
+                        <li><a href="#">jQuery原理</a></li>
+                    </ul>
+                </form> 
+            </div>
+            <br/>
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-round pui-search-large" style="width:40%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-search-large" style="width:40%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-search-large" style="width:40%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            
+            <div class="pui-bg-green-300 pui-clear" style="padding:5px;">
+                <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-search-single-button pui-search-unbordered" style="width: 40%;margin:0;float:right;" width="40px" hover-width="40%">
+                    <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                    <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+                </form>  
+            </div>
+            <br/> 
+            
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-round pui-search-single-button" style="width:40px;" width="40px" hover-width="30%">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search pui-round" style="width:30%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search" style="width:30%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+            </form> 
+            <br/>
+            
+            <form action="//localhost/tasty/tests/post.php" method="post" class="pui-search square" style="width:30%;">
+                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+                <ul class="pui-list pui-search-auto-complete z-depth-2">
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">jQuery插件</a></li>
+                    <li><a href="#">jQuery UI</a></li>
+                    <li><a href="#">jQuery Mobile</a></li>
+                    <li><a href="#">jQuery原理</a></li>
+                </ul>
+            </form> 
+            <br/>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+    </body>
+    </html>

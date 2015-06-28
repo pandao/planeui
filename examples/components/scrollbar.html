@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>自定义滚动条 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <link rel="stylesheet" href="./../../src/plugins/scrollbar/scrollbar.css">
+        <style>
+            html, body {width:100%;height:100%;overflow: hidden;}
+            /* 竖向自定义滚动条 */
+            #test {margin:10px 0;width:500px;height:300px;background: #ddd; }
+            #test .pui-scrollbox-container {}
+
+            /*横向自定义滚动条*/
+            #test2 {width:500px;height:300px;background: #ddd;}
+            #test2 .pui-scrollbox-container{width:1000px;}
+            /*#test2 .pui-scrollbox-scrollbar{position:absolute;top:290px;left:0;width:500px;height:5px;background:#ccc;}
+            #test2 .pui-scrollbox-thumb{position:absolute;top:0;left:0;width:100px;height:5px;background:#999;cursor: pointer;}*/
+            
+        </style>
+	</head>
+	<body>
+        <div class="pui-scrollbox" id="test3" style="width:100%;height: 100%;position:fixed;z-index:1000;background:#999;display:none;">
+            <div class="pui-scrollbox-container">
+                <button class="pui-btn pui-btn-success" id="btn2">关闭全屏自定义滚动条</button>
+                <p><img src="images/7.jpg" class="pui-img-size-auto" /></p>
+                <p><img src="images/12.jpg" class="pui-img-size-auto" /></p>
+                <p><img src="images/19.jpg" class="pui-img-size-auto" /></p>
+                <p><img src="images/10.jpg" class="pui-img-size-auto" /></p>
+            </div>	
+        </div>
+        <div id="layout" style="margin:15px;">
+            <br/>
+            <h4 class="h4">自定义滚动条</h4> 
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <h6>示例一：竖向自定义滚动条</h6>
+            <div class="pui-scrollbox" id="test">
+                <div class="pui-scrollbox-container">
+                    <p><img src="images/7.jpg" /></p>
+                </div>	
+            </div>
+            <br />
+            <h6>示例二：横向自定义滚动条</h6>
+            <div class="pui-scrollbox" id="test2">
+                <div class="pui-scrollbox-container">
+                    <p><img src="images/header-bg.jpg" height="300" /></p>
+                </div>	
+            </div>
+            <h6>示例三：全屏自定义滚动条</h6>
+            <button class="pui-btn pui-btn-success" id="btn">打开全屏自定义滚动条</button>
+        </div>
+        <!--<script src="http://192.168.1.6:8080/target/target-script-min.js#anonymous"></script>-->
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+		<script type="text/javascript" src="./../../src/plugins/scrollbar/scrollbar.js"></script>
+        <script>
+            $(function() {
+                
+                $("#btn").bind($.clickOrTouch(), function() {
+                    $("#test3").show().scrollbox({
+                        //animated : false,
+                        //mousewheel : false,
+                        //speed : 1000,
+                        //hoverDisplay : false
+                    });
+                });
+                
+                $("#btn2").bind($.clickOrTouch(), function() {
+                    $("#test3").fadeOut();
+                });
+                
+                $("#test").scrollbox({
+                    //animated : false,
+                    //mousewheel : false,
+                    start : function() {
+                        console.log("到顶了！", this);
+                    },
+                    end : function() {
+                        console.log("到底了！", this);
+                    }
+                });
+
+                $("#test2").scrollbox({
+                    direction : "x", // 水平滚动
+                    //animated : false,
+                    //mousewheel : false,
+                    start : function() {
+                        console.log("到顶了！", this);
+                    },
+                    end : function() {
+                        console.log("到底了！", this);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

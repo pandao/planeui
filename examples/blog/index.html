@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="Plane UI" />
+        <meta name="keywords" content="Plane UI" />
+		<title>Blog example - Plane UI</title>
+
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+        <!--[if lte IE 9]>
+        <div class="pui-layout pui-browsehappy">
+            <a href="javascript:;" class="pui-close" onclick="document.body.removeChild(this.parentNode);"></a>
+            <p>您正在使用 <strong class="pui-text-yellow pui-text-xl">过时</strong> 的非现代浏览器，<strong class="pui-text-success pui-text-xl">91.23%</strong> 的人选择 <a href="http://browsehappy.com/" target="_blank" class="pui-text-green-400 pui-text-xl"><strong>升级浏览器</strong></a>，获得了更好、更安全的浏览体验！</p>
+        </div>
+        <![endif]-->
+        <a name="top"></a>
+        <a href="#top" class="fa fa-arrow-circle-up fa-3x pui-text-blue-400" id="go-to-top"></a>
+		<div class="pui-layout">
+            <div class="pui-layout pui-bg-blue-500 blog-header-con">
+                <header class="pui-center pui-layout-fixed pui-layout-fixed-1200 blog-header">
+                    <h2>Plane UI's Blog<small class="pui-text-white">官方博客</small></h2>
+                    <menu class="pui-grid pui-row blog-menu">
+                        <ul class="pui-menu pui-menu-inline pui-menu-radius pui-grid-xs-12 pui-grid-sm-8 pui-grid-md-8 pui-grid-lg-9 pui-xs-hide">
+                            <li>
+                                <a href="index.html"><i class="fa fa-home"></i> 首页</a>
+                            </li>
+                            <li>
+                                <a href="#">PHP</a>
+                            </li>
+                            <li>
+                                <a href="#">前端 <i class="pui-arrow-down"></i></a> 
+                                <ul class="pui-menu pui-menu-dropdown">
+                                    <li>
+                                        <a href="#">HTML5 & CSS3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Javascript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">jQuery</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Node.js</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">设计 <i class="pui-arrow-down"></i></a>
+                                <ul class="pui-menu pui-menu-dropdown">
+                                    <li>
+                                        <a href="#">交互设计</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">网页设计</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">UI设计</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">平面设计</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">游记</a>
+                            </li>
+                            <li>
+                                <a href="#">关于我</a>
+                            </li>
+                        </ul>
+                        <div class="pui-grid-xs-12 pui-grid-sm-4 pui-grid-md-4 pui-grid-lg-3 blog-search pui-xs-hide">
+                            <form action="" method="post" class="pui-search pui-round pui-search-large pui-search-unbordered pui-right">
+                                <input type="text" name="keywords" class="pui-search-keywords" placeholder="搜索..." />
+                                <button type="submit" class="pui-search-submit" name="submit-pui-search" value=""></button>
+                                <ul class="pui-list pui-search-auto-complete pui-shadow pui-hide">
+                                    <li><a href="#">Plane</a></li>
+                                    <li><a href="#">Plane 插件</a></li>
+                                    <li><a href="#">Plane UI</a></li>
+                                    <li><a href="#">Plane 组件</a></li>
+                                    <li><a href="#">Plane 教程</a></li>
+                                </ul>
+                            </form> 
+                        </div>
+                    </menu>
+                    
+                    <i class="fa fa-list fa-2x pui-xs-show" id="open-menu"></i>
+                </header>
+            </div> 
+            <div class="pui-container pui-layout-fixed pui-layout-fixed-1200 pui-grid blog-main">
+                <div class="pui-row">
+                    <div class="pui-grid-xs-12 pui-grid-sm-8 pui-grid-md-8 pui-grid-lg-9 blog-list">                        
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title">
+                                <strong><a href="view.html">转载：日常设计：网站设计灵感的十个来源</a></strong>
+                                <p class="article-category">
+                                    来源：<a href="http://cdc.tencent.com/?p=8087">腾讯CDC</a>&nbsp;&nbsp;&nbsp;分类：<a href="#">交互设计</a>, <a href="#">网页设计</a>
+                                </p>
+                                <span class="article-date"><small>2014</small>05-19</span>
+                            </div>
+                            <div class="pui-card-box">
+                                <p><img src="http://cdc.tencent.com/wp-content/uploads/2014/05/banner1.jpg" class="pui-img-full-width article-image" /></p>
+                                <div class="pui-text-sm">
+                                    <p>不仅仅是网页方面的设计，这个世界上围绕在我们身边的所有东西都可以激发我们的网站设计灵感。 你永远不会知道创意的火花什么时候会撞击到你。在项目过程中，我经常发现一些最平常的事物可以让我用一种新的或不同的方式进行思考。这里有10个除了网站以外的我最喜欢的设计灵感资源。...</p>
+                                </div>
+                                <p class="pui-text-right">
+                                    <a href="view.html" class="pui-link"><strong>阅读全文>></strong></a>
+                                </p>
+                            </div>
+                            <div class="pui-card-foot pui-clear">
+                                <span class="pui-text-gary"><i class="fa fa-eye"></i> 浏览: 44,354&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"></i> 喜爱: 126</span>
+                                <div class="bdsharebuttonbox pui-right">
+                                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                    <a href="#" class="bds_more" data-cmd="more"></a>
+                                </div>
+                            </div>
+                        </div>               
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title">
+                                <strong><a href="view.html">转载：扁平和简约来袭</a></strong>
+                                <p class="article-category">
+                                    来源：<a href="http://cdc.tencent.com/?p=7951">腾讯CDC</a>&nbsp;&nbsp;&nbsp;分类：<a href="#">交互设计</a>, <a href="#">网页设计</a>
+                                    <a href="#top" class="pui-right">TOP</a>
+                                </p>
+                                <span class="article-date"><small>2014</small>02-12</span>
+                            </div>
+                            <div class="pui-card-box">
+                                <p><img src="http://cdc.tencent.com/?attachment_id=7965" class="pui-img-full-width article-image" /></p>
+                                <div class="pui-text-sm">
+                                    <p>在过去几年里，软件和APP的界面设计风格发生了迅速变化，由3D、拟物发展到扁平、简约。尽管这一趋势普遍存在，我们还是思考下是如何发展至此的，以及它对整个界面设计领域有何影响。另外，我会分享扁平界面设计的一些技巧和注意问题。...</p>
+                                </div>
+                                <p class="pui-text-right">
+                                    <a href="view.html" class="pui-link"><strong>阅读全文>></strong></a>
+                                </p>
+                            </div>
+                            <div class="pui-card-foot pui-clear">
+                                <span class="pui-text-gary"><i class="fa fa-eye"></i> 浏览: 150,278&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"></i> 喜爱: 312</span>
+                                <div class="bdsharebuttonbox pui-right">
+                                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                    <a href="#" class="bds_more" data-cmd="more"></a>
+                                </div>
+                            </div>
+                        </div>           
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title">
+                                <strong><a href="view.html">转载：做好扁平化设计－交互篇</a></strong>
+                                <p class="article-category">
+                                    来源：<a href="http://cdc.tencent.com/?p=7913">腾讯CDC</a>&nbsp;&nbsp;&nbsp;分类：<a href="#">交互设计</a>, <a href="#">网页设计</a>
+                                    <a href="#top" class="pui-right">TOP</a>
+                                </p>
+                                <span class="article-date"><small>2014</small>01-24</span>
+                            </div>
+                            <div class="pui-card-box">
+                                <p><img src="http://cdc.tencent.com/?attachment_id=7946" class="pui-img-full-width article-image" /></p>
+                                <div class="pui-text-sm">
+                                    <p>随着各种智能设备的多样性和普及，交互界面需要变得更容易适应其变化，很显然扁平的交互界面要比其它样式要更容易处理。移动互联网向着需要低配置、高效能，个性化以及优质用户体验的方向发展。我们必需快速响应这个趋势。...</p>
+                                </div>
+                                <p class="pui-text-right">
+                                    <a href="view.html" class="pui-link"><strong>阅读全文>></strong></a>
+                                </p>
+                            </div>
+                            <div class="pui-card-foot pui-clear">
+                                <span class="pui-text-gary"><i class="fa fa-eye"></i> 浏览: 46,472&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"></i> 喜爱: 262</span>
+                                <div class="bdsharebuttonbox pui-right">
+                                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                    <a href="#" class="bds_more" data-cmd="more"></a>
+                                </div>
+                            </div>
+                        </div>          
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title">
+                                <strong><a href="view.html">转载：做好扁平化设计－视觉篇</a></strong>
+                                <p class="article-category">
+                                    来源：<a href="http://cdc.tencent.com/?p=7844">腾讯CDC</a>&nbsp;&nbsp;&nbsp;分类：<a href="#">交互设计</a>, <a href="#">网页设计</a>
+                                    <a href="#top" class="pui-right">TOP</a>
+                                </p>
+                                <span class="article-date"><small>2014</small>01-24</span>
+                            </div>
+                            <div class="pui-card-box">
+                                <p><img src="http://cdc.tencent.com/?attachment_id=7910" class="pui-img-full-width article-image" /></p>
+                                <div class="pui-text-sm">
+                                    <p>扁平化设计无疑是当前讨论最多，最火的设计形式，自ios7面世以来更是将扁平化设计的讨论推向风口浪尖。 在这里我不想分析拟物设计和扁平化设计的优劣，更不想说谁更好！在形式服从内容的今天，我只能说哪种设计风格更适合你的产品，就像你问我水和酒哪个好喝一样，我没有办法回答，只能看此时你最需要什么。...</p>
+                                </div>
+                                <p class="pui-text-right">
+                                    <a href="view.html" class="pui-link"><strong>阅读全文>></strong></a>
+                                </p>
+                            </div>
+                            <div class="pui-card-foot pui-clear">
+                                <span class="pui-text-gary"><i class="fa fa-eye"></i> 浏览: 119,298&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"></i> 喜爱: 315</span>
+                                <div class="bdsharebuttonbox pui-right">                                    
+                                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                    <a href="#" class="bds_more" data-cmd="more"></a>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="blog-pagination">
+                            <ul class="pui-pagination pui-pagination-bordered pui-pagination-prev-next"> 
+                                <li><a href="#" class="disabled">上一页</a></li>
+                                <li class="pui-pagination-nav"><span>1 / 15</span></li>
+                                <li><a href="#">下一页</a></li> 
+                            </ul>
+                        </div>  
+                    </div>
+                    <div class="pui-grid-xs-12 pui-grid-sm-4 pui-grid-md-4 pui-grid-lg-3 blog-side">
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title pui-card-title-left-border">
+                                <span class="pui-card-title-right pui-xs-show"><a href="#top">TOP</a></span>
+                                <strong>热门文章</strong>
+                            </div>
+                            <div class="pui-card-box">                                
+                                <ul class="pui-list pui-top10-list">
+                                    <li>
+                                        <a href="#" class="pui-top-1">
+                                            <span class="pui-top-count">15万</span>转载：扁平和简约来袭
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pui-top-2">
+                                            <span class="pui-top-count">11.9万</span>转载：做好扁平化设计－视觉篇
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" class="pui-top-3">
+                                            <span class="pui-top-count">4.6万</span>转载：做好扁平化设计－交互篇
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pui-top-4">
+                                            <span class="pui-top-count">4.4万</span>转载：日常设计：网站设计灵...
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title pui-card-title-left-border">
+                                <span class="pui-card-title-right pui-xs-show"><a href="#top">TOP</a></span>
+                                <strong>热门评论</strong>
+                            </div>
+                            <div class="pui-card-box">
+                                <ul class="pui-list pui-list-dashed-line">
+                                    <li>
+                                        <a href="#" class="pui-link">John Wu</a> 评论到：“内容为本及响应式设计的需要”。—— <a href="#" class="pui-link">转载：扁平和简约来袭</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pui-link">Tom Lee</a> 评论到：“内容为本及响应式设计的需要”。—— <a href="#" class="pui-link">转载：做好扁平化设计－视觉篇</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pui-link">Peter Chan</a> 评论到：“交互交互交互交互交互交互”。—— <a href="#" class="pui-link">转载：做好扁平化设计－交互篇</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title">
+                                <span class="pui-card-title-right pui-xs-show"><a href="#top">TOP</a></span>
+                                <strong><i class="fa fa-tags pui-text-teal"></i> 标签</strong>
+                            </div>
+                            <div class="pui-card-box">
+                                <a href="#" class="pui-badge pui-badge-success pui-text-white pui-text-xl">PHP</a>
+                                <a href="#" class="pui-badge pui-bg-teal pui-text-md">CSS3</a>
+                                <a href="#" class="pui-badge pui-bg-orange pui-text-xl">HTML5</a>
+                                <a href="#" class="pui-badge pui-badge-primary">Gulp.js</a>
+                                <a href="#" class="pui-badge pui-badge-warning pui-text-white pui-text-lg">jQuery</a>
+                                <a href="#" class="pui-badge pui-badge-error">Flexbox</a>
+                                <a href="#" class="pui-badge pui-bg-orange">Node-webkit</a>
+                                <a href="#" class="pui-badge pui-badge-secondary pui-text-lg">Node.js</a>
+                                <a href="#" class="pui-badge pui-badge-gary">Memcached</a>
+                                <a href="#" class="pui-badge pui-badge-info pui-text-lg">MySQL</a>
+                                <a href="#" class="pui-badge pui-badge-error">webfont</a>
+                                <a href="#" class="pui-badge pui-badge-info pui-text-xl">响应式</a>
+                                <a href="#" class="pui-badge pui-badge-success">MongoDB</a>
+                                <a href="#" class="pui-badge pui-badge-error pui-text-lg">Redis</a>
+                                <a href="#" class="pui-badge pui-badge-gary">IE6</a>
+                                <a href="#" class="pui-badge pui-badge-primary pui-text-xl">Plane UI</a>
+                                <a href="#" class="pui-badge pui-badge-success">SSDB</a>
+                                <a href="#" class="pui-badge pui-badge-info">SQlite</a>
+                            </div>
+                        </div>
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title pui-card-title-left-border">
+                                <span class="pui-card-title-right pui-xs-show"><a href="#top">TOP</a></span>
+                                <strong>归档</strong>
+                            </div>
+                            <div class="pui-card-box">
+                                <ul class="pui-list pui-list-angle-right-type pui-list-column-2">
+                                    <li><a href="#">2014年12月</a></li>
+                                    <li><a href="#">2014年11月</a></li>
+                                    <li><a href="#">2014年10月</a></li>
+                                    <li><a href="#">2014年09月</a></li>
+                                    <li><a href="#">2014年08月</a></li>
+                                    <li><a href="#">2014年06月</a></li>
+                                    <li><a href="#">2014年04月</a></li>
+                                    <li><a href="#">2014年01月</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-title pui-card-title-left-border">
+                                <span class="pui-card-title-right pui-xs-show"><a href="#top">TOP</a></span>
+                                <strong>关注我</strong>
+                            </div>
+                            <div class="pui-card-box padding-l-r-10">
+                                <ul class="pui-menu pui-menu-radius pui-menu-inline pui-list-column-2">
+                                    <li>
+                                        <a href="http://weibo.com/ipandao" target="_blank"><i class="fa fa-weibo pui-text-red"></i> Weibo</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gihub.com/pandao" target="_blank"><i class="fa fa-github"></i> Github</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gihub.com/pandao" target="_blank"><i class="fa fa-facebook pui-text-blue-900"></i> Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gihub.com/pandao" target="_blank"><i class="fa fa-twitter pui-text-blue-500"></i> Twitter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pui-card pui-card-default pui-card-simple">
+                            <div class="pui-card-box padding-l-r-10">
+                                <ul class="pui-menu pui-menu-radius pui-margin-none pui-list-column-2">
+                                    <li>
+                                        <a href="http://weibo.com/ipandao" target="_blank"><i class="fa fa-sign-in pui-text-green"></i> 登录</a>
+                                    </li> 
+                                    <li>
+                                        <a href="http://weibo.com/ipandao" target="_blank"><i class="fa fa-user pui-text-teal"></i> 注册</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gihub.com/pandao" target="_blank"><i class="fa fa-rss pui-text-orange"></i> 文章RSS</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gihub.com/pandao" target="_blank"><i class="fa fa-rss-square pui-text-orange"></i> 评论RSS</a>
+                                    </li>
+                                </ul>
+                                <p class="pui-text-center"><img src="images/qr-code.png" class="pui-img-size-auto" /></p>                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="pui-center pui-layout-fixed pui-layout-fixed-1200 blog-footer">
+                <hr class="pui-xs-hide" />
+                <ul class="pui-breadcrumb pui-margin-none">
+                    <li>
+                        <a href="index.html"><i class="fa fa-home"></i> 首页</a>
+                    </li>
+                    <li>
+                        <a href="#">PHP</a>
+                    </li>
+                    <li>
+                        <a href="#">前端</a>
+                    </li>
+                    <li>
+                        <a href="#">设计</a>
+                    </li>
+                    <li>
+                        <a href="#">游记</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <span class="pui-right"><a href="#top" class="pui-link">TOP</a></span>
+                    <p>Copyright &copy; 2014-2015 <a href="https://github.com/pandao/planeui" class="pui-link" title="Plane UI's Blog" target="_blank">Plane UI's Blog</a> All Rights Reserved.</p>
+                    <p>Powered by <a href="https://github.com/pandao/planeui" class="pui-link" target="_blank">Plane UI</a>, <a href="https://github.com/pandao/planeui/blob/master/LICENSE" target="_blank" class="pui-link">MIT</a> License.<small class="pui-right">代码如诗。</small></p>
+                </div>
+            </footer>
+		</div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+	</body>
+</html>

@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Buttons */ 
+
+.pui-btn {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 6px 12px;
+    padding: 0.6rem 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.428;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+    //background: transparent;
+    background: none;
+    border: 1px solid transparent;
+    @include border-radius(4px);
+    @include user-select(none);
+    @include transition(color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out);
+    @include user-select(none); // 设置为无法选择文本
+    -webkit-touch-callout: none; // 长按时不触发系统的菜单
+
+    html.no-touch &:hover, &:focus, &.hover, &.focus, &.pui-hover, &.pui-focus {
+        text-decoration: none;
+    }
+
+    &:active, &.active, &.pui-active {
+        outline: 0;
+        color: #fff;
+        background-image: none;
+        @include box-shadow(inset 1px 2px 5px rgba(0, 0, 0, 0.15));
+    }
+    
+    .fa {
+        margin-top: -3px;
+        margin-top: -0.3rem;
+    }
+}
+
+*.disabled, *.pui-disabled, *[disabled], .pui-btn.disabled, .pui-btn.pui-disabled, .pui-btn[disabled], fieldset[disabled] .pui-btn, 
+input[type="text"].disabled, input[type="text"].pui-disabled, input[type="text"][disabled], 
+input[type="password"].disabled, input[type="password"].pui-disabled, input[type="password"][disabled],
+input[type="email"].disabled, input[type="email"].pui-disabled, input[type="email"][disabled],
+input[type="url"].disabled, input[type="url"].pui-disabled, input[type="url"][disabled],
+input[type="number"].disabled, input[type="number"].pui-disabled, input[type="number"][disabled],
+input[type="range"].disabled, input[type="range"].pui-disabled, input[type="range"][disabled],
+input[type="date"].disabled, input[type="date"].pui-disabled, input[type="date"][disabled],
+input[type="color"].disabled, input[type="color"].pui-disabled, input[type="color"][disabled],
+input[type="search"].disabled, input[type="search"].pui-disabled, input[type="search"][disabled],
+select.disabled, select.pui-disabled, select[disabled] {
+    //pointer-events: none;
+    cursor: not-allowed; 
+    @include opacity(0.5);
+    @include box-shadow(none);
+}
+
+.pui-btn-large, .pui-btn-group.pui-btn-large > .pui-btn {
+    padding: 6px 16px;
+    padding: 0.6rem 1.6rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.pui-btn-medium, .pui-btn-group.pui-btn-medium > .pui-btn {
+    padding: 6px 12px;
+    padding: 0.6rem 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.pui-btn-small, .pui-btn-xsmall, .pui-btn-group.pui-btn-small > .pui-btn, .pui-btn-group.pui-btn-xsmall > .pui-btn {
+    padding: 5px 10px;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    @include border-radius(3px);
+}
+
+.pui-btn-xsmall, .pui-btn-group.pui-btn-xsmall > .pui-btn {
+    padding: 1px 5px;
+    padding: 0.1rem 0.5rem;
+    line-height: 1.5;
+}
+
+//.pui-btn-group.pui-btn-default > .pui-btn {
+    //padding: 0.6rem 1.2rem;
+    //padding: 0.6rem 1.2rem;
+    //font-size: 1.4rem;
+    //line-height: 1.5;    
+//}
+
+.pui-btn-default {
+    color: $default-text-color;
+    border-color: $default-border-color;
+    background-color: $default-color;
+
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        color: #333;
+        border-color: #ccc;
+        background-color: #eee;
+    }
+    
+    &:active, &.active, &.pui-active {
+        color: #666;
+    }
+}
+
+.pui-btn-primary, .pui-btn-secondary, .pui-btn-info, .pui-btn-success, .pui-btn-warning, .pui-btn-error {
+    color: #fff;  
+    
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        color: #fff;   
+    }
+}
+
+// button type & colors
+
+@each $name, $color in $ui-colors {
+    .pui-btn-#{$name} {
+  
+        @if $name == gary {
+        } @else {
+            color: #fff;
+        }
+        border-color: $color;
+        background-color: $color;
+        
+        html.no-touch &:hover, &.hover, &.pui-hover {
+            border-color: darken($color, 10%);    // 加深10%
+            background-color: darken($color, 10%);
+        }        
+    }
+}
+
+a {
+    @each $name, $color in $ui-colors {
+  
+        @if $name != gary {    
+        &.pui-btn-#{$name} {
+            color: #fff;
+        }
+        }
+    }
+}
+
+.pui-btn-link {
+    background: none;
+    border-color: #fff;
+    
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        color: $link-color;
+        text-decoration: underline;
+    }
+
+    &.active, &.pui-active {
+        color: #666;
+    }
+}
+
+/* button group */
+
+.pui-btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    
+    > .pui-btn {
+        float: left;
+    }
+    
+    > .pui-btn-default + .pui-btn-default {
+        border-left: none;
+    }
+
+    > .pui-btn:not(:first-child) {
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);
+    }
+
+    > .pui-btn:not(:last-child) {
+        @include border-top-right-radius(0);
+        @include border-bottom-right-radius(0);
+    }
+}
+
+.pui-btn-group-vertical {
+    .pui-btn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        @include border-radius(0);
+    }
+    
+    .pui-btn-default + .pui-btn-default {
+        border-top: none;
+        border-left: 1px solid $default-border-color;
+    }
+    
+    .pui-btn-group {
+        margin-bottom: 1rem;
+    }
+
+    .pui-btn:first-child {
+        @include border-top-right-radius(4px);
+        @include border-top-left-radius(4px);
+        @include border-bottom-right-radius(0);
+        @include border-bottom-left-radius(0);
+    }
+
+    .pui-btn:last-child {
+        @include border-top-right-radius(0);
+        @include border-top-left-radius(0);
+        @include border-bottom-right-radius(4px);
+        @include border-bottom-left-radius(4px);
+    }
+}
+
+.pui-btn-group-justify {
+    width: 100%;
+    background: transparent;
+                
+    //display: -webkit-box;
+    //display: -moz-box;
+    //display: box;
+
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    
+    //display: -webkit-flex;
+    //display: -moz-flex;
+    //display: -ms-flexbox;
+    //display: -ms-flex;
+    //display: flex;
+    @include flexbox();
+
+    > .pui-btn {
+        float: none; 
+        width: 100%;
+        display: block;
+        //-webkit-box-flex: 1;
+        //-moz-box-flex: 1;
+        //box-flex: 1;
+        
+        //-webkit-flex: 1;
+        //-moz-flex: 1;
+        //-ms-flex: 1;
+        //flex: 1;
+        @include flex(1);
+    }
+}
+
+.pui-btn-toolbar {
+    background: transparent;
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    
+    .pui-btn-group {
+        float: left;
+    }
+
+    > .pui-btn + .pui-btn, > .pui-btn-group + .pui-btn, > .pui-btn + .pui-btn-group, > .pui-btn-group + .pui-btn-group {
+        margin-left: 5px;
+        margin-left: 0.5rem;
+    }
+}
+
+.pui-btn.round, .pui-btn-group.round > .pui-btn, .pui-btn-round {
+    @include border-radius(500px);
+}
+
+.pui-btn.square, .pui-btn-group.square > .pui-btn, .pui-btn-square { 
+    @include border-radius(0);
+}
+
+
+/* button box-shadow */
+
+.pui-btn-default.pui-btn-shadow, .pui-btn-shadow .pui-btn-default { 
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+    }
+}
+
+@each $name, $color in $ui-colors {
+    .pui-btn-#{$name}.pui-btn-shadow, .pui-btn-shadow .pui-btn-#{$name} {  
+        @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+        
+        html.no-touch &:hover, &.hover, &.pui-hover {
+            @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+        }        
+    }
+} 
+     
+.pui-btn-toolbar.pui-btn-shadow .pui-btn-group, .pui-btn-group-justify.pui-btn-shadow .pui-btn-group, .pui-btn-group.pui-btn-default > .pui-btn-default {
+    @include box-shadow(none);
+}
+
+.pui-btn.pui-btn-block {
+    width: 100%;
+    display: block;
+    text-align: center; 
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.pui-btn.pui-btn-block:last-child {
+    margin-bottom: 0;
+}
+
+.pui-btn .pui-badge-dot {
+    margin-bottom: 0;
+}
+
+/* button dropdown menu */
+
+.pui-btn-dropdown {
+    display: inline-block;
+    position: relative;
+
+    .pui-btn {
+        float:left;
+        
+        &:first-child {
+            @include border-top-right-radius(0);
+            @include border-bottom-right-radius(0);            
+        }
+    }
+
+    .pui-btn + .pui-btn {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        margin-left: -1px;
+        @include border-top-left-radius(0); 
+        @include border-bottom-left-radius(0); 
+    }
+    
+    @each $name, $color in $ui-colors {
+        .pui-btn-#{$name} + .pui-btn-#{$name} {
+            border-left: 1px solid darken($color, 10%);
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* border colors */
+
+@each $name, $color in $ui-colors {
+    .pui-border-#{$name} {
+        border-color : $color !important;
+    }
+}
+
+@each $color in $colors {
+    .pui-border-#{""+$color} {
+        border-color : $color !important;
+    }
+}
+
+/* border none */
+
+.pui-border-none, .pui-unbordered, .pui-unbordered-all > * {
+    border: none !important;
+}
+
+@each $pos in $positions {
+    .pui-border-#{$pos}-none {
+        border-#{$pos}: none !important;
+    }
+}
+
+/* border 1px */
+
+$border-types: border, border-left, border-right, border-top, border-bottom;
+
+@each $type in $border-types {
+    .pui-#{$type}-1px {
+        #{$type} : 1px solid #ddd !important;
+    }
+    
+    .pui-#{$type}-dashed-1px {
+        #{$type} : 1px dashed #ddd !important;
+    }
+}
+
+/* border styles */
+
+$border-styles: dotted, dashed, solid, double;
+
+@each $type in $border-styles {
+    .pui-border-#{$type} {
+        border-style: $type !important;
+    }
+    
+    .pui-border-top-#{$type} {
+        border-top-style: $type !important;
+    }
+    
+    .pui-border-right-#{$type} {
+        border-right-style: $type !important;
+    }
+    
+    .pui-border-bottom-#{$type} {
+        border-bottom-style: $type !important;
+    }
+    
+    .pui-border-left-#{$type} {
+        border-left-style: $type !important;
+    }
+}
+
+/* border transparent */
+
+@each $type in $border-types {
+    .pui-#{$type}-transparent {
+        #{$type}-color: transparent !important;
+    }
+}
+
+/* border-radius */ 
+
+.pui-circle, .pui-circle-all > *, .pui-round, .pui-round-all > * {
+    text-align: center;
+    @include border-radius(500px !important);
+}
+
+.pui-square, .pui-square-all > * {
+    @include border-radius(0 !important);
+}
+
+.pui-ellipse {
+    text-align: center !important;
+    @include border-radius(100% !important);  
+}
+
+.pui-radius-none, .pui-square, .pui-square-all > * {
+    @include border-radius(0 !important);
+}
+
+.pui-radius, .pui-radius-all > * {
+    @include border-radius(4px !important);
+}
+
+.pui-radius-tr-none {
+    @include border-top-right-radius(0 !important);
+}
+
+.pui-radius-tl-none {
+    @include border-top-left-radius(0 !important);
+}
+
+.pui-radius-br-none {
+    @include border-bottom-right-radius(0 !important);
+}
+
+.pui-radius-bl-none {
+    @include border-bottom-left-radius(0 !important);
+}

@@ -1,0 +1,37 @@
+/* 自定义滚动条 */
+.pui-scrollbox {
+    overflow: hidden;
+    position: relative;
+}
+
+.pui-scrollbox-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pui-scrollbox-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+}
+
+.pui-scrollbox-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+    border-radius: 500px;
+    background-color: #666;
+    background-color: rgba(0, 0, 0, .4);
+    transition: background-color 0.2s ease-in;
+}
+
+.pui-scrollbox-thumb.hover, .pui-scrollbox-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="Plane UI" />
+        <meta name="keywords" content="Plane UI" />
+		<title>Plane UI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <link rel="stylesheet" href="./../../dist/css/planeui.css" />
+        <style>
+            html, body {width:100%;height:100%;overflow: hidden;}
+            .pui-layout {height: 100%;}
+            .sider {overflow: auto;height: 100%;width : 100%;padding: 2rem;}
+            .sider li a {font-size: 1.8rem;}
+            
+            @media only screen and (min-width: 1000px) {
+                .sider {
+                    width: 18%;
+                    border-right: 1px solid #ddd;
+                }
+                
+                .sider li a {font-size: 14px;}
+            }
+        </style>
+	</head>
+	<body>
+        <!--[if lte IE 9]>
+        <div class="pui-layout pui-browsehappy">
+            <a href="javascript:;" class="pui-close" onclick="document.body.removeChild(this.parentNode);"></a>
+            <p>您正在使用 <strong class="pui-text-yellow pui-text-xl">过时</strong> 的非现代浏览器，<strong class="pui-text-success pui-text-xl">91.23%</strong> 的人选择 <a href="http://browsehappy.com/" target="_blank" class="pui-text-green-400 pui-text-xl"><strong>升级浏览器</strong></a>，获得了更好、更安全的浏览体验！</p>
+        </div>
+        <![endif]-->
+		<div class="pui-layout pui-flexbox">
+            <div class="sider">
+                <h4 class="h4">Plane UI 组件示例</h4>
+                <h5>基本元素</h5>
+                <ul>
+                    <li>
+                        <a href="text.html">文本、段落、标题等 Texts</a>
+                    </li>
+                    <li>
+                        <a href="images.html">图片 Image</a>
+                    </li>
+                    <li>
+                        <a href="list.html">列表 List</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">网格布局 Grid Layout</a>
+                    </li>
+                    <li>
+                        <a href="flexbox.html">Flexbox 弹性布局 Flexible Box Layout</a>
+                    </li>
+                    <li>
+                        <a href="icon.html">图标 Icons</a>
+                        <ul>
+                            <li>
+                                <a href="icon.html">Font Awesome 图标</a>
+                            </li>
+                            <li>
+                                <a href="icon-taobao-mobile.html">手机淘宝图标库</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="table.html">表格 Table</a>
+                    </li>
+                    <li>
+                        <a href="font-face.html">字体 Font Face</a>
+                    </li>
+                    <li>
+                        <a href="animation.html">过渡与动画 Animations</a>
+                    </li>
+                </ul>
+                <h5>Material Design 元素</h5>
+                <ul>
+                    <li>
+                        <a href="material-design-colors.html">Material Design Colors</a>
+                    </li>
+                    <li>
+                        <a href="material-design-zdepths.html">Material Design Z-Depth</a>
+                    </li>
+                </ul>
+                <h5>Web 页面组件</h5>
+                <ul>
+                    <li>
+                        <a href="menu.html">菜单 Menu</a>
+                    </li>
+                    <li>
+                        <a href="form.html">表单及元素 Form</a>
+                    </li>
+                    <li>
+                        <a href="button.html">按钮 Button</a>
+                    </li>
+                    <li>
+                        <a href="button-sheet.html">按钮式表格 Button sheet</a>
+                    </li>
+                    <li>
+                        <a href="switch.html">开关按钮 Switch Button</a>
+                    </li>
+                    <li>
+                        <a href="file-input.html">自定义上传控件 File input</a>
+                    </li>
+                    <li>
+                        <a href="checkbox-radio.html">复选框与单选框 Checkbox & Radio</a>
+                    </li>
+                    <li>
+                        <a href="card.html">卡片 Card</a>
+                    </li>
+                    <li>
+                        <a href="list-view.html">列表视图 ListView</a>
+                    </li>
+                    <li>
+                        <a href="badge.html">徽章标签 Badge & Tag</a>
+                    </li>
+                    <li>
+                        <a href="article.html">文章内容 Article</a>
+                    </li>
+                    <li>
+                        <a href="breadcrumb.html">面包屑 Breadcrumb</a>
+                    </li>
+                    <li>
+                        <a href="close.html">关闭按钮 Close Button</a>
+                    </li>
+                    <li>
+                        <a href="comment.html">评论列表 Comments</a>
+                    </li>
+                    <li>
+                        <a href="pagination.html">分页栏 Pagination</a>
+                    </li>
+                    <li>
+                        <a href="loading.html">加载等待 Loading</a>
+                    </li>
+                    <li>
+                        <a href="notice.html">通知公告 Notice</a>
+                    </li>
+                    <li>
+                        <a href="search.html">搜索框 Search</a>
+                    </li>
+                    <li>
+                        <a href="timeline.html">时间轴 Timeline</a>
+                    </li>
+                    <li>
+                        <a href="mask.html">遮罩层 Mask</a>
+                    </li>
+                    <li>
+                        <a href="progress.html">进度条 Progress</a>
+                    </li>
+                    <li>
+                        <a href="ring-progress.html">圆形与圆环进度条 Ring Progress</a>
+                    </li>
+                    <li>
+                        <a href="top10.html">排行列表 Top 10</a>
+                    </li>
+                </ul>
+                <h5>JavaScript 组件</h5>
+                <ul>
+                    <li>
+                        <a href="form-validator.html">表单验证 Form Validator</a>
+                    </li>
+                    <li>
+                        <a href="draggable.html">拖放 Draggable</a>
+                    </li>
+                    <li>
+                        <a href="dialog.html">对话框 Dialog</a>
+                    </li>
+                    <li>
+                        <a href="tab.html">选项卡 Tab</a>
+                    </li>
+                    <li>
+                        <a href="tooltip.html">提示层 Tooltip</a>
+                    </li>
+                    <li>
+                        <a href="rating.html">评价 / 评分 Rating</a>
+                    </li>
+                    <li>
+                        <a href="inviewport.html">视图位置监测 InViewport</a>
+                    </li>
+                    <li>
+                        <a href="screen-responsive.html">屏幕尺寸监测 Response Size</a>
+                    </li>
+                    <li>
+                        <a href="scrollto.html">锚点及位置滚动 ScrollTo</a>
+                    </li>  
+                    <li>
+                        <a href="hover-scroll.html">Hover Scroll</a>
+                    </li>           
+                    <li>
+                        <a href="material-design-color-picker.html">颜色选择器 (Material Design) Color Picker</a>
+                    </li>
+                </ul>
+                <h5>插件</h5>
+                <ul>                
+                    <li>
+                        <a href="./../fullpage/index.html">Full Pager</a>
+                    </li>        
+                    <li>
+                        <a href="scrollbar.html">自定义滚动条</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pui-flex pui-xs-hide pui-sm-hide pui-md-hide" style="height:100%;">
+                <iframe src="./text.html" frameborder="0" style="width:100%;height:100%;" name="viewer"></iframe>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">
+            function reset() {
+                var linkTags = $("a");
+                
+                if ($(window).width() > 1000) {
+                    linkTags.attr("target", "viewer");
+                } else {
+                    linkTags.attr("target", "");
+                }
+            }
+            
+            $(function() {  
+                reset();
+                
+                $(window).resize(reset);
+            }); 
+        </script> 
+	</body>
+</html>

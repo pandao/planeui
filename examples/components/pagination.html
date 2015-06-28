@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>分页栏 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>分页栏 Pagination</h4>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered">
+                    <li><span>总计1254条相关结果，</span></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li class="input" title="输入后按回车或者点击按钮">
+                        跳转至第 <input type="text" value="2" /> 页 <input type="button" value="跳转" />
+                    </li>
+                    <li class="input">
+                        跳转至第 <input type="number" value="2" max="100" min="1" /> 页
+                    </li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered">
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><span style="text-align:center;"> 1 / 10</span></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered">
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li>
+                        <select class="unbordered" onchange="location.href=this.value;">
+                            <option value="#1" selected="selected">1 / 99</option>
+                            <option value="#1">第1页</option>
+                            <option value="#2">第2页</option>
+                            <option value="#3">第3页</option>
+                            <option value="#4">第4页</option>
+                            <option value="#5">第5页</option>
+                        </select>
+                    </li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-center">
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><span> 1 / 10</span></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-prev-next">
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-center pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-circle pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div> 
+            <div class="pui-container pui-clear sm-hide">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-compact">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#" class="active">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="javascript:;">...</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear md-show sm-show">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-compact">
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="javascript:;">1 / 10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-circle pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            <div class="pui-container pui-clear">
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-left pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+                <ul class="pui-pagination pui-pagination-bordered pui-pagination-right pui-pagination-gradient">
+                    <li><a href="#" class="disabled">首页</a></li>
+                    <li><a href="#" class="disabled">上一页</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>...</span></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                </ul>
+            </div>
+            测试文本行
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+    </body>
+</html>

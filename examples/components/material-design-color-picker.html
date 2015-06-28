@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>颜色选择器 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>     
+            .container{width:23%;float:left;margin-bottom: 10px;margin-left: 10px;}
+            .box {padding:10px;}
+            
+            @media (max-width: 640px) {
+                .container {width: 46%;}
+            }
+        </style>
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>颜色选择器 Material Design Color Picker</h4>
+            <p><small>兼容情况： 不支持 IE8 及以下版本</small></p><br/>
+            <input type="text" pui-color-picker />
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>            
+            $(function() {                
+                $("[pui-color-picker]").materialDesignColorPicker({
+                    //width : "3rem",
+                    //height : "3rem",
+                    path : "./../../" // planeui path
+                });
+            });
+        </script>
+    </body>
+</html>

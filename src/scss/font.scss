@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* font-size */
+
+$i: 12;
+
+@while $i < 49 {
+    .pui-f#{$i} {
+        font-size: ($i/10) rem !important;
+    }
+    
+    $i: $i + 1;
+}
+
+/* font family */
+
+.pui-font-serif {
+    font-fmaily: serif, "宋体" !important;
+}
+
+.pui-font-arial {
+    font-fmaily: Arial, sans-serif, "宋体" !important;
+}
+
+.pui-font-shongti {
+    font-fmaily: SimSun, "宋体" !important;
+}
+
+.pui-font-sans-serif {
+    font-fmaily: sans-serif, "宋体" !important;
+}
+
+.pui-font-monospace {
+    font-fmaily: monospace !important;
+}
+
+.pui-font-consolas {
+    font-fmaily: consolas !important;
+}
+
+.pui-font-yahei {
+    font-fmaily: Microsoft YaHei, "微软雅黑" !important;
+}
+
+.pui-font-kaiti {
+    font-family: Kai, "Kaiti SC", "楷体", KaiTi,serif !important;
+}
+
+.pui-font-tahoma {
+    font-family:  Tahoma, Helvetica, Arial, "Helvetica Neue", sans-serif !important;   
+}
+
+.pui-font-helvetica {
+    font-family:  Helvetica, "Helvetica Neue", Arial, Tahoma, sans-serif !important;    
+}
+
+.pui-font-en {
+    font-family: "OpenSansRegular", Helvetica, Tahoma, "Microsoft YaHei", Arial, SimSun, Heiti, sans-serif !important;
+    font-weight: normal !important;
+}
+
+.pui-font-zh-cn {
+    font-family: "Hiragino Sans GB", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", "Droid Sans", "wenquanyi micro hei", Helvetica, Tahoma, Arial, SimSun, "宋体", Heiti, "黑体", sans-serif !important;
+    font-weight: normal !important;
+}
+
+*.pui-font-open-sans-regular, .pui-font-open-sans-regular {
+    font-family: 'OpenSansRegular' !important;
+    font-weight: normal !important;
+}
+
+/* font weight */
+
+$font-weights: normal, bold, bolder, lighter;
+
+@each $weight in $font-weights {
+    .pui-font-#{$weight}, .pui-text-#{$weight}  {
+        font-weight: $weight !important;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>锚点滑动 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <style>
+            body {
+                padding: 2rem;
+            }
+        </style>
+	</head>
+	<body>
+        <a name="top"></a>
+        <div style="width:4000px;padding-bottom: 300px;margin:15px;" id="layout">
+            <br/>
+            <h4 class="h4">锚点滑动 Anchor slide</h4> 
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <div>
+                <a href="#bottom" class="pui-btn pui-btn-default" scrollto>到底部</a>              
+            </div>
+            <div style="float:left;width:2000px;height:1400px;padding: 2rem;margin:10px 0;background:red;">
+                <a name="left"></a>
+                <a href="#right" class="pui-btn pui-btn-default" scrolltox>横向滚动到右侧</a> 
+                <a href="javascript:;" class="pui-btn pui-btn-default" id="test">滚动到x=2000, y=500</a>  
+                <div style="width: 500px;height:500px;background:teal;margin-top: 15px;overflow:auto;">
+                    <p>BOX A</p>
+                    <a href="javascript:;" class="pui-btn pui-btn-default" id="test3">滚动到x=1000, y=1000</a>  
+                    <div style="width: 1000px;height:1000px;background:pink;">
+                        BOX A-1
+                    </div>                    
+                </div>
+            </div>            
+            <div style="float:left;width:1000px;height:1000px;margin:10px 0;padding: 2rem;background:green;">
+                <a name="right"></a>
+                <a href="#left" class="pui-btn pui-btn-default" scrolltox>横向滚动到左侧</a>  
+            </div>
+            <div style="width: 2000px;height: 500px;float:left;background:orange;padding: 2rem;">
+                <a href="javascript:;" class="pui-btn pui-btn-default" id="test2">滚动到x=0, y=0</a>                
+            </div>  
+            <div class="clearfix"></div>
+            <a href="#top" class="pui-btn pui-btn-default" scrollto>到顶部</a>
+        </div>
+        <a name="bottom"></a>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script>
+            $(function() {
+
+                $("#test").scrollTo({
+                    left : "2000px",
+                    top : "500px",
+                    targetHash : false,
+                    callback : function(target) {
+                        console.log(this, target);
+                    }
+                });
+
+                $("#test2").scrollTo({
+                    left : 0,
+                    top : 0,
+                    targetHash : false,
+                    callback : function(target) {
+                        console.log(this, target);
+                    }
+                });
+
+                $("#test3").scrollTo({
+                    left : "1000px",
+                    top : "1000px",
+                    targetHash : false,
+                    scrollTarget : $("#test3").parent(),
+                    callback : function(target) {
+                        console.log(this, target);
+                    }
+                });
+                
+                $("[scrollto]").scrollTo(function(target) {
+                    console.log(this, target);
+                });
+
+                $("[scrolltox]").scrollTo({
+                    direction : "left",
+                    callback : function(target) {
+                        console.log(this, target);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Simple Timeline */
+
+.pui-timeline {
+    position: relative;
+}
+
+.pui-timeline-list {
+    margin-left: 15px;
+    margin-left: 1.5rem;
+    padding: 15px 0;
+    padding: 1.5rem 0;
+    border-left: 2px solid #ddd;  
+}
+
+.pui-timeline-item {
+    position: relative;
+    padding-left: 48px;
+    padding-left: 4.8rem;
+    min-height: 60px;
+    min-height: 6rem;
+
+    > .pui-badge {
+        position: absolute;
+        top: 7px;
+        left: -12px; 
+    }
+
+    > .pui-badge-dot {
+        position: absolute;
+        top: 15px;
+        left: -6px; 
+    }
+}
+
+.pui-timeline-badge-date > .pui-badge,
+.pui-timeline-badge-datetime > .pui-badge {
+    padding: 0 5px; 
+    padding: 0 0.5rem; 
+} 
+
+.pui-timeline-badge-date, .pui-timeline-badge-datetime {
+    padding-left: 130px;
+    padding-left: 13rem;
+}
+
+.pui-timeline-item-context {
+    padding: 8px 0 8px 10px;
+    padding: 0.8rem 0 0.8rem 1rem;
+}
+
+.pui-timeline-divider {
+    margin-left: 10px;
+    margin-left: 1rem;
+    padding: 5px 0 10px 0;
+    padding: 0.5rem 0 1rem 0;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.pui-timeline-divider-dashed-line, .pui-timeline-divider-line {
+    padding-top: 10px;
+    padding-top: 1rem;
+    border-top: 1px solid #eee; 
+} 
+
+.pui-timeline-divider-dashed-line { 
+    border-top-style: dashed; 
+}  

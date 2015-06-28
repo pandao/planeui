@@ -1,0 +1,69 @@
+// 展开式菜单
+.pui-menu-accordion {
+
+    > li {
+        > a {
+            .fa-angle-right {
+                padding-bottom: 1px;
+            }
+
+            .fa-angle-down {
+                display: none;
+            }
+        }
+        
+        html.no-touch &:hover, &.hover {
+
+            > a .fa-angle-right {
+                display: none;
+            }
+        }
+
+        html.no-touch &:hover, &.hover, &.submenu-open, 
+        html.no-touch &.submenu-open:hover,
+        &.submenu-open.hover {
+            > a .fa-angle-down {
+                padding-top: 3px;
+                display: block ;
+            }
+        }
+
+        &.submenu-open, html.no-touch &.submenu-open:hover,
+        &.submenu-open.hover {
+            > a .fa-angle-right {
+                display: none ;
+            }
+        }
+    }
+
+    .pui-sub-menu {
+        display: none;
+        margin-bottom: 0;
+
+        > li + li > a { 
+            margin-bottom: -1px;
+        }
+
+        > li {
+            > a {
+                padding-left: 36px;
+            }
+
+            > .pui-sub-menu {
+                border: 1px solid #ddd;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            &.pui-menu-header {
+                padding-left: 15px;
+            }
+
+            html.no-touch &:hover, &.hover {
+                > .pui-sub-menu {
+                    display: block;                
+                }
+            }
+        }
+    }
+}

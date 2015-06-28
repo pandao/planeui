@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>列表视图 ListView - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>列表视图 ListView</h4>
+            <p><small>兼容情况：不支持 IE8 及以下版本</small></p>
+            <div class="pui-pui-list-view-group"> 
+                <ul class="pui-list pui-list-view pui-list-view-radius pui-list-view-small pui-list-view-angle-right">
+                    <li class="pui-list-view-header">分类标题</li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope-o pui-text-teal-300"></i> 
+                            <summary>
+                                <h6>收件箱</h6> 
+                            </summary> 
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-bars pui-text-orange-300"></i> 
+                            <summary>
+                                <h6>重要联系人</h6>
+                            </summary> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-folder-o pui-text-red-300"></i>
+                            <summary>
+                                <h6>附件收藏</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-badge-dot">99</lable>
+                            <lable class="pui-badge pui-badge-error pui-circle pui-badge-right">99</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-file-text-o pui-text-green-300"></i>
+                            <summary>
+                                <h6>记事本</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-circle">99</lable>
+                            <lable class="pui-badge pui-badge-error pui-badge-right square">999999</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-calendar pui-text-blue-300"></i>
+                            <summary>
+                                <h6>日历</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-badge-right">999999</lable>
+                        </a>
+                    </li>
+                </ul> 
+                <ul class="pui-list pui-list-view pui-list-view-radius pui-list-view-small pui-list-view-angle-right"> 
+                    <li class="pui-list-view-header">分类标题</li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope-o pui-text-teal-300"></i> 
+                            <summary>
+                                <h6>收件箱</h6> 
+                            </summary> 
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-bars pui-text-orange-300"></i> 
+                            <summary>
+                                <h6>重要联系人</h6> 
+                            </summary> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-folder-o pui-text-red-300"></i>
+                            <summary>
+                                <h6>附件收藏</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-badge-dot">99</lable>
+                            <lable class="pui-badge pui-badge-error pui-circle pui-badge-right">99</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-file-text-o pui-text-green-300"></i>
+                            <summary>
+                                <h6>记事本</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-circle">99</lable>
+                            <lable class="pui-badge pui-badge-error pui-badge-right pui-square">999999</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="no-angle-right">
+                            <i class="fa fa-calendar pui-text-blue-300"></i>
+                            <summary>
+                                <h6>日历</h6> 
+                            </summary>
+                            <lable class="pui-badge pui-badge-error pui-badge-right">999999</lable>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <style>
+            </style>
+            <ul class="pui-list pui-list-view pui-list-view-angle-right pui-list-view-round">
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-calendar pui-text-blue-400"></i> 
+                        <summary>
+                            <h6>历历在目</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-dot pui-circle">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/5.jpg" width="64" /> 
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-dot pui-circle">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/5.jpg" />
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-circle">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="no-angle-right">
+                        <img src="images/5.jpg" />  
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-circle pui-badge-right">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="no-angle-right">
+                        <img src="images/5.jpg" />  
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-right">999999</lable>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pui-list pui-list-view pui-list-view-radius"> 
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/5.jpg" />  
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-dot">99</lable>
+                        <lable class="pui-badge pui-badge-error pui-circle pui-badge-right">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/5.jpg" />  
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-circle">99</lable>
+                        <lable class="pui-badge pui-badge-error pui-badge-right pui-square">999999</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/5.jpg" />  
+                        <summary>
+                            <h6>匆匆那年</h6>
+                            <small>王菲最新单曲</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-right">999999</lable>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pui-list pui-list-view pui-list-view-radius"> 
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/twitter.png" />  
+                        <summary>
+                            <h6>Twitter<small>11月23日</small></h6>
+                            <strong>Do you know Matthew Crawfor, Case...</strong>
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-warning pui-badge-dot">99</lable>
+                        <lable class="pui-badge pui-badge-success pui-circle pui-badge-right">99</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/twitter.png" />  
+                        <summary>
+                            <h6>Twitter<small>11月22日</small></h6>
+                            <strong>Do you know Matthew Crawfor, Case...</strong>
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-circle">99</lable>
+                        <lable class="pui-badge pui-badge-info pui-badge-right pui-square">999999</lable>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/twitter.png" />  
+                        <summary>
+                            <h6>Twitter<small>11月21日</small></h6>
+                            <strong>Do you know Matthew Crawfor, Case...</strong>
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                            <small>Pandao, Some people you may know on Twitter.</small> 
+                        </summary>
+                        <lable class="pui-badge pui-badge-error pui-badge-right">999999</lable>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+    </body>
+</html>

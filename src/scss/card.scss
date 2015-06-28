@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Card */
+
+.pui-card {
+    color: #666;
+    display: block;
+    position: relative;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pui-card-head, .pui-card-title, .pui-card-foot {
+    position: relative;
+    padding: 6px 15px; 
+    padding: 0.6rem 1.5rem;
+    
+    > h1, > strong {
+        margin: 0;
+        font-size: 16px;
+        font-size: 1.6rem;
+        
+        small {
+            padding-left: 4px;
+            padding-left: 0.4rem;
+        }
+    }
+}
+
+.pui-card-head { 
+}
+
+.pui-card-foot { 
+}
+
+.pui-card-box {
+    padding: 15px;
+    padding: 1.5rem;
+    overflow: auto;
+    position: relative;
+    color: $default-text-color;
+            
+    > h1 {
+        font-size: 22px;
+        font-size: 2.2rem;
+    }
+}
+
+.pui-card-head + .pui-card-box {
+    padding-top: 5px;
+}
+
+.pui-card-default {    
+    background: #fff;
+    border: 1px solid $default-border-color;
+}
+
+.pui-card-simple {    
+    .pui-card-box {
+        padding: 5px 15px;
+        padding: 0.5rem 1.5rem;        
+    }    
+}
+
+.pui-card-unbordered {
+    border: none;
+    
+    .pui-card-title, .pui-card-head {
+        padding-top: 0;
+    }
+    
+    .pui-card-foot {
+        padding-bottom: 0;
+    }
+    
+    .pui-card-head, .pui-card-title, .pui-card-foot, .pui-card-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.pui-card-badge {
+    display: inline-block;
+    padding: 0 5px;
+    background: #fff;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 14px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: none;
+    border: 1px solid #ddd;
+    @include border-radius(2px);
+}
+
+.pui-card-head-bg, .pui-card-title-bg, .pui-card-foot-bg {
+    background: #fafafa;
+}
+
+.pui-card-title-left-border {
+    margin-left: -16px;
+    margin-left: -1.6rem;
+    
+    > h1, > strong {
+        padding: 0;
+        border-left: 4px solid $primary-color;
+        padding-left: 12px;
+        padding-left: 1.2rem;
+    }
+}
+
+.pui-card-title-underline {
+    padding-top: 4px;
+    padding-top: 0.4rem;
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.pui-card-foot-topline {
+    border-top: 1px solid #ddd;    
+}
+
+.pui-card-title-right {
+    float: right;
+    color: #ccc;
+    padding-top: 4px;
+    padding-top: 0.4rem;
+    
+    a {
+        color: #ccc;  
+        
+        html.no-touch &:hover, &.hover {
+            color: #007CFF;
+        }      
+    }
+    
+    html.no-touch .pui-badge:hover, .pui-badge.hover {
+        color: #fff;
+    }
+    
+    html.no-touch .pui-badge-default:hover, .pui-badge-default.hover {
+        color: #ccc;
+    }
+}
+
+$bg-color : "";
+$text-color: "";
+$border-color: "";
+
+@each $name, $color in $ui-colors {
+  
+    @if $name == error {
+        $bg-color: #FFE8E3;
+        $border-color: #F7D1CB;
+        $text-color: $color;
+    }@else if $name == warning {
+        $bg-color: #FCF5E8;
+        $border-color: #FAE5C4;
+        $text-color: $color;
+    } @else {
+        $text-color: $color;
+        $border-color: lighten($color, 28%);
+        $bg-color: lighten($color, 38%);
+    }
+    
+    .pui-card-#{$name} {
+        border-color: $border-color;
+        
+        .pui-card-head, .pui-card-title, .pui-card-foot {
+            color: $text-color;
+            border-color: $border-color;
+            background-color: $bg-color;
+            
+            small, span, a {
+                color: $text-color;                
+            }
+        }     
+    }
+}
+
+.pui-card-radius {
+    @include border-radius(4px);
+}
+
+.pui-card-square {
+    @include border-radius(none);
+}
+
+.pui-card-group {
+    .pui-card {
+        margin-bottom: 8px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .pui-card-head, .pui-card-title, .pui-card-foot {
+        background: #fafafa;
+    }
+}
+
+.pui-card-padding-none {    
+    .pui-card-head, .pui-card-title, .pui-card-box, .pui-card-foot {
+        padding-left: 0;
+        padding-right: 0;
+    }    
+}
+
+.pui-card-box.pui-card-box-underline {
+    border: none;
+    border-bottom: 1px solid #ddd; 
+    margin-bottom: -5px;
+    margin-bottom: -0.5rem;
+}
+
+.pui-card-shadow { 
+    @include box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+
+    html.no-touch &:hover, &.hover, &.pui-hover {
+        @include box-shadow(0 0 6px rgba(0, 0, 0, 0.25));
+    }
+}
+
+.pui-row .pui-card:last-child {
+    margin-bottom: 0;
+}
+            
+.pui-card-image {
+    overflow: auto;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.pui-card-head-bg {
+    position: relative;
+    padding: 0;
+
+    > h1 {
+        color: #fff;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        margin: 0;
+        font-size: 2.2rem;
+
+        > small {
+            color: #fff;
+        }
+    }
+}
+
+.pui-card-head-img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 -0.6rem;
+}
+
+.pui-card-radius .pui-card-head-img {
+    @include border-top-left-radius(4px);
+    @include border-top-right-radius(4px);
+}
+
+.pui-card-column {
+    @include flexbox();
+    @include flex-direction(row);
+}
+
+.pui-card-column > .pui-card-box {
+    @include flex(1);
+}
+
+.pui-card-left, .pui-card-right {
+    position: relative;
+
+    > p {
+        margin-bottom: 0;
+    }
+
+    > h1 {
+        color: #fff;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 1.4;
+        text-align: left;
+        -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+
+        > small {
+            color: #fff;
+            display: block;
+            margin: 0;
+        }
+    }
+}
+
+.pui-card-right > h1 {
+    text-align: right;
+}
+
+.pui-card-box-left {
+    float: left;
+    margin-right: 2rem;
+}
+
+.pui-card-box-right {
+    float: right;
+    margin-left: 2rem;
+}
+            
+@media (max-width: 360px) {
+    .pui-card-column {
+        @include flex-direction(column);
+
+        > .pui-card-left {
+            height: auto;
+        }
+    }
+}

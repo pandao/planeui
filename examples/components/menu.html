@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>菜单与菜单栏 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+        <style>            
+            .pui-menu-accordion.pui-bg-blue > li >  a,
+            .pui-menu-accordion.pui-bg-green > li >  a {
+                color: #fff;
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            
+            html.no-touch .pui-menu-accordion.pui-bg-blue > li > a:hover, 
+            html.no-touch .pui-menu-accordion.pui-bg-green > li > a:hover, 
+            .pui-menu-accordion.pui-bg-blue > li > a.hover, 
+            .pui-menu-accordion.pui-bg-green > li > a.hover{
+                background: rgba(0, 0, 0, 0.1);
+            }
+            
+            .pui-menu-accordion.pui-bg-blue .pui-sub-menu,
+            .pui-menu-accordion.pui-bg-green .pui-sub-menu {
+                border: none;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        </style>
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>菜单与菜单栏 Menu & Menubar</h4> 
+            <h6>点击展开菜单并关闭其他</h6>
+            <ul class="pui-menu pui-menu-accordion pui-menu-bordered pui-bg-green click">
+                <li>                    
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-warning">3</b>
+                        <i class="fa fa-home pui-text-xl"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-shopping-cart pui-text-lg"></i> 产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-warning">3</b>
+                        <i class="fa fa-file-text-o pui-text-lg"></i>
+                        <span>开发文档</span>
+                    </a>
+                    <ul class="pui-menu pui-sub-menu">
+                        <li>
+                            <a href="javascript:;">下拉菜单一</a>
+                        </li>
+                        <li>                            
+                            <a href="javascript:;">下拉菜单二 <label class="pui-badge pui-badge-error">5989</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <span class="pui-badge pui-badge-warning">99</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="disabled pui-hide">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XX </a>
+                            <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-warning">3</b>
+                        <i class="fa fa-file-text-o pui-text-lg"></i>
+                        <span>讨论区</span>
+                    </a>
+                    <ul class="pui-menu pui-sub-menu">
+                        <li>
+                            <a href="javascript:;">下拉菜单一</a>
+                        </li>
+                        <li>                            
+                            <a href="javascript:;">下拉菜单二 <label class="pui-badge pui-badge-success">5989</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <span class="pui-badge pui-badge-info">99</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="disabled pui-hide">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XX </a>
+                            <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-comment-o pui-text-lg"></i> 交流社区 <span class="pui-badge pui-badge-error">1829</span></a>
+                </li> 
+                <li>
+                    <a href="javascript:;"><i class="fa fa-download pui-text-lg"></i> Downloads <span class="pui-badge pui-badge-warning">99</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-phone pui-text-lg"></i> 联系方式</a>
+                    <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                </li>
+            </ul>
+            <h6>点击展开或关闭菜单</h6>
+            <ul class="pui-menu pui-menu-accordion pui-menu-bordered pui-bg-blue click-toggle">
+                <li>                    
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-error">3</b>
+                        <i class="fa fa-home pui-text-xl"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-shopping-cart pui-text-lg"></i> 产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-warning">3</b>
+                        <i class="fa fa-file-text-o pui-text-lg"></i>
+                        <span>开发文档</span>
+                    </a>
+                    <ul class="pui-menu pui-sub-menu">
+                        <li class="pui-menu-header pui-hide">Sub header</li>
+                        <li>
+                            <a href="javascript:;">下拉菜单一</a>
+                        </li>
+                        <li>                            
+                            <a href="javascript:;">下拉菜单二 <label class="pui-badge pui-badge-success">5989</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <span class="pui-badge pui-badge-info">99</span></a>
+                        </li>
+                        <li class="pui-menu-divider pui-hide"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled pui-hide">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XX </a>
+                            <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pui-right">
+                            <i class="fa fa-fw fa-angle-right pui-text-lg"></i>
+                            <i class="fa fa-fw fa-angle-down pui-text-lg"></i>
+                        </span>
+                        <b class="pui-badge pui-badge-success">3</b>
+                        <i class="fa fa-file-text-o pui-text-lg"></i>
+                        <span>讨论区</span>
+                    </a>
+                    <ul class="pui-menu pui-sub-menu">
+                        <li class="pui-menu-header pui-hide">Sub header</li>
+                        <li>
+                            <a href="javascript:;">下拉菜单一</a>
+                        </li>
+                        <li>                            
+                            <a href="javascript:;">下拉菜单二 <label class="pui-badge pui-badge-success">5989</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <span class="pui-badge pui-badge-info">99</span></a>
+                        </li>
+                        <li class="pui-menu-divider pui-hide"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled pui-hide">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XX </a>
+                            <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-comment-o pui-text-lg"></i> 交流社区 <span class="pui-badge pui-badge-success">1829</span></a>
+                </li> 
+                <li>
+                    <a href="javascript:;"><i class="fa fa-download pui-text-lg"></i> Downloads <span class="pui-badge pui-badge-success">99</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-phone pui-text-lg"></i> 联系方式</a>
+                    <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                </li>
+            </ul>
+            <button class="pui-btn pui-btn-default" show-context-menu="#test-contextmenu">右键菜单</button><br/><br/>
+            <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow" id="test-contextmenu">
+                <li class="pui-menu-header">Header</li>
+                <li>
+                    <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单三XXX <label class="pui-badge pui-badge-info">99</label></a>
+                </li>
+                <li class="pui-menu-divider"></li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle" style="min-width:10px;">1</label></a>
+                </li>
+                <li class="has-submenu">
+                    <a href="javascript:;">下拉菜单五</a>
+                    <ul class="pui-menu pui-menu-dropdown">
+
+                        <li class="pui-menu-header">Header</li>
+                        <li>
+                            <a href="javascript:;" class="active">下拉菜单一</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单二</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXXXXXXXX</a>
+                        </li>
+                        <li class="pui-menu-divider"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled">Downloads</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="javascript:;">下拉菜单四XXXXXXXXXXXXXXXXX</a>
+                            <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow">
+
+                                <li class="pui-menu-header">Header</li>
+                                <li>
+                                    <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单二</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单三XXXXXXXXX</a>
+                                </li>
+                                <li class="pui-menu-divider"></li> 
+                                <li>
+                                    <a href="javascript:;" class="disabled">Downloads</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单四XXXXXXXXXXXXXXXXX</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单五</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-bordered pui-menu-inline pui-menu-bordered-radius clear">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                    <ul class="pui-menu pui-menu-dropdown" style="width:200%;">
+                        <li class="pui-menu-header">Header</li>
+                        <li>
+                            <a href="javascript:;" class="active" style="margin-left:-1px;">下拉菜单一</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX</a>
+                        </li>
+                        <li class="pui-menu-divider"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle">1</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" style="width: 120px\9;">Downloads <span class="pui-badge pui-badge-warning">10</span></a>
+                    
+                </li>
+                <li>
+                    <span class="pui-badge pui-badge-info pui-badge-dot"></span>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul> 
+            <ul class="pui-menu pui-menu-bordered pui-menu-bordered-radius">
+                <li>
+                    <a href="javascript:;" class="active"><i class="fa fa-home"></i>首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                    <ul class="pui-menu pui-menu-dropdown" style="width: 150px\9;"> 
+                        <li class="pui-menu-header">Header</li>
+                        <li>
+                            <a href="javascript:;" class="active"><i class="fa fa-home"></i>下拉菜单一</a>
+                        </li>
+                        <li>                            
+                            <a href="javascript:;">下拉菜单二 <label class="pui-badge pui-badge-success">5989</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <span class="pui-badge pui-badge-info">99</span></a>
+                        </li>
+                        <li class="pui-menu-divider"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XX </a>
+                            <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单五</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区 <span class="pui-badge pui-badge-success">1829</span></a>
+                </li> 
+                <li>
+                    <a href="javascript:;">Downloads <span class="pui-badge pui-badge-info">99</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                    <span class="pui-badge pui-badge-warning pui-badge-dot"></span>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-active-underline pui-menu-inline">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-round pui-menu-inline">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-round">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <div class="pui-menubar pui-menubar-square pui-menubar-header-style pui-bg-blue-500 pui-unbordered">
+                <div class="pui-menubar-aside">
+                    <a href="#"><i class="fa fa-home fa-2x pui-text-white"></i></a>
+                </div>
+                <div class="pui-menubar-middle">
+                    <strong class="text-md">标题XXXXX</strong>
+                </div>
+                <div class="pui-menubar-offside">       
+                    <a href="#"><i class="fa fa-camera-retro fa-2x pui-text-white"></i></a>          
+                </div>
+            </div>
+            <div class="pui-menubar pui-menubar-square pui-menubar-header-style">
+                <div class="pui-menubar-aside">
+                    <a href="#"><i class="fa fa-home fa-2x"></i></a>  
+                </div>
+                <div class="pui-menubar-middle">
+                    <strong class="text-md">标题XXXXX</strong>
+                </div>
+                <div class="pui-menubar-offside">       
+                    <a href="#"><i class="fa fa-camera-retro fa-2x"></i></a>          
+                </div>
+            </div> 
+            <div class="pui-menubar pui-menubar-square pui-bg-blue-500 pui-menubar-bg-color">
+                <div class="pui-menubar-aside text-lg" style="padding:0 10px;">TEST LOGO</div>
+                <ul class="pui-menu pui-menu-radius pui-menu-inline">
+                    <li>
+                        <a href="javascript:;" class="active">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                        <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow z-depth-3" style="width: 200%;top: 44px;">
+                            <li class="pui-menu-header">Header</li>
+                            <li>
+                                <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单三XXX <label class="pui-badge pui-badge-info">99</label></a>
+                            </li>
+                            <li class="pui-menu-divider"></li> 
+                            <li>
+                                <a href="javascript:;" class="disabled">Downloads</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle" style="min-width:10px;">1</label></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;" class="disabled">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <div class="pui-menubar-offside pui-unbordered-all">
+                    <input type="text" style="width:150px;height:30px;padding:6px 6px 5px;border-top-right-radius:0;border-bottom-right-radius:0;" /><button class="pui-btn pui-btn-default pui-btn-small" style="border-top-left-radius:0;border-bottom-left-radius:0;margin-left:-1px;">搜索</button>
+                </div>
+                <div class="pui-menubar-offside">
+                    <div class="pui-btn-dropdown pui-unbordered-all" style="margin-top:1px;margin-bottom: -5px;" menu-dropdown-target="#test-menu" menu-dropdown-direction="bottom-right">
+                        <button class="pui-btn pui-btn-default pui-btn-small">下拉菜单</button>
+                        <button class="pui-btn pui-btn-default pui-btn-small"><span class="pui-arrow-down"></span></button>
+                    </div>  
+                </div>
+            </div>
+            <div class="pui-menubar pui-menubar-square">
+                <div class="pui-menubar-aside text-lg" style="padding:0 10px 0 0;">TEST LOGO</div>
+                <ul class="pui-menu pui-menu-radius pui-menu-inline">
+                    <li>
+                        <a href="javascript:;" class="active">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">产品特性 <span class="pui-arrow-down"></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                        <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow z-depth-3" style="width: 200%;top: 44px;">
+                            <li class="pui-menu-header">Header</li>
+                            <li>
+                                <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单三XXX <label class="pui-badge pui-badge-info">99</label></a>
+                            </li>
+                            <li class="pui-menu-divider"></li> 
+                            <li>
+                                <a href="javascript:;" class="disabled">Downloads</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle" style="min-width:10px;">1</label></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;" class="disabled">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <div class="pui-menubar-offside">
+                    <input type="text" style="width:150px;height:32px;padding:6px 6px 5px;border-top-right-radius:0;border-bottom-right-radius:0;" /><button class="pui-btn pui-btn-default pui-btn-small" style="border-top-left-radius:0;border-bottom-left-radius:0;margin-left:-1px;">搜索</button>
+                </div>
+                <div class="pui-menubar-offside">  
+                    <div class="pui-btn-dropdown" style="margin-top:1px;margin-bottom: -5px;" menu-dropdown-target="#test-menu" menu-dropdown-direction="bottom-right">
+                        <button class="pui-btn pui-btn-default pui-btn-small">下拉菜单</button>
+                        <button class="pui-btn pui-btn-default pui-btn-small"><span class="pui-arrow-down"></span></button>
+                    </div>  
+                </div>
+            </div>
+            <div class="pui-btn-dropdown" menu-dropdown-target="#test-menu">
+                <button class="pui-btn pui-btn-default pui-btn-xsmall">下拉菜单</button>
+                <button class="pui-btn pui-btn-default pui-btn-xsmall"><span class="pui-arrow-down"></span></button>
+            </div>
+            <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow" id="test-menu">
+                <li class="pui-menu-header">Header</li>
+                <li>
+                    <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单三XXX <label class="pui-badge pui-badge-info">99</label></a>
+                </li>
+                <li class="pui-menu-divider"></li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle" style="min-width:10px;">1</label></a>
+                </li>
+            </ul>
+            <div class="pui-btn-dropdown" menu-dropdown-target="#test-menu" menu-dropdown-direction="right-bottom">
+                <button class="pui-btn pui-btn-info">下拉菜单</button>
+                <button class="pui-btn pui-btn-info"><span class="pui-arrow-down"></span></button>
+            </div>
+            <br/>
+            <button class="pui-btn pui-btn-default" menu-dropdown-target="#test-menu">
+                下拉菜单  <span class="pui-arrow-down"></span>
+            </button>
+            <br/><br/><br/> 
+            <ul class="pui-menu pui-menu-radius pui-menu-justify pui-menu-tab-style">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                    <ul class="pui-menu pui-menu-dropdown">
+ 
+                        <li class="pui-menu-header">Header</li>
+                        <li>
+                            <a href="javascript:;" class="active">下拉菜单一</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单二</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXXXXXXXX</a>
+                        </li>
+                        <li class="pui-menu-divider"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XXXXXXXXXXXXXXXXX</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="javascript:;">下拉菜单五</a>
+                            <ul class="pui-menu pui-menu-dropdown">
+         
+                                <li class="pui-menu-header">Header</li>
+                                <li>
+                                    <a href="javascript:;" class="active">下拉菜单一</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单二</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单三XXXXXXXXX</a>
+                                </li>
+                                <li class="pui-menu-divider"></li> 
+                                <li>
+                                    <a href="javascript:;" class="disabled">Downloads</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="javascript:;">下拉菜单四XXXXXXXXXXXXXXXXX</a>
+                                    <ul class="pui-menu pui-menu-dropdown">
+                 
+                                        <li class="pui-menu-header">Header</li>
+                                        <li>
+                                            <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">下拉菜单二</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">下拉菜单三XXXXXXXXX</a>
+                                        </li>
+                                        <li class="pui-menu-divider"></li> 
+                                        <li>
+                                            <a href="javascript:;" class="disabled">Downloads</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">下拉菜单四XXXXXXXXXXXXXXXXX</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">下拉菜单五</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">下拉菜单五</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-justify pui-menu-round">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-justify pui-menu-bordered">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-justify pui-menu-tab-style">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-justify">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-tab-style pui-menu-inline">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档 <span class="pui-arrow-down"></span></a>
+                    <ul class="pui-menu pui-menu-dropdown pui-menu-dropdown-unarrow z-depth-3" style="width: 200%;top: 44px;">
+                        <li class="pui-menu-header">Header</li>
+                        <li>
+                            <a href="javascript:;" class="active" style="width:100.999999%;margin-left:-1px;">下拉菜单一</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单二<label class="pui-badge pui-badge-success">5</label></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单三XXX <label class="pui-badge pui-badge-info">99</label></a>
+                        </li>
+                        <li class="pui-menu-divider"></li> 
+                        <li>
+                            <a href="javascript:;" class="disabled">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">下拉菜单四XXXXXX <label class="pui-badge pui-badge-warning pui-badge-circle" style="min-width:10px;">1</label></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-tab-style">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-link-color pui-menu-inline"> 
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider">|</li> 
+                <li>
+                    <a href="javascript:;" class="disabled">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-link-color pui-menu-inline">
+                <li class="pui-menu-header">
+                    导航菜单的标题
+                </li>
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider"></li>
+                <li class="pui-menu-header-small">
+                    导航菜单的标题2
+                </li>
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+                <li class="pui-menu-foot">
+                    <a href="javascript:;">更多内容>></a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-link-color">
+                <li class="pui-menu-header pui-menu-header-frame">
+                    导航菜单的标题
+                </li>
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider"></li>
+                <li class="pui-menu-header">
+                    导航菜单的标题2
+                </li>
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+                <li class="pui-menu-foot">
+                    <a href="javascript:;">更多内容>></a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-link-color pui-menu-small">
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider"></li>
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-simple pui-menu-inline">
+                <li>
+                    <a href="javascript:;">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider">|</li>
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul>
+            <ul class="pui-menu pui-menu-radius pui-menu-simple">
+                <li>
+                    <a href="javascript:;">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品特性</a>
+                </li>
+                <li>
+                    <a href="javascript:;">开发文档</a>
+                </li>
+                <li>
+                    <a href="javascript:;">交流社区</a>
+                </li>
+                <li class="pui-menu-divider"></li>
+                <li>
+                    <a href="javascript:;">Downloads</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系方式</a>
+                </li>
+            </ul> 
+            <div class="pui-menu-column">
+                <ul class="pui-menu pui-menu-simple">
+                    <li class="pui-menu-header">
+                        <a href="javascript:;">首页</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">产品特性</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <ul class="pui-menu pui-menu-simple">
+                    <li class="pui-menu-header">
+                        <a href="javascript:;">首页</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">产品特性</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <ul class="pui-menu pui-menu-simple">
+                    <li class="pui-menu-header">
+                        <a href="javascript:;">首页</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">产品特性</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <ul class="pui-menu pui-menu-simple">
+                    <li class="pui-menu-header">
+                        <a href="javascript:;">首页</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">产品特性</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+                <ul class="pui-menu pui-menu-simple">
+                    <li class="pui-menu-header">
+                        <a href="javascript:;">首页</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">产品特性</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">开发文档</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">交流社区</a>
+                    </li> 
+                    <li>
+                        <a href="javascript:;">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">联系方式</a>
+                    </li>
+                </ul>
+            </div>
+            <br/>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+    </body>
+    </html>

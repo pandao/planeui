@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>遮罩层 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4 class="h4">遮罩层 Mask layer</h4> 
+            <p><small>兼容情况： 支持 IE8+</small></p>
+            <div class="pui-mask pui-mask-bg pui-mask-fixed pui-hide">
+                <div class="pui-mask pui-mask-container">
+                    <div class="pui-mask-content">
+                        <i class="fa fa-search-plus fa-2x pui-text-white"></i>
+                        <p>fixed 固定定位，子元素透明</p>
+                    </div> 
+                </div>
+            </div>   
+            <div class="pui-mask pui-mask-bg pui-mask-fixed pui-hide" style="z-index:101;"></div>
+            <div class="pui-mask pui-mask-container pui-mask-fixed pui-hide" style="z-index:102;">
+                <div class="pui-mask-content">
+                    <i class="fa fa-search-plus fa-2x pui-text-white"></i>
+                    <p class="pui-text-white">fixed 固定定位2，子元素不透明</p>
+                </div> 
+            </div>
+            <br/>
+            <button class="pui-btn pui-btn-info" id="btn1">打开整个屏幕的遮罩，子元素透明</button>
+            <button class="pui-btn pui-btn-success" id="btn2">打开整个屏幕的遮罩，子元素不透明</button>
+            <br/><br/><br/>
+            
+            <p>示例一：在遮罩背景层的上面，不继承透明</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;overflow:hidden;">
+                父层的内容XXXXXXXX
+                <img src="images/8.jpg" class="pui-img-size-auto pui-blur" />
+                <div class="pui-mask pui-mask-bg"></div>         
+                <div class="pui-mask pui-mask-container">
+                    <div class="pui-mask-content">
+                        <i class="fa fa-search-plus fa-2x pui-text-white"></i>
+                    </div> 
+                </div>
+            </div>
+            <br/>
+            <p>示例二：在遮罩背景层的里面，继承透明</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;">
+                父层的内容XXXXXXXX
+                <div class="pui-mask pui-mask-bg">
+                    <div class="pui-mask pui-mask-container">
+                        <div class="pui-mask-content">
+                            <i class="fa fa-search-plus fa-2x pui-text-white"></i>
+                        </div> 
+                    </div>
+                </div>     
+            </div>
+            <p>示例三：有高度的遮罩背景层(在遮罩背景层的上面，不继承透明)</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;">
+                父层的内容XXXXXXXX
+                <div class="pui-mask pui-mask-bg" style="height: 20%;"></div>
+                <div class="pui-mask pui-mask-container" style="height: 20%;">
+                    <div class="pui-mask-content pui-text-white">
+                        标题文本
+                    </div> 
+                </div>  
+            </div>
+            <p>示例四：有高度的遮罩背景层，放在底部(在遮罩背景层的上面，不继承透明)</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;">
+                父层的内容XXXXXXXX
+                <div class="pui-mask pui-mask-bg pui-mask-bottom" style="height: 20%;"></div>
+                <div class="pui-mask pui-mask-container pui-mask-bottom" style="height: 20%;">
+                    <div class="pui-mask-content pui-text-white">
+                        标题文本
+                    </div> 
+                </div>  
+            </div>
+            <p>示例四：有宽度的遮罩背景层，放在左侧(在遮罩背景层的上面，不继承透明)</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;">
+                父层的内容XXXXXXXX
+                <div class="pui-mask pui-mask-bg pui-mask-left" style="width: 20%;"></div>
+                <div class="pui-mask pui-mask-container pui-mask-left" style="width: 20%;">
+                    <div class="pui-mask-content pui-text-white">
+                        标题文本
+                    </div> 
+                </div>  
+            </div>
+            <p>示例四：有宽度的遮罩背景层，放在右侧(在遮罩背景层的上面，不继承透明)</p>
+            <div style="width:360px;height: 240px;background:red; position: relative;">
+                父层的内容XXXXXXXX
+                <div class="pui-mask pui-mask-bg pui-mask-right" style="width: 20%;"></div>
+                <div class="pui-mask pui-mask-container pui-mask-right" style="width: 20%;">
+                    <div class="pui-mask-content pui-text-white">标题文本</div> 
+                </div>  
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+        <script type="text/javascript">
+            $(function(){  
+                
+                $('.pui-mask-fixed').bind($.clickOrTouch(), function(){
+                    $(this).fadeOut().siblings('.pui-mask-fixed').fadeOut();
+                });
+                
+                $("#btn1").bind($.clickOrTouch(), function(){
+                    $(".pui-mask-fixed").eq(0).removeClass('pui-hide').fadeIn();
+                });    
+                
+                $("#btn2").bind($.clickOrTouch(), function(){
+                    $(".pui-mask-fixed").eq(1).removeClass('pui-hide').fadeIn();
+                    $(".pui-mask-fixed").eq(2).removeClass('pui-hide').fadeIn();
+                });
+            });
+        </script>
+    </body>
+</html>

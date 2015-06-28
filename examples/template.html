@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="Plane UI" />
+        <meta name="keywords" content="Plane UI" />
+		<meta name="author" content="Pandao, pandao@vip.qq.com"/>
+		<meta name="robots" content="index,follow" />
+		
+		<!-- 禁止百度转码 -->
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+		<!-- 添加到主屏后的标题 iOS6+ -->
+		<meta name="apple-mobile-web-app-title" content="Plane UI" />
+
+		<!-- 是否启用 WebApp 全屏模式 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!-- 设置状态栏的背景颜色，只有在 `"apple-mobile-web-app-capable" content="yes"` 时生效 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- for iOS icons -->
+		<link rel="apple-touch-icon-precomposed" href="app/icons/icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="app/icons/icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="app/icons/icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="app/icons/icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="app/icons/icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="app/icons/icon-180x180.png">
+
+		<!-- for Android 5 -->
+		<meta name="theme-color" content="#0098DF" />
+
+		<!-- Windows 8 metro color -->
+		<meta name="msapplication-TileColor" content="#0098DF" /> 
+
+		<!-- Windows 8 metro icon -->
+		<meta name="msapplication-TileImage" content="favicon.png" />
+
+		<!-- closed google auto translate -->
+		<meta name="google" value="notranslate" />
+		
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true" />
+
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320" />
+
+		<!-- uc 强制竖屏 -->
+		<meta name="screen-orientation" content="portrait" />
+
+		<!-- QQ 强制竖屏 -->
+		<meta name="x5-orientation" content="portrait" />
+
+		<!-- UC 强制全屏 -->
+		<meta name="full-screen" content="yes" />
+
+		<!-- QQ 强制全屏 -->
+		<meta name="x5-fullscreen" content="true" />
+
+		<!-- UC 应用模式 -->
+		<meta name="browsermode" content="application" />
+
+		<!-- QQ 应用模式 -->
+		<meta name="x5-page-mode" content="app" />
+
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no" />
+		
+		<title>Plane UI 模板页</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />        
+        <link rel="stylesheet" type="text/css" href="./../dist/css/planeui.min.css" />
+	</head>
+	<body>
+        <!--[if lte IE 9]>
+        <div class="pui-layout pui-browsehappy">
+            <a href="javascript:;" class="pui-close" onclick="document.body.removeChild(this.parentNode);"></a>
+            <p>您正在使用 <strong class="pui-text-yellow pui-text-xl">过时</strong> 的非现代浏览器，<strong class="pui-text-success pui-text-xl">91.23%</strong> 的人选择 <a href="http://browsehappy.com/" target="_blank" class="pui-text-green-400 pui-text-xl"><strong>升级浏览器</strong></a>，获得了更好、更安全的浏览体验！</p>
+        </div>
+        <![endif]-->
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../dist/js/planeui.js"></script>
+	</body>
+</html>

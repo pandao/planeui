@@ -1,0 +1,213 @@
+@charset "UTF-8";
+    
+.pui-app-layout {   
+    height: 100%;
+    background: #333;
+    position: relative; 
+
+    > .pui-app-main, > .pui-side-slide-left,  > .pui-side-slide-right,  
+    > .pui-side-slide-top,  > .pui-side-slide-bottom {
+        position: relative;
+        display: block;
+        overflow: auto;
+    }
+
+    > .pui-side-slide-left,  > .pui-side-slide-right,
+    > .pui-side-slide-top,  > .pui-side-slide-bottom { 
+        display: none;
+    }
+
+    > .pui-side-slide-left {   
+        width: 240px;
+        height: 100%;
+        background: #333;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include box-shadow(inset -5px 0 10px rgba(0, 0, 0, 0.2));
+    }
+
+    > .pui-app-main {   
+        overflow: hidden;
+        max-width: 100%; 
+        min-width: 100%;
+        height: 100%;              
+        background: #fff;  
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        @include flexbox();
+        @include flex-direction(column);
+
+        > .pui-app-header {
+            width: 100%;
+            height: 48px; 
+            min-height: 48px;  
+            margin: 0;
+            padding: 0;
+            border: none;
+            vertical-align: middle;
+            @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+            position: relative; 
+            @include user-select(none); // 设置为无法选择文本
+            -webkit-touch-callout: none; // 长按时不触发系统的菜单
+            @include flexbox();
+            @include flex-direction(row);  
+            @include align-items(center);
+            position: relative;
+            z-index: 1000;
+        }
+
+        > .pui-app-main-container { 
+            width: 100%;
+            overflow: auto;
+            @include flex(1);
+            padding: 0;
+            -webkit-overflow-scrolling: touch;
+            z-index: 1;
+        }
+
+        > .pui-side-position-mask {
+            z-index: 79; 
+        }
+
+        > .pui-app-footer {
+            width:100%; 
+            height: 48px; 
+            height: 4.8rem; 
+            vertical-align: middle;
+            @include box-shadow(0 -1px 3px rgba(0, 0, 0, 0.15));
+            z-index: 1000;
+            position:relative;
+
+            > .pui-button-sheet { 
+                border: none; 
+                vertical-align: middle;
+            }
+        }
+
+        > .pui-mask {
+            display: none;
+            z-index: 101;                
+        }
+    }
+
+    > .pui-app-main-next {
+        left: 100%;
+        display: none;
+    }
+
+    > .pui-side-slide-right { 
+        width: 240px;
+        height: 100%;
+        background: #333; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include box-shadow(inset 5px 0 10px rgba(0, 0, 0, 0.2));
+    }
+
+    > .pui-side-slide-top { 
+        max-width: 100%;
+        min-width: 100%;
+        height: 180px;
+        background: #333; 
+        position: absolute;
+        top: 0;
+        left: 0; 
+        @include box-shadow(inset 0 -5px 10px rgba(0, 0, 0, 0.2));
+    }
+
+    > .pui-side-slide-bottom { 
+        max-width: 100%;
+        min-width: 100%;
+        height: 180px;
+        background: #333; 
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include box-shadow(inset 0 5px 10px rgba(0, 0, 0, 0.2));
+    } 
+}
+
+[pui-side-slide] {
+    cursor: pointer;
+}
+
+.pui-side-position-left, .pui-side-position-right, 
+.pui-side-position-top, .pui-side-position-bottom { 
+    display: none;
+    overflow: auto;
+    width: 240px;
+    margin: 48px 0; 
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 80; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.pui-side-position-left { 
+    left: 0; 
+}
+
+.pui-side-position-right { 
+    right: 0; 
+}
+
+.pui-side-position-top, .pui-side-position-bottom {
+    width: 100%;
+    height: 240px; 
+    margin: 0; 
+    top: auto;
+    left: 0;
+    color: #666;
+    background: #fff;
+}
+
+.pui-side-position-top {
+    top: 0; 
+    @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.pui-side-position-bottom {
+    bottom: 0;
+    @include box-shadow(0 -5px 10px rgba(0, 0, 0, 0.2)); 
+}
+
+.pui-side-position-zindex-top {
+    z-index: 101;
+}
+
+.pui-app-header-aside {
+}
+
+.pui-app-header-middle {
+    text-align: center;
+    @include flex(1);
+}
+
+.pui-app-header-aside, .pui-app-header-offside {
+    > a {
+        text-align: center;
+        display: inline-block;
+        padding: 12px;
+        min-width: 48px;
+
+        html.no-touch &:hover, &.hover { 
+            background-color: rgba(0, 0, 0, 0.1);
+        } 
+    }
+}
+
+.pui-app-scroller {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @include transform(translateZ(0));
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    @include text-size-adjust(none);
+}

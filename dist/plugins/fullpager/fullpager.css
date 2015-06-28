@@ -1,0 +1,100 @@
+.pui-full-page-html, .pui-full-page-html > body {
+    zoom: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.pui-full-page-group, .pui-full-page-inline-list { 
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pui-full-page {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    overflow-x: hidden;
+    color:#fff;
+    position: relative;
+    vertical-align: middle; 
+    display : table;
+}
+
+.pui-full-inline-pages {
+    display: block;
+}
+
+.pui-full-page-inline {
+    width: 100%;
+    height: 100%;  
+    float: left;
+    display : table;
+} 
+
+.pui-full-page-box,
+.pui-full-page-inline-box {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.pui-full-page-inline-prev-btn, 
+.pui-full-page-inline-next-btn {
+    position: absolute;
+    top: 45%;
+    color: red;
+    display: inline-block;
+    z-index: 100;
+}
+
+.pui-full-page-inline-prev-btn {
+    left: 48px;
+}
+
+.pui-full-page-inline-next-btn {
+    right: 48px;
+}
+
+.pui-full-page-inline-nav {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    z-index: 100;
+}
+
+.pui-full-page-nav-item.active {
+    background-color: #71B472;
+}
+
+.pui-full-page-nav-item + .pui-full-page-nav-item {
+    margin-left: 7px;
+}
+
+.pui-full-page-group > .pui-full-page-nav {
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+    display: inline-block;
+    position: fixed;
+    top: 45%;
+    right: 15px;
+    z-index: 101;
+}
+
+.pui-full-page-group > .pui-full-page-nav > .pui-full-page-nav-item {
+    display: block;
+    text-align: center;
+}
+
+.pui-full-page-group > .pui-full-page-nav > .pui-full-page-nav-item + .pui-full-page-nav-item {
+    margin: 10px 0 0 0;
+}

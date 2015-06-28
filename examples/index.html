@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="Plane UI" />
+        <meta name="keywords" content="Plane UI" />
+		<meta name="apple-mobile-web-app-title" content="Plane UI" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- for iOS icons -->
+		<link rel="apple-touch-icon-precomposed" href="../dist/icons/icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/icons/icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/icons/icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../dist/icons/icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/icons/icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../dist/icons/icon-180x180.png">
+		
+		<meta name="google" value="notranslate" />
+
+		<!-- for Android 5 -->
+		<meta name="theme-color" content="#008FE2" />
+
+		<!-- Windows 8 metro color -->
+		<meta name="msapplication-TileColor" content="#008FE2" /> 
+
+		<!-- Windows 8 metro icon -->
+		<meta name="msapplication-TileImage" content="favicon.png" />
+
+		<title>Plane UI - HTML5 跨终端响应式前端界面框架</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="../dist/css/planeui.min.css" />
+        <link rel="stylesheet" type="text/css" href="./index.css" />
+	</head>
+	<body>
+        <!--[if lte IE 9]>
+        <div class="pui-layout pui-browsehappy">
+            <a href="javascript:;" class="pui-close" onclick="document.body.removeChild(this.parentNode);"></a>
+            <p>您正在使用 <strong class="pui-text-yellow pui-text-xl">过时</strong> 的非现代浏览器，<strong class="pui-text-success pui-text-xl">91.23%</strong> 的人选择 <a href="http://browsehappy.com/" target="_blank" class="pui-text-green-400 pui-text-xl"><strong>升级浏览器</strong></a>，获得了更好、更安全的浏览体验！</p>
+        </div>
+        <![endif]-->
+        <a name="top"></a>
+		<div class="pui-layout">
+            <div class="pui-layout page-header">
+                <div class="pui-layout pui-layout-fixed pui-layout-fixed-1200">  
+                    <div class="pui-menubar pui-menubar-square pui-menubar-header-style pui-bg-none pui-unbordered">
+                        <div class="pui-menubar-aside">
+                            <h2 class="pui-margin-none pui-text-normal page-title" title="Plane UI"><i class="planeui-logo-lg"></i> Plane UI</h2>
+                        </div>
+                        <div class="pui-menubar-offside">       
+                            <ul class="pui-menu pui-menu-inline pui-menu-simple pui-right">
+                                <li>
+                                    <a href="#top">首页</a>
+                                </li>
+                                <li>
+                                    <a href="#features">主要特性</a>
+                                </li>
+                                <li>
+                                    <a href="#examples">示例</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/pandao/planeui/archive/master.zip">下载</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/pandao/planeui/issues" title="问题反馈" target="_blank">问题反馈</a>
+                                </li>
+                            </ul>         
+                        </div>
+                        <div class="pui-menubar-offside pui-xs-show pui-sm-hide pui-md-hide pui-lg-hide pui-xl-hide pui-xxl-hide"> 
+                            <a href="javascript:;" title="展开 / 关闭菜单" class="fa fa-list fa-2x"></a>     
+                        </div>
+                        <div class="pui-menubar-offside"> 
+                            <a href="https://github.com/pandao/planeui" title="Github" target="_blank" class="fa fa-github fa-2x"></a>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pui-layout main">  
+                <div class="pui-layout banner"> 
+                    <div class="banner-con">
+                        <h1><i class="planeui-logo-5x pui-animation-floating pui-text-shadow"></i></h1>
+                        <h1 class="pui-text-xxxxxl pui-text-normal pui-margin-none pui-text-shadow pui-animation-expand-in">Plane UI</h1>
+                        <h1 class="pui-text-xxxl pui-text-normal pui-text-shadow pui-animation-slide-left slogan">HTML5 跨终端响应式前端界面框架</h1>
+                        <p class="pui-text-shadow pui-text-lg pui-animation-slide-right slogan-en">The Modern HTML5 Cross-Device Responsive Front-end UI Framework.</p>
+                    </div>
+                </div>
+                <a name="features"></a>
+                <div class="pui-grid pui-layout-fixed-1200 main-con">
+                    <div class="pui-row pui-margin-none pui-height-5rem">
+                        <div class="pui-grid-xs-12" style="height:auto;">                            
+                            <p>最新版本：v0.1.0 预览版，更新于：2015-06-26</p>
+                        </div>
+                    </div>
+                    <hr class="pui-hr-dashed"/>
+                    <div class="pui-row features">
+                        <h2 class="pui-text-center pui-text-normal">主要特性</h2>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1 id="mobile-first">
+                                <a href="javascript:;" class="pui-text-light-green-200 pui-text-xxxxl">
+                                    <i class="fa fa-mobile fa-1x"></i>
+                                    <i class="fa fa-tablet fa-2x"></i>
+                                    <i class="fa fa-desktop fa-2x"></i>
+                                </a>
+                            </h1>
+                            <h5>移动优先</h5>
+                            <p>遵循 Mobile first （移动优先）设计理念，从小到大自适应屏幕。</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="javascript:;"><i class="fa fa-th fa-3x pui-text-blue-200"></i></a></h1>
+                            <h5>模组化</h5>
+                            <p>自带多种常用组件，模块化设计，方便快速地构建应用。</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="javascript:;"><i class="fa fa-random fa-3x pui-text-deep-orange-200"></i></a></h1>
+                            <h5>优雅降级</h5>
+                            <p>对浏览器进行分级支持，可以对IE8 提供最基本的兼容支持。</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="javascript:;"><i class="fa fa-html5 fa-3x pui-text-cyan-200"></i></a></h1>
+                            <h5>持续演进</h5>
+                            <p>向 Web Components 逐渐演进，提供更多 HTML5 + CSS3 + ES6 特性的支持。</p>
+                        </div>
+                    </div>
+                    <a name="examples"></a>
+                    <hr class="pui-hr-dashed"/>
+                    <div class="pui-row examples">
+                        <h2 class="pui-text-center pui-text-normal">UI 示例</h2>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="./components/"><i class="fa fa-cubes fa-3x pui-text-red-200"></i></a></h1>
+                            <h5>组件示例</h5>
+                            <p>Button, Dialog, Form ...</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="./login/"><i class="fa fa-dashboard fa-3x pui-text-pink-200"></i></a></h1>
+                            <h5>登陆页面示例</h5>
+                            <p>Admin Login example</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="./blog/"><i class="fa fa-edit fa-3x pui-text-green-200"></i></a></h1>
+                            <h5>博客页面示例</h5>
+                            <p>Blog article list example</p>
+                        </div>
+                        <div class="pui-grid-xs-6 pui-grid-sm-6 pui-grid-md-3 pui-grid-lg-3 pui-grid-xl-3 pui-grid-xxl-3 pui-text-center"> 
+                            <h1><a href="./app/"><i class="fa fa-mobile fa-3x pui-text-orange-200"></i></a></h1>
+                            <h5>WebApp 示例</h5>
+                            <p>Web application layout example</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="pui-center pui-layout-fixed pui-layout-fixed-1200">
+                <hr />
+                <div class="copyright">
+                    <span class="pui-right pui-xs-show"><a href="#top" class="pui-link">TOP</a></span>
+                    <p>Copyright &copy; 2014-2015 <a href="https://github.com/pandao/planeui" class="pui-link" title="Plane UI" target="_blank">Plane UI</a> All Rights Reserved.</p>
+                    <p>Powered by <a href="https://github.com/pandao/planeui" class="pui-link" target="_blank">Plane UI</a>, <a href="https://github.com/pandao/planeui/blob/master/LICENSE" target="_blank" class="pui-link">MIT</a> License.<small class="pui-right">代码如诗。</small></p>
+                </div>
+            </footer>
+		</div>
+        <a href="#top" class="fa fa-arrow-circle-up fa-3x pui-text-blue-400" id="go-to-top"></a>
+        <!--<script src="http://192.168.1.6:8080/target/target-script-min.js#anonymous"></script>-->
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./app/js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./app/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../dist/js/planeui.patch.ie8.min.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../dist/js/planeui.patch.ie9.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../dist/js/planeui.min.js"></script>
+        <script>
+            $(function(){
+                var header  = $(".page-header");
+                var goToTop = $("#go-to-top");
+                
+                $('a[href*="#"]').scrollTo();
+                
+                $(window).scroll(function() {
+                    var top = $(this).scrollTop();   
+                    var heading = $(".banner-con h1");
+                    var title1 = heading.eq(1);
+                    var title2 = heading.eq(2);
+                    var title2 = heading.eq(2);
+                    var sloganEn = $(".slogan-en");
+                    
+                    if (title1.is(":in-viewport")) {
+                        title1.addClass("pui-animation-expand-in");
+                    } else {
+                        title1.removeClass("pui-animation-expand-in");
+                    }
+                    
+                    if (title2.is(":in-viewport")) {
+                        title2.addClass("pui-animation-slide-left");
+                    } else {
+                        title2.removeClass("pui-animation-slide-left");
+                    }
+                    
+                    if (sloganEn.is(":in-viewport")) {
+                        sloganEn.addClass("pui-animation-slide-right");
+                    } else {
+                        sloganEn.removeClass("pui-animation-slide-right");
+                    }
+        
+                    if (top > 300) {
+                        header.css({
+                            position: "fixed",
+                            top: 0,
+                            left: 0,
+                            zIndex: 10000,
+                            boxShadow : "0 0 5px rgba(0, 0, 0, .5)"
+                        });
+                    } else {
+                        header.css({
+                            position: "static",
+                            boxShadow : "none"
+                        });
+                    }
+        
+                    if (top > 300) {
+                        goToTop.fadeIn();
+                    } else {
+                        goToTop.fadeOut();
+                    }
+                });
+                
+                function openMenu() {
+                    
+                    if (!$.responsive.xs() && !$.responsive.sm()) {
+                        return ;
+                    }
+                    
+                    var menu = $(".page-header .pui-menu-simple");
+                    
+                    menu.toggleClass("pui-right pui-pos-fixed open");
+                    header.toggleClass("main-color");
+                
+                    $(".page-header .pui-menu-simple.open").bind("mouseleave", openMenu);
+                }
+                
+                $(".page-header .fa-list").bind("click", openMenu);
+            });
+        </script>
+	</body>
+</html>

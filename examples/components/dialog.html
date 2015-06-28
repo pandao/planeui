@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>对话框与弹出层 - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+        <style>
+            @media only screen and (max-width: 1280px) {
+                .pui-btn {
+                    margin-bottom: 1rem;
+                }
+            }
+        </style>
+    </head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4 class="h4">模态对话框 Dialog</h4>  
+            <p><small>兼容情况： 支持 IE9+（基本兼容 IE8，但不完整）</small></p><br/>
+            <div id="trace"></div>
+            <button class="pui-btn pui-btn-primary" id="test-default">Default</button>
+            <button class="pui-btn pui-btn-primary" id="test-default2">Default 无圆角且无动画</button>
+            <button class="pui-btn pui-btn-primary" id="test-default-unclosed">Default 无关闭按钮</button>
+            <button class="pui-btn pui-btn-primary" id="test-default-nomask">Default 无透明遮罩背景</button>
+            <button class="pui-btn pui-btn-primary" id="test-default-transparent-mask">Default 全透明遮罩背景</button>
+            <button class="pui-btn pui-btn-primary" id="test-default-white-mask">Default 白色透明遮罩背景</button>
+            <button class="pui-btn pui-btn-primary" id="test-default-from-id">Default 从某个ID获取内容</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-warning" id="test-alert">Alert 默认风格</button>
+            <button class="pui-btn pui-btn-warning" id="test-alert-app-style">Alert App风格</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-error" id="test-confirm">Confirm 默认风格</button>
+            <button class="pui-btn pui-btn-error" id="test-confirm-app-style">Confirm App风格</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-info" id="test-prompt">Prompt 默认风格</button>
+            <button class="pui-btn pui-btn-info" id="test-prompt-app-style">Prompt App风格</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-success" id="test-image">Image 单张图片</button>
+            <!--<button class="pui-btn pui-btn-success" id="test-image-list">Image 多张图片</button>-->
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-secondary" id="test-loading">Loading</button>
+            <button class="pui-btn pui-btn-secondary" id="test-loading-reset">Loading 自定义样式</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-info" id="test-table">Table(-cell)</button>
+            <p>说明：用于放置垂直居中的内容。</p>
+            <button class="pui-btn pui-btn-success pui-bg-teal" id="test-window">Window 带标题栏</button>
+            <button class="pui-btn pui-btn-success pui-bg-teal" id="test-window-toolbar">Window 带工具栏按钮</button>
+            <button class="pui-btn pui-btn-success pui-bg-teal" id="test-window-footer">Window 有底栏</button>
+            <p>说明：</p>
+            <button class="pui-btn pui-btn-success pui-bg-red" id="test-iframe">Iframe</button>
+            <button class="pui-btn pui-btn-success pui-bg-red" id="test-iframe2">Iframe 互相传值与控制</button>
+            <button class="pui-btn pui-btn-success pui-bg-red" id="test-iframe-toolbar">Iframe 带工具栏按钮</button>
+            
+            <div id="test-form">
+                <form class="pui-form">
+                    <div clss="pui-form-group">
+                        <label>标题：</label>
+                        <input type="text" value="dfdf" />
+                    </div>
+                    <div clss="pui-form-group">
+                        <label>副标题：</label>
+                        <input type="text" value="dfdf" />
+                    </div>                
+                    <div clss="pui-form-group">
+                        <input type="submit" class="pui-btn pui-btn-default" value="提交" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+		<script type="text/javascript" src="./js/dialog-test.js"></script>
+    </body>
+    </html>

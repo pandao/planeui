@@ -1,0 +1,21 @@
+.pui-font-sizer {
+    display: inline-block;
+    margin-left: 10px; 
+    @include user-select(none);
+    -webkit-touch-callout: none;
+
+     > span {
+        padding: 2px 3px;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        line-height: 1;
+        cursor: pointer;
+        display: inline-block;         
+        @include transition(all 300ms ease-out);
+
+        html.no-touch &:hover, &.hover {
+            background: #fafafa;
+            border: 1px solid #ddd;
+        }
+    }
+}

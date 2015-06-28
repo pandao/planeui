@@ -1,0 +1,33 @@
+        
+.pui-color-picker {
+    position: relative;
+
+    &:after {
+        color: #000;
+        font-family: "FontAwesome";
+        font-weight: normal;
+        font-style: normal; 
+        font-size: 1.5em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+        content : "\f200";
+        @include opacity(0.2);
+        position: absolute;
+        top: 0.2rem;
+        right: 1rem;
+    }
+
+    > .pui-button-sheet-list {
+        padding: 1rem;
+        background: #fff;
+        @include box-shadow(0 0 3px rgba(0, 0, 0, .3));
+        position: absolute;
+        top: 100%;
+        left: 0;
+        
+        > a {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

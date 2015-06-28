@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.pui-flexbox {
+    @include flexbox();
+}
+
+.pui-flex {
+    @include flex(1);
+}
+
+.pui-flex-inline {
+    @include flex-inline(1);
+}
+
+.pui-inline-flexbox {
+    @include inline-flexbox();
+}
+
+.pui-flex-row {
+    @include flex-direction(row);
+}
+
+.pui-flex-row-reverse {
+    @include flex-direction(row-reverse);
+}
+
+.pui-flex-column {
+    @include flex-direction(column);
+}
+
+.pui-flex-column-reverse {
+    @include flex-direction(column-reverse);
+}
+
+.pui-flex-wrap {
+    @include flex-wrap(wrap);
+}
+
+.pui-flex-nowrap {
+    @include flex-wrap(nowrap);
+}

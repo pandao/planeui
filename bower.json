@@ -1,0 +1,43 @@
+{
+  "name": "planeui",
+  "version": "0.1.0",
+  "homepage": "https://github.com/pandao/planeui",
+  "authors": [
+    "pandao <272383090@qq.com>"
+  ],
+  "description": "The Modern HTML5 Cross-Device Responsive Front-end UI Framework.",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "planeui",
+    "PlaneUI",
+    "UI",
+    "framework",
+    "UI Framework",
+    "HTML5",
+    "webapp",
+    "ui kit",
+    "Response design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "prefixes.scss": "^0.2.0",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "fontawesome": "~4.3.0",
+    "selectivizr": "~1.0.2",
+    "normalize.css": "~3.0.3",
+    "doctype-flexie": "~1.0.3",
+    "modernizr": "~2.8.3",
+    "qunit": "~1.18.0",
+    "jquery": "~2.1.4"
+  }
+}

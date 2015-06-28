@@ -1,0 +1,23 @@
+.pui-file-input {
+    display: inline-block;
+    position: relative;      
+    overflow: hidden; 
+    overflow-y: visible;
+    padding-bottom: 2px;
+    vertical-align: middle;
+
+    > input[type="file"] {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include opacity(0);
+        cursor: pointer;
+
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+    }
+}
+
+//.pui-file-input-btn {}

@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Tabs */
+
+$tab-radius : 4px;
+
+.pui-tab, .pui-tab-head, .pui-tab-container, .pui-tab-box, .pui-tab-foot {
+    position: relative;
+}
+
+.pui-tab {
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    @include user-select(none);
+    -webkit-touch-callout: none;
+
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.pui-tab-head {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    > li {
+        cursor: pointer;
+        padding: 6px 12px;
+        padding: 0.6rem 1.2rem;
+        @include border-radius($tab-radius);
+        display: inline-block;
+        @include transition(background-color 300ms ease-out, border-color 300ms ease-out);
+
+        html.no-touch &:hover, &.hover {
+            background: #f6f6f6;
+        }
+
+        &.active, &.pui-active {
+            color: #fff;
+            background: $primary-color;
+        }
+
+        &.disabled, &.pui-disabled {
+            cursor: not-allowed;
+        }
+
+        > a {
+
+        }
+    }
+}
+
+.pui-tab-container {
+
+}
+
+.pui-tab-box {
+    display: none;
+    padding: 10px 0;
+    padding: 1rem 0;
+}
+
+.pui-tab-foot {
+    border-top: 1px solid #ddd;
+    padding: 8px 0;
+    padding: 0.8rem 0;
+    color: #999;
+}
+
+.pui-tab-foot-bordered {
+    padding: 8px 10px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.pui-tab-foot-unbordered {
+    border: none;
+}
+
+.pui-tab-square > li {
+    @include border-radius(0);
+}
+
+.pui-tab-ellipse > li {
+    @include border-radius(500px);
+}
+
+.pui-tab-bordered {
+
+    > .pui-tab-head {
+        border-bottom: 1px solid #ddd;
+
+        > li {
+            padding-left: 15px;
+            padding-left: 1.5rem;
+            padding-right: 15px;
+            padding-right: 1.5rem;
+            margin-bottom: -1px;
+            @include border-bottom-left-radius(0);
+            @include border-bottom-right-radius(0);
+            transition: none;
+
+            &.active, &.pui-active {
+                color: #666;
+                background: #fff;
+                border: 1px solid #ddd;
+                border-bottom-color: #fff;
+            }
+        }
+    }
+}
+
+.pui-tab-box-bordered > .pui-tab-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+.pui-tab-box-radius > .pui-tab-box {
+    @include border-bottom-left-radius($tab-radius);
+    @include border-bottom-right-radius($tab-radius);
+}
+
+.pui-tab-underline {
+    > .pui-tab-head {
+        border-bottom: 2px solid $primary-color;      
+
+        > li {
+            padding-left: 15px;
+            padding-left: 1.5rem;
+            padding-right: 15px;
+            padding-right: 1.5rem;
+            margin-bottom: 0;
+            @include border-bottom-left-radius(0);
+            @include border-bottom-right-radius(0);    
+
+            &.active, &.pui-active {
+            }
+        }   
+    }   
+}
+
+.pui-tab-justify {
+
+    > .pui-tab-head {
+        width: 100%;
+        display: table;
+
+        > li {
+            text-align: center;
+            display: table-cell;
+        }
+    }
+}
+
+.pui-tab-bordered.pui-tab-justify {
+
+    > .pui-tab-head {
+        border: none;
+
+        > li { 
+            border-bottom: 1px solid #ddd;
+
+            &.active, &.pui-active {
+                border-bottom: none; 
+            }
+
+            &.disabled, &.pui-disabled {
+            }
+        }
+    }
+}
+
+.pui-tab-left {
+    width: 100%;
+    display: table;
+    
+    > .pui-tab-head {        
+        width: 20%;
+        display: table-cell;
+
+        > li {
+            display: block;
+        }
+    }
+
+    > .pui-tab-container {    
+        width: 80%;
+        display: table-cell;
+
+        > .pui-tab-box {
+            padding: 0 15px;
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+.pui-tab-right {
+    width: 100%;
+    display: table;
+    
+    > .pui-tab-head {
+        width: 20%;
+        display: table-cell;
+
+        > li {
+            display: block;
+        }
+    }
+
+    > .pui-tab-container { 
+        width: 80%;
+        display: table-cell;
+
+        > .pui-tab-box {
+            padding: 0 15px 0 0;
+            padding: 0 1.5rem 0 0;
+        }
+    }
+}
+
+.pui-tab-bottom {
+    > .pui-tab-head { 
+        > li { 
+        }
+    }
+
+    > .pui-tab-container { 
+        > .pui-tab-box {
+            padding: 15px 0;
+            padding: 1.5rem 0;
+        }
+    }
+}
+
+.pui-tab-underline.pui-tab-left {
+    > .pui-tab-head {
+        border: none;
+        border-right: 2px solid $primary-color;
+
+        > li {  
+            @include border-top-right-radius(0);
+            @include border-bottom-left-radius($tab-radius);
+
+            &.active, &.pui-active {
+            }
+        }
+    }
+}
+
+.pui-tab-underline.pui-tab-right {
+    > .pui-tab-head {
+        border: none;
+        border-left: 2px solid $primary-color;
+
+        > li { 
+            @include border-top-left-radius(0);
+            @include border-bottom-right-radius($tab-radius);
+
+            &.active, &.pui-active { 
+            }
+        }
+    }
+}
+
+.pui-tab-underline.pui-tab-bottom {
+    > .pui-tab-head {
+        border: none;
+        border-top: 2px solid $primary-color;
+
+        > li { 
+            @include border-radius(0);
+            @include border-bottom-left-radius($tab-radius);
+            @include border-bottom-right-radius($tab-radius);
+
+            &.active, &.pui-active { 
+            }
+        }
+    }
+}
+
+.pui-tab-bordered.pui-tab-left { 
+
+    > .pui-tab-head {   
+        border: none;
+        border-right: 1px solid #ddd;
+
+        > li {
+            margin: 0;
+            @include border-top-right-radius(0);
+            @include border-bottom-left-radius($tab-radius);
+
+            &.active, &.pui-active {
+                margin-right: -2px;
+                border-right-color: #fff;
+                border-bottom-color: #ddd;
+            }
+        }
+    }
+
+    > .pui-tab-container {  
+    }
+}
+
+.pui-tab-left {
+    > .pui-tab-box-bordered > .pui-tab-box { 
+        padding: 15px;
+        padding: 1.5rem;
+        border-top: 1px solid #ddd;
+        border-left: none;
+    }
+
+    > .pui-tab-box-radius > .pui-tab-box {
+        @include border-top-right-radius($tab-radius);
+        @include border-bottom-left-radius(0);
+    }
+}
+
+.pui-tab-bordered.pui-tab-right {
+    width: 100%; 
+
+    > .pui-tab-head {   
+        border: none;
+        border-left: 1px solid #ddd;
+
+        > li {
+            margin: 0;
+            @include border-top-left-radius(0);
+            @include border-bottom-right-radius($tab-radius);
+
+            &.active, &.pui-active {
+                margin-left: -2px;
+                border-left-color: #fff;
+                border-bottom-color: #ddd;
+            }
+        }
+    }
+
+    > .pui-tab-container {
+    }
+}
+
+.pui-tab-right {
+    > .pui-tab-box-bordered > .pui-tab-box { 
+        padding: 1.5rem;
+        border-top: 1px solid #ddd;
+        border-right: none;
+    }
+
+    > .pui-tab-box-radius > .pui-tab-box {
+        @include border-top-left-radius($tab-radius);
+        @include border-bottom-right-radius(0);
+    }
+}
+
+.pui-tab-bordered.pui-tab-bottom {
+    > .pui-tab-head {
+        border: none;
+        border-top: 1px solid #ddd;
+
+        > li {
+            @include border-radius(0);
+            @include border-bottom-left-radius($tab-radius); 
+            @include border-bottom-right-radius($tab-radius); 
+
+            &.active, &.pui-active {
+                margin-top: -1px;
+                border-top-color: #fff;
+                border-bottom: 1px solid #ddd;             
+            } 
+        }
+    }
+}
+
+.pui-tab-bottom {
+    > .pui-tab-box-bordered > .pui-tab-box { 
+        padding: 15px;
+        padding: 1.5rem;
+        border-top: 1px solid #ddd;
+        border-bottom: none;
+    }
+
+    > .pui-tab-box-radius > .pui-tab-box {
+        @include border-radius(0);
+        @include border-top-left-radius($tab-radius);
+        @include border-top-right-radius($tab-radius);
+    }
+}
+
+.pui-tab-bordered.pui-tab-group-style { 
+
+    > .pui-tab-head {
+        border: none; 
+
+        > li { 
+            float: left;
+            border: 1px solid #ddd;
+            @include border-radius(0);
+
+            &.active, &.pui-active {
+                color: #fff;
+                background: $primary-color;
+                border-color: $primary-color;
+            }
+
+            &:first-child { 
+                @include border-top-left-radius($tab-radius);
+                @include border-bottom-left-radius($tab-radius);
+            }
+
+            &:last-child { 
+                @include border-top-right-radius($tab-radius);
+                @include border-bottom-right-radius($tab-radius);
+            }
+        }
+
+        > li + li { 
+            margin-left: -1px;
+        }
+        
+        & > li.active + li, & > li.pui-active + li {
+           border-left-color: $primary-color; 
+        }
+    }
+}
+    
+.pui-tab > .pui-tab-scroll-x, .pui-tab > .pui-tab-scroll-y {
+    overflow: hidden;
+}
+
+.pui-tab {
+    > .pui-tab-scroll-x {
+        width: 100%;
+        height: auto;
+        
+        > .pui-tab-container {
+            width: 40000px;
+            height: auto;
+
+            > .pui-tab-box {
+                width: 769px;
+                height: auto; 
+                float: left;
+                display: block;
+            }
+        }
+    }
+
+    > .pui-tab-scroll-y {
+        width: 100%;
+        height: 100px; 
+        min-height: 100px; 
+
+        > .pui-tab-container {
+            width: 100%;
+            min-height: 1000px; 
+
+            > .pui-tab-box {
+                width: 100%;
+                min-height: 100px; 
+                display: block;
+            }
+        }
+    }
+}

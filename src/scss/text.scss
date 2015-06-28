@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* text align */
+
+$text-align: left, right, center, justify;
+
+@each $align in $text-align {
+    .pui-text-#{$align}, .pui-text-#{$align}-all > * {
+        text-align: $align !important;
+    }
+}
+
+.pui-text-top, .pui-vertical-top {
+    vertical-align: top !important;
+}
+
+.pui-text-middle, .pui-vertical-middle {
+    vertical-align: middle !important;
+}
+
+.pui-text-bottom, .pui-vertical-bottom {
+    vertical-align: bottom !important;
+}
+
+/* text colors */
+
+@each $color in $colors {
+    .pui-text-#{""+$color} {
+        color: $color !important;
+    }
+}
+
+@each $name, $color in $ui-colors {
+    .pui-text-#{$name} {
+        color : $color !important;
+    }
+}
+
+.pui-text-indent {
+    text-indent: 21pt;
+}
+ 
+/* text/font size */
+
+$text-sizes : (
+    xxs : 1rem 10px,
+    xs : 1.2rem 12px,
+    sm : 1.4rem 14px,
+    md : 1.6rem 16px,
+    lg : 1.8rem 18px,
+    xl : 2rem 20px,
+    xxl : 2.4rem 24px,
+    xxxl : 3.2rem 32px,
+    xxxxl : 4rem 40px,
+    xxxxxl : 4.8rem 48px
+);
+
+@each $size, $num in $text-sizes {
+    .pui-text-#{$size} {
+        font-size: nth($num, 2) !important;
+        font-size: nth($num, 1) !important;
+    }
+} 
+
+/* text other */
+
+.pui-text-shadow {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4) !important;
+}
+
+.pui-text-shadow-white {
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+.pui-text-shadow-none {
+    text-shadow: none !important;
+}
+
+@each $name, $color in $ui-colors {
+    .pui-text-shadow-#{$name} {
+        text-shadow: 0 1px 1px rgba(red($color), green($color), blue($color), 0.4) !important;
+    }
+}
+
+.pui-text-nowrap {
+    white-space: nowrap !important;
+}
+
+.pui-word-break {
+    -ms-word-break: break-all !important;
+    word-break: break-all !important;
+    word-wrap: break-word !important;
+}
+
+$text-transform: lowercase, uppercase, capitalize, none;
+
+@each $trans in $text-transform {
+    .pui-text-#{$trans} {
+        text-transform: $trans !important;
+    }
+}
+
+.pui-text-ellipsis {
+    overflow: hidden !important;
+    word-wrap: normal !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}

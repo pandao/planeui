@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+/* Notices */
+            
+.pui-notice {
+    min-width: 240px;
+    min-width: 24rem;
+    padding: 12px;
+    padding: 1.2rem;
+    margin-bottom: 10px; 
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    @include border-radius(4px);
+    position: relative;
+    background: #fff;
+}
+
+.pui-notice-head { 
+    margin-top: -6px;
+
+    .pui-notice-head-underline > & { 
+        padding: 0 0 6px 0; 
+        padding: 0 0 0.6rem 0; 
+        margin-bottom: 10px;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    > strong {
+        font-size: 16px;
+        font-size: 1.6ren;
+    }
+
+    > small {
+        margin-left: 8px;
+        margin-left: 0.8rem;
+    }
+}
+
+.pui-notice-content {
+    padding: 0;
+
+    a {
+        color: #0D79DE;
+
+        html.no-touch &:hover, &.hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.pui-notice > p:last-child, .pui-notice-content > p:last-child {
+    margin: 0;
+}
+
+.pui-notice-foot {
+    text-align: right;
+    color: #ccc;
+}
+
+.pui-notice:not(.pui-notice-head-underline) { 
+    padding-right: 36px;
+    padding-right: 3.6rem;
+}
+
+.pui-notice > .pui-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+.pui-notice > .pui-close-bordered {
+    top: -1px;
+    right: -1px;
+}
+
+.pui-notice > .pui-close-border-circle {
+    top: -10px;
+    right: -10px;
+    background: #fff;
+}
+
+.pui-notice-not-foot, .pui-notice:not(.pui-notice-foot) .pui-notice-content {
+    padding-bottom: 0;
+}
+
+.pui-notice-icon { 
+    min-height: 60px;
+    min-height: 6rem;
+
+    &:before { 
+        min-width: 54px; 
+        min-width: 5.4rem;  
+        padding-left: 5px;
+        padding-left: 0.5rem;
+        display: block;
+        float: left;
+        font-family: "FontAwesome"; 
+        font-weight: normal;
+        font-style: normal; 
+        font-size: 36px; 
+        font-size: 3.6rem;
+        line-height: 1; 
+        @include opacity(0.5);
+        text-rendering: auto;  
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+    }
+
+    > .pui-notice-content {
+        margin-left: 54px;
+        margin-left: 5.4rem;
+    }
+
+    &.pui-shadow {
+        @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.2));
+    }
+
+    &.pui-square {
+        @include border-radius(0);
+    }
+
+    &.pui-inline-block {
+        display: inline-block;
+    }
+}
+
+$bg-color : "";
+$text-color: "";
+$border-color: "";
+
+@each $name, $color in $ui-colors {
+  
+    @if $name == error {
+        $bg-color: #FFE8E3;
+        $border-color: #F7D1CB;
+        $text-color: $color;
+    }@else if $name == warning {
+        $bg-color: #FCF5E8;
+        $border-color: #FAE5C4;
+        $text-color: $color;
+    } @else {
+        $text-color: $color;
+        $border-color: lighten($color, 28%);
+        $bg-color: lighten($color, 38%);
+    }
+    
+    .pui-notice-icon-#{$name}, .pui-notice-icon-bg-#{$name} {
+        color: $text-color;
+        border-color: $border-color;
+        background-color: $bg-color; 
+    }
+    
+    .pui-notice-icon-#{$name} > .pui-close {
+        
+        &:after {
+            color: $text-color;
+            opacity: 0.8;
+        }
+        
+        html.no-touch &:hover, &.hover { 
+            opacity: 1;
+        }
+    }
+    
+    .pui-notice-icon-bg-#{$name} > .pui-notice-head > small {
+        color: lighten($text-color, 15%);
+    }
+}
+
+.pui-notice-icon-success:before { 
+    color: $success-color;  
+    content: "\f058";
+}
+
+.pui-notice-icon-info:before { 
+    color: $info-color;  
+    content: "\f05a";
+}
+
+.pui-notice-icon-warning:before { 
+    color: $warning-color; 
+    font-size: 32px;
+    font-size: 3.2rem;
+    content: "\f071";
+}
+
+.pui-notice-icon-error:before {  
+    color: $error-color;
+    content: "\f00d";
+}
+
+.pui-notice-icon-question {
+    color: #5AA5EA;
+    border-color: #92C9FB;
+    background: #C9E5FF;
+}
+
+.pui-notice-icon-question:before { 
+    color: #2493F7;   
+    content: "\f059";
+}
+
+.pui-notice-icon-question > .pui-close:after {
+    color: #5AA5EA;    
+    opacity: 0.8;
+}
+
+.pui-notice-icon-update:before, 
+.pui-notice-icon-upload:before {  
+    font-size: 33px;
+    font-size: 3.3rem;
+    color: $info-color;  
+    content: "\f0ee";
+}
+
+.pui-notice-icon-download:before {  
+    font-size: 33px;
+    font-size: 3.3rem;
+    color: $info-color;  
+    content: "\f0ed";
+}
+
+.pui-notice-icon-unlink:before { 
+    font-size: 34px;
+    font-size: 3.4rem;
+    color: $info-color;  
+    content: "\f127";
+}
+
+.pui-notice-icon-loading:before,
+.pui-notice-icon-waiting:before {  
+    color: $info-color;  
+    content: "\f017";
+}
+
+.pui-notice-icon-email:before,            
+.pui-notice-icon-message:before {
+    font-size: 32px;
+    font-size: 3.2rem;
+    color: $info-color;  
+    content: "\f003";                
+}
+
+.pui-notice-icon-comment:before {
+    font-size: 35px;
+    font-size: 3.5rem;
+    color: $info-color;  
+    content: "\f0e6";
+}
+
+.pui-notice-icon-tips:before { 
+    font-size: 38px;
+    font-size: 3.8rem;
+    color: $info-color;  
+    content: "\f0eb";
+}
+
+.pui-notice-popup {
+    width: 320px;
+    width: 32rem;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+
+    > .pui-notice {
+        @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.2));
+    }
+}
+
+.pui-notice > .pui-badge {
+    float: left;
+    margin-top: 5px;
+
+    & + .pui-notice-content {
+        margin-left: 48px;
+        margin-left: 4.8rem;
+    }
+}
+
+.pui-notice > .pui-badge-dot + .pui-notice-content {
+    margin-left: 24px;
+    margin-left: 2.4rem;
+}
+
+.pui-notice-position-tl, .pui-notice-position-tr, .pui-notice-position-tc,
+.pui-notice-position-bl, .pui-notice-position-br, .pui-notice-position-bc {
+    position: fixed;
+    z-index: 10001; 
+}
+
+.pui-notice-position-tl { 
+    top: 10px;
+    bottom: auto;
+    left: 10px;   
+    right: auto;
+}
+
+.pui-notice-position-tr { 
+    top: 10px;
+    right: 10px;   
+    left: auto; 
+    bottom: auto;           
+}
+
+.pui-notice-position-tc { 
+    width: 40%;
+    top: 10px;
+    left: 30%;   
+    right: auto;  
+    bottom: auto;          
+}
+
+.pui-notice-position-bl { 
+    top: auto;
+    bottom: 10px;
+    left: 10px;  
+    right: auto;            
+}
+
+.pui-notice-position-br { 
+    top: auto;
+    bottom: 10px;
+    right: 10px;   
+    left: auto;            
+}
+
+
+.pui-notice-position-bc { 
+    top: auto;
+    width: 40%;
+    bottom: 10px;
+    left: 30%;                 
+}
+
+.pui-notice-content-scrollable {
+    height: 160px;
+    height: 16rem;
+    margin-bottom: 5px; 
+    overflow-y: scroll;
+}
+
+.pui-notice-content-scrollable-x { 
+    margin-bottom: 5px; 
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.pui-notice-content-scrollable-auto { 
+    height: 160px;
+    height: 16rem;
+    margin-bottom: 5px;  
+    overflow: auto;
+}

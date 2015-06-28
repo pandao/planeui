@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="description" content="PlaneUI" />
+        <meta name="keywords" content="PlaneUI" />
+        <title>List & ListView - PlaneUI 组件示例</title>
+
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="./../../dist/css/planeui.css" />
+	</head>
+	<body>
+        <div class="pui-layout" style="width:96%;">
+            <br/>
+            <h4>列表 List & ListView</h4>
+            <p><small>兼容情况： 支持 IE8+</small></p><br/>
+            <ul>
+                <li>列表项 A</li>
+                <li>
+                    列表项 B
+                    <ul>
+                        <li>列表项 B-1</li>
+                        <li>列表项 B-2</li>
+                        <li>列表项 B-3</li>
+                        <li>
+                            列表项 B-4
+                            <ul>
+                                <li>列表项 B-4-1</li>
+                                <li>列表项 B-4-2</li>
+                                <li>列表项 B-4-3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>列表项 C</li>
+                <li>
+                    列表项 D
+                    <ul>
+                        <li>
+                            列表项 D-1
+                        </li>
+                        <li>
+                            列表项 D-2
+                        </li>
+                        <li>
+                            列表项 D-3
+                        </li>
+                        <ul>
+                            <li>
+                                列表项 D-4-1
+                            </li>
+                            <li>
+                                列表项 D-4-2
+                            </li>
+                            <li>
+                                列表项 D-4-3
+                            </li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <ol>
+                <li>第一章 XXXXXXX</li>
+                <li>第二章 XXXXXXX
+                    <ol>
+                        <li>第一节 XXXXXXXX</li>
+                        <li>第三节 XXXXXXXX
+                            <ol>
+                                 <li>小节A</li>
+                                 <li>小节B</li>
+                            </ol>
+                        </li>
+                    </ol>
+                 </li>
+                 <li>第三章 XXXXXXX</li>
+                 <li>第四章 XXXXXXX</li>
+            </ol>
+            <ul class="pui-list">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul>
+            <ul class="pui-list pui-list-margin-bottom">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul>
+            <ul class="pui-list pui-list-line">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul>
+            <ul class="pui-list pui-list-line pui-list-bordered">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul>
+            <ul class="pui-list pui-list-line pui-list-stripe">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul>
+            <ul class="pui-list pui-list-line pui-list-stripe pui-list-bordered">
+                <li>列表项1</li>
+                <li>列表项2</li>
+                <li>列表项3</li>
+                <li>列表项4</li>
+                <li>列表项5</li>
+            </ul> 
+            <div class="pui-pui-list-group">   
+                <h6>pui-list-group</h6>             
+                <ul class="pui-list pui-list-line pui-list-stripe pui-list-bordered">
+                    <li>列表项1</li>
+                    <li>列表项2</li>
+                    <li>列表项3</li>
+                    <li>列表项4</li>
+                </ul>              
+                <ul class="pui-list pui-list-line pui-list-stripe pui-list-bordered">
+                    <li>列表项1</li>
+                    <li>列表项2</li>
+                    <li>列表项3</li>
+                    <li>列表项4</li>
+                </ul>              
+                <ul class="pui-list pui-list-line pui-list-stripe pui-list-bordered">
+                    <li>列表项1</li>
+                    <li>列表项2</li>
+                    <li>列表项3</li>
+                    <li>列表项4</li>
+                </ul>
+            </div>           
+            <ul class="pui-list pui-list-line pui-list-line-img">
+                <li>
+                    <p><img src="images/1.jpg" class="pui-img-size-auto" /></p>
+                    <h6><a href="#">图片标题</a></h6>
+                    <small>副标题文本XXXXXXXXXXXXXXXXXX</small>
+                </li>
+                <li>
+                    <p><img src="images/1.jpg" class="pui-img-size-auto" /></p>
+                    <h6><a href="#">图片标题</a></h6>
+                    <small>副标题文本XXXXXXXXXXXXXXXXXX</small>
+                </li>
+                <li>
+                    <p><img src="images/1.jpg" class="pui-img-size-auto" /></p>
+                    <h6><a href="#">图片标题</a></h6>
+                    <small>副标题文本XXXXXXXXXXXXXXXXXX</small>
+                </li>
+            </ul>
+            <div class="pui-dl-img-list pui-underline-dashed">
+                <dl>
+                    <dt>
+                        <a href="#"><img src="images/17.jpg" class="pui-img-size-auto" /></a>
+                    </dt>
+                    <dd>
+                        <h5>《似水流年》</h5>
+                        <p>曲：李键 词：王海涛</p>
+                        <p>语出 明·汤显祖《牡丹亭》第十出：“则为你如花美眷，似水流年。”</p>
+                        <p>偶尔在镜子里面，旧时光和我相遇；</p>
+                        <p>那片远远的天空，炉火映红的暖冬;</p>
+                        <p>....</p>
+                        <p class="pui-text-left"><a href="#" class="pui-link">试听专辑>></a></p>
+                    </dd> 
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="images/17.jpg" class="pui-img-size-auto" />
+                    </dt>
+                    <dd>
+                        <h5>《似水流年》</h5>
+                        <p>曲：李键 词：王海涛</p>
+                        <p>语出 明·汤显祖《牡丹亭》第十出：“则为你如花美眷，似水流年。”</p>
+                        <p>偶尔在镜子里面，旧时光和我相遇；</p>
+                        <p>那片远远的天空，炉火映红的暖冬;</p>
+                        <p>....</p>
+                        <p class="pui-text-left"><a href="#" class="pui-link">试听专辑>></a></p>
+                    </dd> 
+                </dl>
+            </div>
+            <br/>
+            <dl class="pui-dl-horizontal" style="width:80%;">
+                <dt>
+                    《似水流年》
+                </dt>
+                <dd>
+                    《似水流年》是李健的第1张专辑，和大部分已成长为音乐人的创作歌手一样，李健在专辑中包揽了所有歌曲的作曲和编曲，因此，这张专辑可以说是最能体现李健的个人风格和音乐主张的作品了。
+                </dd>
+                <dt>
+                    《音乐傲骨》
+                </dt>
+                <dd>
+                    距离上一张创作专辑《想念你》已有两年的时间,2009年冬天李健将为我们带来最温暖的沉淀,最朴实的坚持和最无争的好声音。在第四张全新创作专辑《音乐傲骨》中,李健依然用诗一样的情怀、隽永宁静的音乐唤醒我们关于故乡、爱人、朋友的种种记忆及美好感念。经过了两年的积累与沉淀,李健通过直白而赤诚的语言表达出自己对音乐的坚守和对理想的不断追求,日益成熟的风格及音乐品行也令他赢得了宛如寒梅冬竹般的敬赏与尊重。
+                </dd>
+                <dt>
+                    《拾光》
+                </dt>
+                <dd>
+                    《拾光》是李健在2013年9月23日发行的个人专辑，该专辑共收录有15首歌曲。专辑选择了旧曲新唱的方式，且将重点放在编曲上，选择15首李健的原创作品，以古典音乐元素重新编曲，并蕴含国家交响乐团的弦乐五重奏和众多古典器乐演奏家进行录制 。该种编曲却削弱了作品原有的流行性，丧失了原有的流畅，形成了一种慢热感。但是这并不影响情感的传达，该种编曲为歌曲本身注入了正能量，使作品更加优雅。专辑囊括内地年度金曲、最佳专辑、製作人、歌手等奖项的音乐传奇。拾年精选，时光沉淀，拾回感动 凝结爱的声音与馀韵。
+                </dd>
+            </dl>
+            <dl class="pui-dl-list-line"> 
+                <dt>
+                    <p>《似水流年》</p>
+                    <img src="images/18.jpg" width="449" class="pui-img-size-auto" />
+                </dt>
+                <dd>
+                    《似水流年》是李健的第1张专辑，和大部分已成长为音乐人的创作歌手一样，李健在专辑中包揽了所有歌曲的作曲和编曲，因此，这张专辑可以说是最能体现李健的个人风格和音乐主张的作品了。
+                </dd>
+                <dt>
+                    <p>《音乐傲骨》</p>
+                    <img src="images/22.jpg" class="pui-img-size-auto" />
+                </dt>
+                <dd>
+                    距离上一张创作专辑《想念你》已有两年的时间,2009年冬天李健将为我们带来最温暖的沉淀,最朴实的坚持和最无争的好声音。在第四张全新创作专辑《音乐傲骨》中,李健依然用诗一样的情怀、隽永宁静的音乐唤醒我们关于故乡、爱人、朋友的种种记忆及美好感念。经过了两年的积累与沉淀,李健通过直白而赤诚的语言表达出自己对音乐的坚守和对理想的不断追求,日益成熟的风格及音乐品行也令他赢得了宛如寒梅冬竹般的敬赏与尊重。
+                </dd>
+                <dt>
+                    <p>《拾光》</p>
+                    <img src="images/24.jpg" class="pui-img-size-auto" />
+                </dt>
+                <dd>
+                    《拾光》是李健在2013年9月23日发行的个人专辑，该专辑共收录有15首歌曲。专辑选择了旧曲新唱的方式，且将重点放在编曲上，选择15首李健的原创作品，以古典音乐元素重新编曲，并蕴含国家交响乐团的弦乐五重奏和众多古典器乐演奏家进行录制 。该种编曲却削弱了作品原有的流行性，丧失了原有的流畅，形成了一种慢热感。但是这并不影响情感的传达，该种编曲为歌曲本身注入了正能量，使作品更加优雅。专辑囊括内地年度金曲、最佳专辑、製作人、歌手等奖项的音乐传奇。拾年精选，时光沉淀，拾回感动 凝结爱的声音与馀韵。
+                </dd>
+            </dl> 
+        </div>
+
+        <!--[if (gte IE 9) | !(IE)]><!-->
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie8.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="./../../dist/js/planeui.patch.ie9.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./../../dist/js/planeui.js"></script>
+    </body>
+</html>

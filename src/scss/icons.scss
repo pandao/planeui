@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+@import "lib/global";
+
+[class*="pui-icon"], [class*="icon-"], [class*="fa-"] {
+    vertical-align: middle;
+    //-webkit-text-stroke-width: 0.1px; //边缘模糊，去除图标的锯齿
+}
